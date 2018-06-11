@@ -244,9 +244,6 @@ def write_to_file(index, index_tag_full, hash_data_dict, hash_counters):
         with open('hash_data_pretty.json', 'a') as hash_file:
             hash_file.write(json.dumps(hash_data_dict, indent=4, sort_keys=False) + "\n")
 
-        with open('hash_data_stats.json', 'w') as hash_file:
-            hash_file.write(json.dumps(hash_counters, indent=4, sort_keys=False) + "\n")
-
 # print and write to file the current hash count stats
     hash_counters['total samples'] = index
     print('\nCurrent hash count stats:\n')
