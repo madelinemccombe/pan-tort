@@ -7,9 +7,10 @@ This provides contextual information in test environments beyond just a hash mis
 import sys
 import json
 import time
+from datetime import timedelta, datetime
 import requests
 
-from panrc import hostname, api_key, hashfile, hashtype, index_name
+from panrc import hostname, api_key, threatnamefile, hashtype, index_name
 
 
 def init_hash_counters():
@@ -21,7 +22,8 @@ def init_hash_counters():
 
     hash_counters = {}
     hash_count_values = ['total samples', 'malware', 'mal_inactive_sig', 'mal_active_sig',
-                         'mal_no_sig', 'grayware', 'benign', 'phishing', 'No sample found']
+                         'mal_no_sig', 'grayware', 'benign', 'phishing', 'No sample found',
+                         'sig_new', 'sig_updated']
 
     for value in hash_count_values:
         hash_counters[value] = 0
@@ -36,26 +38,26 @@ def elk_index(elk_index_name, index):
     index_tag_full = {}
     index_tag_inner = {}
     index_tag_inner['_index'] = elk_index_name
-    index_tag_innter['_type'] = elk_index_name
+    index_tag_inner['_type'] = elk_index_name
     index_tag_inner['_id'] = index
     index_tag_full['index'] = index_tag_inner
 
     return index_tag_full
 
 
-def get_hash_list(filename):
+def get_threatname_list(filename):
 
-    """ read the hash list from file and load into a list """
+    """ read the threatname list from file and load into a list """
 
-    hash_list = []
+    threatname_list = []
 
-    with open(filename, 'r') as hash_file:
-        hash_list = hash_file.read().splitlines()
+    with open(filename, 'r') as threatname_file:
+        threatname_list = threatname_file.read().splitlines()
 
-    return hash_list
+    return threatname_list
 
 
-def init_query(af_ip, af_api_key, hashvalue):
+def init_query(af_ip, af_api_key, threatname):
 
     """
     initial API query post to Autofocus
@@ -63,7 +65,7 @@ def init_query(af_ip, af_api_key, hashvalue):
     """
 
     query = {"operator": "all",
-             "children": [{"field":"sample.sha256", "operator":"is", "value":hashvalue}]
+             "children": [{"field":"sample.threat_name", "operator":"is", "value":threatname}]
             }
 
     search_values = {"apiKey": af_api_key,
@@ -71,7 +73,7 @@ def init_query(af_ip, af_api_key, hashvalue):
                      "size": 1,
                      "from": 0,
                      "sort": {"create_date": {"order": "desc"}},
-                     "scope": "global",
+                     "scope": "public",
                      "artifactSource": "af"
                     }
 
@@ -106,7 +108,7 @@ def get_query_results(af_ip, af_api_key, search_dict):
 
     while query_status != 'FIN':
 
-        time.sleep(5)
+        time.sleep(3)
         try:
             results_url = f'https://{af_ip}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
@@ -132,7 +134,7 @@ def get_query_results(af_ip, af_api_key, search_dict):
     return autofocus_results
 
 
-def get_sample_data(af_ip, af_api_key, hashvalue, af_hashtype, hash_counters):
+def get_sample_data(af_ip, af_api_key, threatname, hash_counters):
 
     """ query each hash to get malware verdict and associated data """
 
@@ -140,16 +142,15 @@ def get_sample_data(af_ip, af_api_key, hashvalue, af_hashtype, hash_counters):
 
 
     hash_data_dict = {}
-    print(f'\nworking with hash = {hashvalue}')
+    print(f'\nworking with threat_name = {threatname}')
 
-    search_dict = init_query(af_ip, af_api_key, hashvalue)
+    search_dict = init_query(af_ip, af_api_key, threatname)
     autofocus_results = get_query_results(af_ip, af_api_key, search_dict)
 
 
 # AFoutput is json output converted to python dictionary
 
-    hash_data_dict['hashtype'] = af_hashtype
-    hash_data_dict['hashvalue'] = hashvalue
+    hash_data_dict['threatname'] = threatname
 
     if autofocus_results['hits']:
 
@@ -171,7 +172,7 @@ def get_sample_data(af_ip, af_api_key, hashvalue, af_hashtype, hash_counters):
 # These hashes can be check in VirusTotal to see if unsupported file type for Wildfire
     else:
         hash_data_dict['verdict'] = 'No sample found'
-        print('\n     No sample found in Autofocus for this hash')
+        print('\n     No public sample found in Autofocus for this threatname')
         verdict_text = 'No sample found'
 
     return hash_data_dict
@@ -203,9 +204,22 @@ def get_sig_coverage(af_ip, af_api_key, sample_data, hash_counters):
 
     results_analysis = {}
     results_analysis = json.loads(search.text)
+    sample_data['sig_create_date'] = results_analysis['coverage']['wf_av_sig'][0]['create_date']
+    sample_data['sig_first_added'] = results_analysis['coverage']['wf_av_sig'][0]['first_added_daily']
+    sample_data['sig_last_added'] = results_analysis['coverage']['wf_av_sig'][0]['last_added_daily']
     sample_data['dns_sig'] = results_analysis['coverage']['dns_sig']
     sample_data['wf_av_sig'] = results_analysis['coverage']['wf_av_sig']
     sample_data['fileurl_sig'] = results_analysis['coverage']['fileurl_sig']
+
+# get time delta between new sample and new sig in minutes
+    sample_FMT = '%Y-%m-%dT%H:%M:%S'
+    sig_FMT = '%Y-%m-%d %H:%M:%S'    
+    sig_time = datetime.strptime(sample_data['sig_create_date'], sig_FMT)
+    sample_time = datetime.strptime(sample_data['create_date'], sample_FMT)
+    tdelta = sig_time - sample_time
+    tdelta_minutes = round(tdelta.total_seconds() / 60, 1)
+    sample_data['create_delta'] = str(tdelta)
+    sample_data['create_delta_minutes'] = tdelta_minutes
 
 # Check all the sig states [true or false] to see active vs inactive sigs for malware
 
@@ -217,6 +231,13 @@ def get_sig_coverage(af_ip, af_api_key, sample_data, hash_counters):
             hash_counters['mal_inactive_sig'] += 1
         else:
             hash_counters['mal_no_sig'] += 1
+
+    if sample_data['sig_first_added'] == sample_data['sig_last_added']:
+        sample_data['sig_type'] = 'new'
+        hash_counters['sig_new'] += 1
+    else:
+        sample_data['sig_type'] = 'updated'
+        hash_counters['sig_updated'] += 1
 
     return sample_data, hash_counters
 
@@ -230,26 +251,26 @@ def write_to_file(index, index_tag_full, hash_data_dict, hash_counters):
     """
 
     if index == 1:
-        with open('hash_data_estack.json', 'w') as hash_file:
-            hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
-            hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+        with open('threatname_data_estack.json', 'w') as output_file:
+            output_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+            output_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-        with open('hash_data_pretty.json', 'w') as hash_file:
-            hash_file.write(json.dumps(hash_data_dict, indent=4, sort_keys=False) + "\n")
+        with open('threatname_data_pretty.json', 'w') as output_file:
+            output_file.write(json.dumps(hash_data_dict, indent=4, sort_keys=False) + "\n")
 
     else:
-        with open('hash_data_estack.json', 'a') as hash_file:
-            hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
-            hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+        with open('threatname_data_estack.json', 'a') as output_file:
+            output_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+            output_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-        with open('hash_data_pretty.json', 'a') as hash_file:
-            hash_file.write(json.dumps(hash_data_dict, indent=4, sort_keys=False) + "\n")
+        with open('threatname_data_pretty.json', 'a') as output_file:
+            output_file.write(json.dumps(hash_data_dict, indent=4, sort_keys=False) + "\n")
 
 # print and write to file the current hash count stats
     hash_counters['total samples'] = index
     print('\nCurrent hash count stats:\n')
     print(json.dumps(hash_counters, indent=4, sort_keys=False) + '\n')
-    with open('hash_data_stats.json', 'w') as hash_file:
+    with open('threatname_data_stats.json', 'w') as hash_file:
         hash_file.write(json.dumps(hash_counters, indent=4, sort_keys=False) + "\n")
 
 
@@ -264,11 +285,11 @@ def main():
     hash_counters = init_hash_counters()
 
 # read hash list from file
-    hash_list = get_hash_list(hashfile)
+    threatname_list = get_threatname_list(threatnamefile)
 
 # iterate through the hash list getting sample and signature data
 
-    for hashvalue in hash_list:
+    for threatname in threatname_list:
 
         sample_data = {}
         hash_data_dict = {}
@@ -278,7 +299,7 @@ def main():
         index_tag_full = elk_index(index_name, index)
 
 # query Autofocus to get sample and signature coverage data
-        sample_data = get_sample_data(hostname, api_key, hashvalue, hashtype, hash_counters)
+        sample_data = get_sample_data(hostname, api_key, threatname, hash_counters)
 
         if sample_data['verdict'] != 'No sample found':
             hash_data_dict, hash_counters = \
