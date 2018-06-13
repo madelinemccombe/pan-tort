@@ -33,8 +33,16 @@ hashtype = 'sha256'
 index_name = 'hash-data'
 ```
 
+If using threatname add a threatname file to panrc:
+
+```
+threatnamefile = 'threatname_list.txt'
+```
+
+You can also change the index name as required.
+
 <br/>
-### 8. Create the hash_list.txt file with a list of MD5 hashes
+### 8. Create the hash_list.txt file with a list of MD5 hashes or threatname.txt file with threats
 
 [Create hash_list.txt](https://github.com/PaloAltoNetworks/pan-tort/wiki/hash_list)
 <br/>
@@ -43,6 +51,10 @@ index_name = 'hash-data'
 
 ```python hash_data.py```
 <br/>
+
+or for threatname:
+
+```python threatname_data.py```
 
 Supported hashtypes are md5, sha1, and sha256
 <br/>
