@@ -62,46 +62,6 @@ def get_hash_list():
     return hash_list
 
 
-def init_query(hashvalue):
-
-    """
-    initial query into autofocus for a specific hash value
-    :param hashvalue: hash for the search
-    :return: autofocus response from initial query
-    """
-
-
-    query = {"operator": "all",
-             "children": [{"field":"sample.sha256", "operator":"is", "value":hashvalue}]
-            }
-
-    search_values = {"apiKey": api_key,
-                     "query": query,
-                     "size": 1000,
-                     "from": 0,
-                     "sort": {"create_date": {"order": "desc"}},
-                     "scope": "public",
-                     "artifactSource": "af"
-                    }
-
-    headers = {"Content-Type": "application/json"}
-    search_url = f'https://{hostname}/api/v1.0/samples/search'
-
-    try:
-        search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
-        print('Search query posted to Autofocus')
-        search.raise_for_status()
-    except requests.exceptions.HTTPError:
-        print(search)
-        print(search.text)
-        print('\nCorrect errors and rerun the application\n')
-        sys.exit()
-
-    search_dict = json.loads(search.text)
-
-    return search_dict
-
-
 def multi_query(hashlist, querysize):
 
     """
