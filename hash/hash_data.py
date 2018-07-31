@@ -9,7 +9,8 @@ import json
 import time
 import requests
 
-from panrc import hostname, api_key, hashfile, hashtype, index_name
+from af_api import api_key
+from conf import hostname, hashfile, hashtype, elk_index_name, query_tag
 
 
 def init_hash_counters():
