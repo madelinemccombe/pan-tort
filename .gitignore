@@ -102,8 +102,7 @@ hashenv/
 .mypy_cache/
 
 # stk specific
-hash/hash_data_estack.json
-hash/hash_data_pretty.json
-hash/hash_data_stats.json
+hash/*.json
 hash/hash_list.txt
 hash/panrc.py
+hash/conf.py
