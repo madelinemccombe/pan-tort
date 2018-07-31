@@ -1,0 +1,5 @@
+hostname = 'autofocus.paloaltonetworks.com'
+hashfile = 'hash_list.txt'
+hashtype = 'sha256'
+elk_index_name = 'hash-data'
+query_tag = 'elf'

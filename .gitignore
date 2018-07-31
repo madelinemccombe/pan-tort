@@ -105,4 +105,3 @@ hashenv/
 hash/*.json
 hash/hash_list.txt
 hash/af_api.py
-hash/conf.py
