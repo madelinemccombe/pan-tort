@@ -104,5 +104,5 @@ hashenv/
 # stk specific
 hash/*.json
 hash/hash_list.txt
-hash/panrc.py
+hash/af_api.py
 hash/conf.py
