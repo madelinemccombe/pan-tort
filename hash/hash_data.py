@@ -36,7 +36,7 @@ def elk_index(elk_index_name, index):
     index_tag_full = {}
     index_tag_inner = {}
     index_tag_inner['_index'] = elk_index_name
-    index_tag_innter['_type'] = elk_index_name
+    index_tag_inner['_type'] = elk_index_name
     index_tag_inner['_id'] = index
     index_tag_full['index'] = index_tag_inner
 
@@ -46,8 +46,6 @@ def elk_index(elk_index_name, index):
 def get_hash_list(filename):
 
     """ read the hash list from file and load into a list """
-
-    hash_list = []
 
     with open(filename, 'r') as hash_file:
         hash_list = hash_file.read().splitlines()
@@ -71,7 +69,7 @@ def init_query(af_ip, af_api_key, hashvalue):
                      "size": 1,
                      "from": 0,
                      "sort": {"create_date": {"order": "desc"}},
-                     "scope": "global",
+                     "scope": "public",
                      "artifactSource": "af"
                     }
 
@@ -88,7 +86,6 @@ def init_query(af_ip, af_api_key, hashvalue):
         print('\nCorrect errors and rerun the application\n')
         sys.exit()
 
-    search_dict = {}
     search_dict = json.loads(search.text)
 
     return search_dict
@@ -102,9 +99,8 @@ def get_query_results(af_ip, af_api_key, search_dict):
 
     cookie = search_dict['af_cookie']
     print(f'Tracking cookie is {cookie}')
-    query_status = ''
 
-    while query_status != 'FIN':
+    for timer in range(60):
 
         time.sleep(5)
         try:
@@ -121,13 +117,15 @@ def get_query_results(af_ip, af_api_key, search_dict):
 
         autofocus_results = results.json()
 
-        if 'total' in autofocus_results:
-            if autofocus_results['total'] == 0:
-                print('Now waiting for a hit...')
+        if 'total' in AFoutput_dict:
+            if AFoutput_dict['total'] == 0 and AFoutput_dict['af_in_progress'] == 'true':
+                print('     Now waiting for a hit...')
+            elif AFoutput_dict['total'] == 0 and AFoutput_dict['af_in_progress'] == 'false':
+                break
             else:
-                query_status = 'FIN'
+                break
         else:
-            print('Autofocus still queuing up the search...')
+            print('     Autofocus still queuing up the search...')
 
     return autofocus_results
 
