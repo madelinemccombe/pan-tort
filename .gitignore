@@ -101,7 +101,7 @@ hashenv/
 # mypy
 .mypy_cache/
 
-# stk specific
+# pan-tort specific
 hash/*.json
 hash/hash_list.txt
 hash/af_api.py
