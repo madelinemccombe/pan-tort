@@ -66,6 +66,13 @@ def get_hash_list():
 
     return hash_list
 
+def isactive(dict, searchFor):
+    for k in dict:
+        for v in dict[k]:
+            if searchFor in v:
+                return 'Active'
+    return 'Inactive'
+
 
 def multi_query(hashlist):
 
@@ -274,9 +281,37 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag):
                 sys.exit()
 
             results_analysis = json.loads(search.text)
-            hash_data_dict['dns_sig'] = results_analysis['coverage']['dns_sig']
-            hash_data_dict['wf_av_sig'] = results_analysis['coverage']['wf_av_sig']
-            hash_data_dict['fileurl_sig'] = results_analysis['coverage']['fileurl_sig']
+
+            sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
+
+            for type in sigtypes:
+                # add the full response to the doc
+                hash_data_dict[type] = results_analysis['coverage'][type]
+
+                signames = []
+                signamefield = f'{type}_names'
+                # get all the sig names to store in the doc
+                # estack seems to have issues with nested data found in the full output
+                for signame in  hash_data_dict[type]:
+                    signames = signame['name']
+
+                    #if list not empty then check if an active sig and store sig state per sig type
+                    if not signames:
+                        has_sig = isactive(signame, 'true')
+                    else:
+                        has_sig = 'None'
+
+                hash_data_dict[signamefield] = signames
+
+
+
+
+
+
+ #           hash_data_dict['dns_sig'] = results_analysis['coverage']['dns_sig']
+ #           hash_data_dict['wf_av_sig'] = results_analysis['coverage']['wf_av_sig']
+ #           hash_data_dict['fileurl_sig'] = results_analysis['coverage']['fileurl_sig']
+
 
             print('Sig coverage search complete')
             minute_pts_rem = results_analysis['bucket_info']['minute_points_remaining']
