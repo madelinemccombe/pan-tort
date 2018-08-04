@@ -61,4 +61,4 @@ def tag_query(total):
     return
 
 if __name__ == '__main__':
-    tag_query(2292)
+    tag_query(3000)
