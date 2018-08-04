@@ -45,5 +45,19 @@ Delete existing data in the index
     curl -XDELETE http://localhost:9200/sampleindex
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_cryptominer_mar25231_nosigs.json -H "Content-Type: application/x-ndjson"
 
+
+Elasticsearch delete by query example
+-------------------------------------
+
+POST hash-data/_delete_by_query
+{
+        "size": 10000,
+        "_source": "query_tag",
+"query": {
+        "match" : {
+            "query_tag" : "cryptominer_apr18"
+        }
+    }
+}
