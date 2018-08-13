@@ -1,1 +1,274 @@
-{"samples": [{"hashvalue": "e851a109ad1791507bdce8e69f7c8ab7c595b52f5332a09239094ca24c8e43a8", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "e851a109ad1791507bdce8e69f7c8ab7c595b52f5332a09239094ca24c8e43a8", "create_date": "2018-08-01T14:41:41", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "40e7e168d86786d5a4eed90faf18e979bb6950a02d6e2cfe27b0305845220692", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "40e7e168d86786d5a4eed90faf18e979bb6950a02d6e2cfe27b0305845220692", "create_date": "2018-08-02T02:12:58", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.RenameOnReboot", "Unit42.DisableRegedit", "Unit42.ImageFileExecutionOptionsPersistence", "Unit42.WindowlessIE", "490082.Modify_AttachmentManager", "Commodity.Jadtre"], "priority_tags_public": ["Commodity.Jadtre"], "priority_tags_name": ["Jadtre"]}, {"hashvalue": "9ea8b10a0c16b0a199cc79489d7efa0dd9bdaca3f2700088826c2ece34935c88", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "9ea8b10a0c16b0a199cc79489d7efa0dd9bdaca3f2700088826c2ece34935c88", "create_date": "2018-08-01T14:45:27", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "a2e40d30cd62bb986a0921fb2be75b5f8398407a30408122b00001393f9c00bb", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "a2e40d30cd62bb986a0921fb2be75b5f8398407a30408122b00001393f9c00bb", "create_date": "2018-08-01T14:44:07", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "4dbfcbead70247359d1a93dafc0282d1875c6b98cb13048b88096067328196c6", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "4dbfcbead70247359d1a93dafc0282d1875c6b98cb13048b88096067328196c6", "create_date": "2018-08-01T14:41:29", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "6fe5d3ed1c5d9aeafc34fa19b9ea84d972b3882f8de4bf8aeab348a07cdafe22", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "6fe5d3ed1c5d9aeafc34fa19b9ea84d972b3882f8de4bf8aeab348a07cdafe22", "create_date": "2018-08-02T03:37:18", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.ProcessInjection", "Unit42.ExplorerNetworkConnection"], "priority_tags_public": [], "priority_tags_name": []}, {"hashvalue": "e6c9006054a5cbd27a6597cb9917c01e7cee12d7ec94f9eef181606e8ba56db3", "verdict": "malware", "filetype": "RAR Archive", "filetype_group": "RAR Archive", "sha256hash": "e6c9006054a5cbd27a6597cb9917c01e7cee12d7ec94f9eef181606e8ba56db3", "create_date": "2018-07-30T00:35:51", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364"}, {"hashvalue": "68dee48431237bd4a9e7c15ddabbad47702879d0260b77c72083cda3b9085097", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "68dee48431237bd4a9e7c15ddabbad47702879d0260b77c72083cda3b9085097", "create_date": "2018-08-01T14:41:16", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "5b083ee81fa4e36463418769cdc14671ab3c42a475bfe4f0812a0652609f7106", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "5b083ee81fa4e36463418769cdc14671ab3c42a475bfe4f0812a0652609f7106", "create_date": "2018-08-02T03:50:28", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.ProcessInjection", "Unit42.ExplorerNetworkConnection"], "priority_tags_public": [], "priority_tags_name": []}, {"hashvalue": "28ac02440929a89df84b05a3666109e6079c94a558fefad5bef36a13a29bbe23", "verdict": "malware", "filetype": "RAR Archive", "filetype_group": "RAR Archive", "sha256hash": "28ac02440929a89df84b05a3666109e6079c94a558fefad5bef36a13a29bbe23", "create_date": "2018-07-30T09:51:30", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364"}, {"hashvalue": "e851a109ad1791507bdce8e69f7c8ab7c595b52f5332a09239094ca24c8e43a8", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "e851a109ad1791507bdce8e69f7c8ab7c595b52f5332a09239094ca24c8e43a8", "create_date": "2018-08-01T14:41:41", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "40e7e168d86786d5a4eed90faf18e979bb6950a02d6e2cfe27b0305845220692", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "40e7e168d86786d5a4eed90faf18e979bb6950a02d6e2cfe27b0305845220692", "create_date": "2018-08-02T02:12:58", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.RenameOnReboot", "Unit42.DisableRegedit", "Unit42.ImageFileExecutionOptionsPersistence", "Unit42.WindowlessIE", "490082.Modify_AttachmentManager", "Commodity.Jadtre"], "priority_tags_public": ["Commodity.Jadtre"], "priority_tags_name": ["Jadtre"]}, {"hashvalue": "9ea8b10a0c16b0a199cc79489d7efa0dd9bdaca3f2700088826c2ece34935c88", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "9ea8b10a0c16b0a199cc79489d7efa0dd9bdaca3f2700088826c2ece34935c88", "create_date": "2018-08-01T14:45:27", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "a2e40d30cd62bb986a0921fb2be75b5f8398407a30408122b00001393f9c00bb", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "a2e40d30cd62bb986a0921fb2be75b5f8398407a30408122b00001393f9c00bb", "create_date": "2018-08-01T14:44:07", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "4dbfcbead70247359d1a93dafc0282d1875c6b98cb13048b88096067328196c6", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "4dbfcbead70247359d1a93dafc0282d1875c6b98cb13048b88096067328196c6", "create_date": "2018-08-01T14:41:29", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "6fe5d3ed1c5d9aeafc34fa19b9ea84d972b3882f8de4bf8aeab348a07cdafe22", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "6fe5d3ed1c5d9aeafc34fa19b9ea84d972b3882f8de4bf8aeab348a07cdafe22", "create_date": "2018-08-02T03:37:18", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.ProcessInjection", "Unit42.ExplorerNetworkConnection"], "priority_tags_public": [], "priority_tags_name": []}, {"hashvalue": "e6c9006054a5cbd27a6597cb9917c01e7cee12d7ec94f9eef181606e8ba56db3", "verdict": "malware", "filetype": "RAR Archive", "filetype_group": "RAR Archive", "sha256hash": "e6c9006054a5cbd27a6597cb9917c01e7cee12d7ec94f9eef181606e8ba56db3", "create_date": "2018-07-30T00:35:51", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364"}, {"hashvalue": "68dee48431237bd4a9e7c15ddabbad47702879d0260b77c72083cda3b9085097", "verdict": "malware", "filetype": "ELF", "filetype_group": "ELF", "sha256hash": "68dee48431237bd4a9e7c15ddabbad47702879d0260b77c72083cda3b9085097", "create_date": "2018-08-01T14:41:16", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": []}, {"hashvalue": "5b083ee81fa4e36463418769cdc14671ab3c42a475bfe4f0812a0652609f7106", "verdict": "malware", "filetype": "PE", "filetype_group": "PE", "sha256hash": "5b083ee81fa4e36463418769cdc14671ab3c42a475bfe4f0812a0652609f7106", "create_date": "2018-08-02T03:50:28", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364", "all_tags": ["Unit42.ProcessInjection", "Unit42.ExplorerNetworkConnection"], "priority_tags_public": [], "priority_tags_name": []}, {"hashvalue": "28ac02440929a89df84b05a3666109e6079c94a558fefad5bef36a13a29bbe23", "verdict": "malware", "filetype": "RAR Archive", "filetype_group": "RAR Archive", "sha256hash": "28ac02440929a89df84b05a3666109e6079c94a558fefad5bef36a13a29bbe23", "create_date": "2018-07-30T09:51:30", "query_tag": "test", "query_time": "2018-08-08 11:58:22.691364"}]}
+{
+  "samples": [
+    {
+      "hashvalue": "5bd44a35094fe6f7794d895122ddfa62",
+      "sha256hash": "762a4f2bf5ea4ff72fce674da1adf29f0b9357be18de4cd992d79198c56bb514",
+      "create_date": "2017-09-01T16:46:24",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "ELF",
+      "filetype_group": "ELF",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "9bc4b66e68f08dde32e901287e8637fd",
+      "sha256hash": "2548d997fcc8f32e2aa9605e730af81dc18a03b2108971147f0d305b845eb03f",
+      "create_date": "2017-09-01T16:46:22",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "ELF",
+      "filetype_group": "ELF",
+      "all_tags": [
+        "Unit42.ELFMirai",
+        "Unit42.EirRCE"
+      ],
+      "priority_tags_public": [
+        "Unit42.ELFMirai"
+      ],
+      "priority_tags_name": [
+        "ELFMirai"
+      ],
+      "tag_groups": [
+        "Linux"
+      ]
+    },
+    {
+      "hashvalue": "5849bb9ceefee5ef295e7e966d0ba2b5",
+      "sha256hash": "72656911d3c500c9b231b4ac6b625f8bf946e151e114c929a060472fedb8499d",
+      "create_date": "2017-09-01T16:46:20",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "ELF",
+      "filetype_group": "ELF",
+      "all_tags": [
+        "Unit42.ELFMirai"
+      ],
+      "priority_tags_public": [
+        "Unit42.ELFMirai"
+      ],
+      "priority_tags_name": [
+        "ELFMirai"
+      ],
+      "tag_groups": [
+        "Linux"
+      ]
+    },
+    {
+      "hashvalue": "246475378c5bcd7ed7ece231827af999",
+      "sha256hash": "97dd9e460f3946eb0b89ae81a0c3890f529ed47f8bd9fd00f161cde2b5903184",
+      "create_date": "2017-09-01T16:46:24",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "ELF",
+      "filetype_group": "ELF",
+      "all_tags": [
+        "Unit42.ELFMirai",
+        "Unit42.EirRCE"
+      ],
+      "priority_tags_public": [
+        "Unit42.ELFMirai"
+      ],
+      "priority_tags_name": [
+        "ELFMirai"
+      ],
+      "tag_groups": [
+        "Linux"
+      ]
+    },
+    {
+      "hashvalue": "e722cde5555e1a74cf6bd83358d79b48",
+      "sha256hash": "d5d7809511c342dc0070da96145f2b6f685c36176715718870443e62f6966902",
+      "create_date": "2017-03-05T20:37:44",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "07bc4a941ec01e15ce67604f90ada1e3",
+      "sha256hash": "8dc40958ddcebe5fd8a167625b56810209c972c3152ec31c618bb445bcb95f09",
+      "create_date": "2017-03-05T21:31:00",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "938edc1fbe831172b7d51343e2127a01",
+      "sha256hash": "d1f2356a98d8c0f9665cb753f9feb01b3425cea40e90bcbf17db4b2de58a3863",
+      "create_date": "2017-03-05T16:53:13",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "a1a65d7f21eabd585c89dd7ee5b5527d",
+      "sha256hash": "1303bf3b98ce888f0944785f83b7ce54438b385246ec7cd5b5ad512f6fc9fbac",
+      "create_date": "2017-03-05T21:42:08",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "85d679c698199c75df4de812b138d7ef",
+      "sha256hash": "7ddd0ffbb16da85c3faca94256dd54799e46839dffbb5a4704dacbdd0be18b09",
+      "create_date": "2017-03-05T16:33:49",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "4e020ab7b72707c4391d3070ee1c668b",
+      "sha256hash": "131f5616b684a31f44071e3a86a48a715dd8f8301f332dc88eff552b8f9af9a1",
+      "create_date": "2017-03-05T21:14:29",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "8c27afe0de658a2f46232c4af0d18f3b",
+      "sha256hash": "11da643b0a40fe9f6d71f8c096be5f18472eb4dab69123465b7937227c0b5a8d",
+      "create_date": "2017-03-05T20:21:10",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "9261f7b4f1f977b84e8fb51173b02b60",
+      "sha256hash": "d86e0598c08d86fdcadea52b5da4d2ee8531c801884b83108bdaca42eaeb60b3",
+      "create_date": "2017-03-05T20:17:47",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "654941efd3cef663a262365ff3eb5c62",
+      "sha256hash": "4383d803daecc6550ea9ddb0b9fb361d8672003356869d0af482f94926cfbf3f",
+      "create_date": "2017-03-05T21:11:16",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "ebca0906e7fa7a9c89b0ce748eda5651",
+      "sha256hash": "ca7eb78abc0b25384ace77dcf644888ef7f0f26c1e35931c0d880608a34cd420",
+      "create_date": "2017-03-05T20:14:35",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Android APK",
+      "filetype_group": "Android",
+      "all_tags": [
+        "Unit42.SMSsend"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": [],
+      "tag_groups": [
+        "Android"
+      ]
+    },
+    {
+      "hashvalue": "d7446579c41f78d8cf520dfeea17840a",
+      "sha256hash": "fa803369648084e6cef6f55b537cadf1f394f1a3519a4e17a1b149b80c475bee",
+      "create_date": "2017-03-05T21:17:12",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Word 97 - 2003 Document",
+      "filetype_group": "Word",
+      "all_tags": [
+        "Unit42.WordCallsWinHTTPDll"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "0db960b5be45e5bd7ce143cef9e3ef06",
+      "sha256hash": "0e0f72408d58405f9b09cc4f9dd828bd57e285bd3d099de7e36178a95114f070",
+      "create_date": "2016-12-30T21:26:20",
+      "query_tag": "test",
+      "query_time": "2018-08-13 18:09:07.652708",
+      "verdict": "malware",
+      "filetype": "Microsoft Excel 97 - 2003 Document",
+      "filetype_group": "Excel",
+      "all_tags": [
+        "Unit42.Petya",
+        "Unit42.ModifyMBR"
+      ],
+      "priority_tags_public": [
+        "Unit42.Petya"
+      ],
+      "priority_tags_name": [
+        "Petya"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    }
+  ]
+}

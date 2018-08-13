@@ -2,11 +2,125 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71f90d9d-4943-41dc-9fb9-c8b447bbedbf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/docs/estack_bulk.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/estack_bulk.rst" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash/hash_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/hash_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash/hash_plus.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/hash_plus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2694.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2695.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2696.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2697.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2698.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2694.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2695.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2696.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2696.txt_quotes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2697.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2697.txt_quotes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2698.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_AntiVirusExternal-2698.txt_quotes" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/AV_updates/threatnames_test.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_data_plus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_plus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2694_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2694_jun_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2694_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2694_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2695_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2695_noAPI_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2695_noAPI_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2696_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2697_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_AVsigs_2698_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_blackvine2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_blackvine2018_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_coinminer_apr18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_coinminer_may2jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_crypto_marTest_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_apr1H_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_apr2H_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_jun18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_mar2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_mar25231_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_cryptominer_may18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_emotet_2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_ftp_apr-aug_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_ftp_apr_jul_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_healthcare_jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_macosx2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_msoffice_apr2jul2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_mssp_gold_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_mssp_gold_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_pdf_postnov2017_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_retail_2017-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_smbv1_2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_soap_fromjan2017_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_sofacy_2016-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_sofacy_2016-18_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_sofacy_2016to2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_testing_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_threatname-test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_threatnames-test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_time_test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_utilities_2016-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_zippyshare_2016to2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/upload_source_summary.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/upload_source_summary_2017to2018.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/upload_source_summary_manualapi.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2694_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2694_jun_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2694_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2694_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2695_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2695_noAPI_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2695_noAPI_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2697_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_AVsigs_2698_jun_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_blackvine2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_blackvine2018_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_coinminer_apr18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_coinminer_may2jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_crypto_marTest_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_apr18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_apr1H_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_apr2H_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_jun18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_mar18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_mar2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_mar25231_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_mar2H18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_cryptominer_may18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_emotet_2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_ftp_apr-aug_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_ftp_apr_jul_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_healthcare_jul18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_macosx2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_msoffice_apr2jul2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_mssp_gold_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_mssp_gold_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_pdf_postnov2017_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_retail_2017-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_smbv1_2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_soap_fromjan2017_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_sofacy_2016-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_sofacy_2016-18_sigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_sofacy_2016to2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_testing_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_threatname-test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_time_test_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_utilities_2016-18_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_zippyshare_2016to2018_nosigs.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/parse_threatnames.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/saved_queries/larger_query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/saved_queries/larger_query_shuffle.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/saved_queries/smaller_query.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary_stats/summary_counts.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary_stats/summary_source.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,78 +131,61 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hash/conf.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hash_list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/hash_list.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="scratch.json" pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
+            <state relative-caret-position="579">
               <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="estack_bulk.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
+      <file leaf-file-name="README.md" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor>
+                <markdownNavigatorState />
+              </second_editor>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary_counts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary_stats/summary_counts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1496">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
-              <folding>
-                <element signature="e#253#263#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_source.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary_stats/summary_source.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="158" column="31" selection-start-line="158" selection-start-column="31" selection-end-line="158" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="af_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/af_api.py">
+      <file leaf-file-name="filetypedata.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/filetypedata.py">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file leaf-file-name="hash_data_plus.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/hash/hash_data_plus.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="423" column="22" selection-start-line="423" selection-start-column="22" selection-end-line="423" selection-end-column="22" />
+            <state relative-caret-position="-1847">
+              <caret line="303" column="83" selection-start-line="303" selection-start-column="83" selection-end-line="303" selection-end-column="83" />
               <folding>
                 <element signature="e#253#263#0" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="556">
+              <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="requirements.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/requirements.txt">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file leaf-file-name="af_api.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/af_api.py">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -113,7 +210,6 @@
       <find>1000</find>
       <find>&quot;hashvalue</find>
       <find>af_out</find>
-      <find />
       <find>[</find>
       <find>Unit42.Gafgyt</find>
       <find>sha256</find>
@@ -124,6 +220,7 @@
       <find>hashvalue</find>
       <find>AVsigs_2694_jun</find>
       <find>Unit</find>
+      <find>running_total</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -143,7 +240,6 @@
         <option value="$PROJECT_DIR$/hash/panrc.py" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/hash/af_api.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/hash/readtagdata.py" />
         <option value="$PROJECT_DIR$/hash/hash_data_estack.json" />
         <option value="$PROJECT_DIR$/hash/filetypedata.py" />
@@ -174,6 +270,7 @@
         <option value="$PROJECT_DIR$/hash/hash_data.py" />
         <option value="$PROJECT_DIR$/hash/conf.py" />
         <option value="$PROJECT_DIR$/hash/hash_data_plus.py" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -207,17 +304,7 @@
             <path>
               <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
               <item name="pan-tort" type="462c0819:PsiDirectoryNode" />
-              <item name="docs" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pan-tort" type="462c0819:PsiDirectoryNode" />
               <item name="hash" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
-              <item name="pan-tort" type="462c0819:PsiDirectoryNode" />
-              <item name="summary_stats" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
@@ -240,11 +327,11 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/hash" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/summary_stats" />
+      <recent name="$PROJECT_DIR$/hash" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/hash" />
     </key>
   </component>
@@ -291,35 +378,50 @@
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info anchor="right" id="SciView" order="3" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31666666" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30899706" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="bottom" id="Python Console" order="10" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" id="Database" order="4" />
       <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3897436" />
       <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
-      <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,101 +431,27 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_sigs.json" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="103" column="10" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/requests/sessions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="617" selection-start-line="617" selection-end-line="617" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_cryptominer_mar18_nosigs.json" />
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_public.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_2014_2018.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_public.csv" />
+    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats.csv" />
+    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_2014_2018.csv" />
     <entry file="file://$PROJECT_DIR$/hash/threatnames.text" />
-    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2694.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11788">
-          <caret line="534" selection-start-line="534" selection-end-line="534" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2695.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-618" />
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2694.html" />
+    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2695.html" />
     <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_test_nosigs.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_test_nosigs.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt_quotes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="499" column="31" lean-forward="true" selection-end-line="499" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatnames-test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatname-test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2695_noAPI_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt_quotes" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_test.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatnames-test_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatname-test_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2695_noAPI_nosigs.json" />
     <entry file="file://$PROJECT_DIR$/hash/tagdata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -431,112 +459,32 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="48932" column="22" selection-start-line="48932" selection-start-column="22" selection-end-line="48932" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2695_noAPI_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_sigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2696_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41914">
-          <caret line="2803" column="231" selection-start-line="2803" selection-start-column="231" selection-end-line="2803" selection-end-column="231" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2697_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2694.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8000" column="23" selection-start-line="8000" selection-end-line="8000" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/parse_threatnames.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-548">
-          <caret column="13" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2695_noAPI_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2696_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2697_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2694.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/parse_threatnames.py" />
     <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="960">
+        <state relative-caret-position="579">
           <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_blackvine2018_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/smaller_query.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="437" column="17" selection-end-line="447" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/larger_query_shuffle.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/larger_query.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="442" column="19" lean-forward="true" selection-start-line="442" selection-start-column="19" selection-end-line="442" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_testing_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_soap_fromjan2017_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_2017to2018.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6495">
-          <caret line="433" column="3" selection-start-line="433" selection-start-column="3" selection-end-line="433" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_manualapi.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_blackvine2018_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/smaller_query.json" />
+    <entry file="file://$PROJECT_DIR$/hash/larger_query_shuffle.json" />
+    <entry file="file://$PROJECT_DIR$/hash/larger_query.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_testing_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_soap_fromjan2017_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_2017to2018.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_manualapi.json" />
     <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -548,9 +496,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1496">
           <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#253#263#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -564,42 +509,44 @@
     <entry file="file://$PROJECT_DIR$/hash/af_api.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_plus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="38" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <element signature="e#253#263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/hash_plus.py" />
     <entry file="file://$PROJECT_DIR$/hash/hash_data.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_list.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_list.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/conf.py" />
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/hash/filetypedata.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/hash/hash_data_plus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="423" column="22" selection-start-line="423" selection-start-column="22" selection-end-line="423" selection-end-column="22" />
+        <state relative-caret-position="-1847">
+          <caret line="303" column="83" selection-start-line="303" selection-start-column="83" selection-end-line="303" selection-end-column="83" />
           <folding>
             <element signature="e#253#263#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/conf.py">
+    <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="556">
+          <caret line="108" column="12" selection-start-line="108" selection-start-column="12" selection-end-line="108" selection-end-column="12" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/requirements.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
 </project>
