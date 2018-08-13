@@ -1,0 +1,5950 @@
+{
+  "samples": [
+    {
+      "hashvalue": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "sha256hash": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "create_date": "2018-08-03T05:54:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "sha256hash": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "create_date": "2018-08-03T00:34:25",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "sha256hash": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "create_date": "2018-08-02T19:30:55",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "sha256hash": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "create_date": "2018-08-02T20:32:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "sha256hash": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "create_date": "2018-08-03T05:54:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "sha256hash": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "create_date": "2018-08-03T00:34:25",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "sha256hash": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "create_date": "2018-08-02T19:30:55",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "sha256hash": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "create_date": "2018-08-02T20:32:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "sha256hash": "c30169c9a051a7f186a320cc1ba28627f4c18f7bd34f75217f64b9396c8b665b",
+      "create_date": "2018-08-03T05:54:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "sha256hash": "86d013ec4f6e563c73a9e880605f5b364b9bc53cdb9b4fe717d56f8728c537bc",
+      "create_date": "2018-08-03T00:34:25",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_public": [
+        "Unit42.Emotet"
+      ],
+      "priority_tags_name": [
+        "Emotet"
+      ],
+      "tag_groups": [
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "sha256hash": "1456b3c44cf976378016bfa3424997e2aed929e4fe42c92e17d2882f914946fd",
+      "create_date": "2018-08-02T19:30:55",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "sha256hash": "d1a7071783a6720b610883e3213b961e11013f510cae8ee6e6b3aadbc2a69bb6",
+      "create_date": "2018-08-02T20:32:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ProcessInjection",
+        "Unit42.ExplorerNetworkConnection"
+      ],
+      "priority_tags_public": [],
+      "priority_tags_name": []
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "sha256hash": "a220cf19f1cb4641acca7f7d2e00369607677086198274eb1e48d79492169719",
+      "create_date": "2018-08-03T07:00:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "sha256hash": "e61154c1e279341110fef063ca723b65acfbf001ca7e312ec59d7f040d5e35cc",
+      "create_date": "2018-08-03T06:58:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "sha256hash": "221cb2f62d397f046dafccc8df21079dd771157ca2a8931aaddd97ddb1f385c4",
+      "create_date": "2018-08-03T07:00:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "sha256hash": "c688bcc9c0a9f9d2ee5fdd94f5e5631cf50935da19e1f24e0f383ddfab51caa6",
+      "create_date": "2018-08-03T07:00:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "sha256hash": "b79c2259ffb2bf44de254dca8ca15832a0d50da12367d0a62edca154951cbcae",
+      "create_date": "2018-08-03T07:00:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "sha256hash": "e8b5e89361113f675b0ba0b22db7f157068a3306cbb8a976490ebfbcb8638b48",
+      "create_date": "2018-08-03T06:59:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "sha256hash": "5a6b0aecfaa8ece1feeda0c0e1f8ef606c3c3b10ad3592f2b165c0be5e4dde01",
+      "create_date": "2018-08-03T06:58:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "sha256hash": "0ee30b1beb6deee644361796956aa44f8ea2e77645a63a351a958cfdeb9f1ff2",
+      "create_date": "2018-08-03T06:58:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "sha256hash": "f71510dd92cccd7ce55ebb2b176c38a9ddf347d640db31d0c082e2eb1db0b870",
+      "create_date": "2018-08-03T07:00:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "sha256hash": "520b114f9e3f431dcd08c238b9101316018c58c99d7d6333a1bb60874aefd6fe",
+      "create_date": "2018-08-03T07:00:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.ModifyWindowsFirewall",
+        "Unit42.ResolveSinkholedDomain",
+        "Unit42.RenameOnReboot",
+        "Commodity.Virut"
+      ],
+      "priority_tags_public": [
+        "Commodity.Virut"
+      ],
+      "priority_tags_name": [
+        "Virut"
+      ],
+      "tag_groups": [
+        "FileInfector"
+      ]
+    },
+    {
+      "hashvalue": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "sha256hash": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "create_date": "2018-08-02T23:07:41",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "sha256hash": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "create_date": "2018-08-03T05:49:59",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "sha256hash": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "create_date": "2018-08-03T05:50:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "sha256hash": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "create_date": "2018-08-02T11:51:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "sha256hash": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "create_date": "2018-08-02T16:51:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "sha256hash": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "create_date": "2018-08-02T12:09:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "sha256hash": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "create_date": "2018-08-02T11:58:56",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "sha256hash": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "create_date": "2018-08-03T05:52:39",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "sha256hash": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "create_date": "2018-08-03T05:50:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "sha256hash": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "create_date": "2018-08-02T23:07:41",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "sha256hash": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "create_date": "2018-08-03T05:49:59",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "sha256hash": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "create_date": "2018-08-03T05:50:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "sha256hash": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "create_date": "2018-08-02T11:51:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "sha256hash": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "create_date": "2018-08-02T16:51:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "sha256hash": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "create_date": "2018-08-02T12:09:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "sha256hash": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "create_date": "2018-08-02T11:58:56",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "sha256hash": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "create_date": "2018-08-03T05:52:39",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "sha256hash": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "create_date": "2018-08-03T05:50:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "sha256hash": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "create_date": "2018-08-02T23:07:41",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "sha256hash": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "create_date": "2018-08-03T05:49:59",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "sha256hash": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "create_date": "2018-08-03T05:50:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "sha256hash": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "create_date": "2018-08-02T11:51:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "sha256hash": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "create_date": "2018-08-02T16:51:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "sha256hash": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "create_date": "2018-08-02T12:09:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "sha256hash": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "create_date": "2018-08-02T11:58:56",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "sha256hash": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "create_date": "2018-08-03T05:52:39",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "sha256hash": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "create_date": "2018-08-03T05:50:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "sha256hash": "2f07b0c5c78c3ce158afb26a5a21680a915d9eb6c3591c613e7b2610868edd9d",
+      "create_date": "2018-08-02T23:07:41",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "sha256hash": "2e358dd4d5ba5c0e21e8f2dde94d65df6326e67c6edab6992cb9a23d32eb62e2",
+      "create_date": "2018-08-03T05:49:59",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "sha256hash": "114632ad13717b57022cb1c0490f96fa7e32cb37af6c446235621ee15ccb6153",
+      "create_date": "2018-08-03T05:50:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "sha256hash": "5358c7eb2a91bea4cac15df5bac2cbfd279010dffaff8723d04b49a194f50863",
+      "create_date": "2018-08-02T11:51:21",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "sha256hash": "0e6809163a6d2539c4c7f202a7a73cb5ccfcc39057c2972823857aa10dcb5325",
+      "create_date": "2018-08-02T16:51:35",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "sha256hash": "b9be55d9b036a25c1156edfd7ebfb8943f3cbf8ecd52a8657ab06660364462d5",
+      "create_date": "2018-08-02T12:09:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "sha256hash": "2a74f47c900b244a679a532b90a3e4495ef86d3bf83a127bfc671e2b0bc0b5b9",
+      "create_date": "2018-08-02T11:58:56",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "sha256hash": "d12b2ad163572fdf84760a43494e1e9d4f6bb5b2edff065cd65fb85b3e25cc87",
+      "create_date": "2018-08-03T05:52:39",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "sha256hash": "82678668c940aac3d1a6adcdf38f3026c4e31783b4cc59783b39b5b121f2422a",
+      "create_date": "2018-08-03T05:50:24",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "sha256hash": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "create_date": "2018-08-03T04:48:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "sha256hash": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "create_date": "2018-08-03T08:31:09",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "sha256hash": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "create_date": "2018-08-03T04:48:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "sha256hash": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "create_date": "2018-08-03T03:02:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "sha256hash": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "create_date": "2018-08-02T16:12:38",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "sha256hash": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "create_date": "2018-08-03T01:45:44",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "sha256hash": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "create_date": "2018-08-03T00:51:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "sha256hash": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "create_date": "2018-08-03T10:59:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "sha256hash": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "create_date": "2018-08-03T08:31:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "sha256hash": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "create_date": "2018-08-03T00:51:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "sha256hash": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "create_date": "2018-08-03T04:48:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "sha256hash": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "create_date": "2018-08-03T08:31:09",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "sha256hash": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "create_date": "2018-08-03T04:48:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "sha256hash": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "create_date": "2018-08-03T03:02:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "sha256hash": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "create_date": "2018-08-02T16:12:38",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "sha256hash": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "create_date": "2018-08-03T01:45:44",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "sha256hash": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "create_date": "2018-08-03T00:51:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "sha256hash": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "create_date": "2018-08-03T10:59:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "sha256hash": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "create_date": "2018-08-03T08:31:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "sha256hash": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "create_date": "2018-08-03T00:51:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "sha256hash": "e1deb0a90bd7e8eeec01bfade426b633098b24d64200dd6c1943dad17cf0bed1",
+      "create_date": "2018-08-03T04:48:14",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "sha256hash": "08be6af9709a2b8bbc02962f25c8dca69b09290aabd54563215a8f7f7924c1cb",
+      "create_date": "2018-08-03T08:31:09",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "sha256hash": "b9c4d20e2d0621a2cc91b1f8ee988d6c9004f163be35caaa95be26007312d4e4",
+      "create_date": "2018-08-03T04:48:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "sha256hash": "9178a023fbde121e3cc9eb94ff78d507670dd740ee0650fb5c4f3f33227597ec",
+      "create_date": "2018-08-03T03:02:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "sha256hash": "9678616bbac94899665126e1802b02651c9655eb7d83c7505593dd360b834f73",
+      "create_date": "2018-08-02T16:12:38",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "sha256hash": "20a5ebcdf4ab91a79f32c88193982abb115e70f453690caff4c9776185e71fe2",
+      "create_date": "2018-08-03T01:45:44",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "sha256hash": "288bef07de78696145ee5e9141941f5fc3253676a07a9a3b1f2f8762dd69d44e",
+      "create_date": "2018-08-03T00:51:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "sha256hash": "4f19b999d3535425e8407e2f5cdacbeabc0bbfd06d88341abb350c11dc54ce78",
+      "create_date": "2018-08-03T10:59:37",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "sha256hash": "37ed47077ef82490d8121d21761d11874348b728eb98b13a676aec5a9ae38649",
+      "create_date": "2018-08-03T08:31:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "sha256hash": "08963f5ffcf2bf63ee4650f8f017b39c2824c8fb1f2eb413ed39bc2f080b8edd",
+      "create_date": "2018-08-03T00:51:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_public": [
+        "Commodity.Sarodip"
+      ],
+      "priority_tags_name": [
+        "Sarodip"
+      ]
+    },
+    {
+      "hashvalue": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "sha256hash": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "sha256hash": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "sha256hash": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "sha256hash": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "sha256hash": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "sha256hash": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "sha256hash": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "sha256hash": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "sha256hash": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "sha256hash": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "create_date": "2018-08-02T20:13:02",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "sha256hash": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "sha256hash": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "sha256hash": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "sha256hash": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "sha256hash": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "sha256hash": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "sha256hash": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "sha256hash": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "sha256hash": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "sha256hash": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "create_date": "2018-08-02T20:13:02",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "sha256hash": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "sha256hash": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "sha256hash": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "sha256hash": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "sha256hash": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "sha256hash": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "sha256hash": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "sha256hash": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "sha256hash": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "sha256hash": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "create_date": "2018-08-02T20:13:02",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "sha256hash": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "sha256hash": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "sha256hash": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "sha256hash": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "sha256hash": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "sha256hash": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "sha256hash": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "sha256hash": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "sha256hash": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "sha256hash": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "create_date": "2018-08-02T20:13:02",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "sha256hash": "4801be6a2eab5a52f70d7e8a8d6d3e5e886692f62277eb1749aa073056da6697",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "sha256hash": "b01b2e8b6561f7cb486e699c22e84f48e663f75678b18d3d7cb0cb465db24fe2",
+      "create_date": "2018-08-02T20:13:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "sha256hash": "79488d4924a79b3951c88805d7e479ebbb21a3658ade2511ecd183ac13e6e1da",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "sha256hash": "0c6157e26196630221963c5c6e16c65b4cda69c4b3dfbc5a7125141314751827",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "sha256hash": "0389b74fd0c4fe1dc3eb77abb1df82953d540506c7c04b48d4479900249bbdab",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "sha256hash": "a91565d23074c77c70c991107b5fe4f3292e8e7c25dd120940e181eb95252151",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "sha256hash": "15b283ea9a6eeb61940ddf590e40aec4bd09381b74b0a9a5158f9c1a7e4c5cdc",
+      "create_date": "2018-08-02T20:13:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "sha256hash": "2f66954a8309fdf9c57b130d240119ce5f96aba95e4fec641d959d66697058df",
+      "create_date": "2018-08-02T20:13:07",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "sha256hash": "10f2df308b8b2caad8ccfe286c9d10fc04ddec4191b38dbbf8b25b29f5e6c794",
+      "create_date": "2018-08-02T20:13:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "sha256hash": "555633eefafc033b8b8a942d101f419cdc50b1430e06bb9aba27e5bb742e35a7",
+      "create_date": "2018-08-02T20:13:02",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "sha256hash": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "create_date": "2018-08-02T11:35:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "sha256hash": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "create_date": "2018-08-03T08:41:12",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "sha256hash": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "create_date": "2018-08-02T18:32:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "sha256hash": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "create_date": "2018-08-02T11:46:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "sha256hash": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "create_date": "2018-08-03T08:31:33",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "sha256hash": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "create_date": "2018-08-03T05:50:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "sha256hash": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "create_date": "2018-08-02T16:21:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "sha256hash": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "create_date": "2018-08-02T08:23:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "sha256hash": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "create_date": "2018-08-02T18:54:00",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "sha256hash": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "create_date": "2018-08-03T07:00:15",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "sha256hash": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "create_date": "2018-08-02T11:35:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "sha256hash": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "create_date": "2018-08-03T08:41:12",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "sha256hash": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "create_date": "2018-08-02T18:32:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "sha256hash": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "create_date": "2018-08-02T11:46:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "sha256hash": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "create_date": "2018-08-03T08:31:33",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "sha256hash": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "create_date": "2018-08-03T05:50:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "sha256hash": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "create_date": "2018-08-02T16:21:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "sha256hash": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "create_date": "2018-08-02T08:23:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "sha256hash": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "create_date": "2018-08-02T18:54:00",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "sha256hash": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "create_date": "2018-08-03T07:00:15",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "sha256hash": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "create_date": "2018-08-02T11:35:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "sha256hash": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "create_date": "2018-08-03T08:41:12",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "sha256hash": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "create_date": "2018-08-02T18:32:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "sha256hash": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "create_date": "2018-08-02T11:46:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "sha256hash": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "create_date": "2018-08-03T08:31:33",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "sha256hash": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "create_date": "2018-08-03T05:50:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "sha256hash": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "create_date": "2018-08-02T16:21:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "sha256hash": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "create_date": "2018-08-02T08:23:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "sha256hash": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "create_date": "2018-08-02T18:54:00",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "sha256hash": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "create_date": "2018-08-03T07:00:15",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "sha256hash": "a316355b65a177865332bc94621c8b973ce971bdce57a67393d2ab99091e4b28",
+      "create_date": "2018-08-02T11:35:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "sha256hash": "3032f594a0f5cca73c284326ace677e261a47954a40f69a4df2e2911cf3eab3c",
+      "create_date": "2018-08-03T08:41:12",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "sha256hash": "d7e9a6b1ed50f22e742da2a1008a17f3d4097cc3b876d76e0c0fe08f670d3972",
+      "create_date": "2018-08-02T18:32:29",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "sha256hash": "27e187b19149d368b0f5d8096e8645e222e696196c2550040118ce8f97357961",
+      "create_date": "2018-08-02T11:46:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "sha256hash": "8613c8e07b74d5843e4db43a9806b21f58691aeae9b64384b58a9a9c5b8dd31f",
+      "create_date": "2018-08-03T08:31:33",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "sha256hash": "a68872f06f42d4ee3ba00dd12c3fe8b8e5530a267fabffe9d8e75c54fd4cb582",
+      "create_date": "2018-08-03T05:50:01",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "sha256hash": "0fdd772471b31a5f75f35b986a51085aee4208b7dcdfde14c924c7dd6ce5f39f",
+      "create_date": "2018-08-02T16:21:05",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "sha256hash": "5f2d95c4c56e5e972714abda529119944091b959d710e9ee3fe02d586760385b",
+      "create_date": "2018-08-02T08:23:11",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "sha256hash": "94c6eba861b11383e97ac1d04c105a3b557c490b8af0ead5d48ca69214ec3de3",
+      "create_date": "2018-08-02T18:54:00",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "sha256hash": "4067d7edf3b50b0a2d6598fd378c9760850195f37f7b0672449baebc84847dea",
+      "create_date": "2018-08-03T07:00:15",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "01659d6aeaa7345f71dbe4d66baa035107c3fa88db8bd95d684af2d583e70d5e",
+      "sha256hash": "01659d6aeaa7345f71dbe4d66baa035107c3fa88db8bd95d684af2d583e70d5e",
+      "create_date": "2018-06-25T21:11:40",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "sha256hash": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "create_date": "2018-08-03T03:57:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "sha256hash": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "create_date": "2018-08-03T04:02:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "sha256hash": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "create_date": "2018-08-03T04:07:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "sha256hash": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "create_date": "2018-08-03T04:04:57",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "sha256hash": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "create_date": "2018-08-03T04:01:54",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "sha256hash": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "create_date": "2018-08-03T04:01:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "sha256hash": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "create_date": "2018-08-03T03:56:17",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "sha256hash": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "create_date": "2018-08-03T04:02:26",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE"
+    },
+    {
+      "hashvalue": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "sha256hash": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "sha256hash": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "sha256hash": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "create_date": "2018-08-03T03:57:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "sha256hash": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "create_date": "2018-08-03T04:02:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "sha256hash": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "create_date": "2018-08-03T04:07:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "sha256hash": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "create_date": "2018-08-03T04:04:57",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "sha256hash": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "create_date": "2018-08-03T04:01:54",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "sha256hash": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "create_date": "2018-08-03T04:01:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "sha256hash": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "create_date": "2018-08-03T03:56:17",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "sha256hash": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "create_date": "2018-08-03T04:02:26",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE"
+    },
+    {
+      "hashvalue": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "sha256hash": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "sha256hash": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "sha256hash": "0a7ed4aa9dccf0c9242473d565d20dc9ff397e19edc12b907ebe2222bbf95461",
+      "create_date": "2018-08-03T03:57:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "sha256hash": "67807e8047929bae3c0f7fbe6b4243e6e57c451f8acbc2b91e1ee1f1a22de609",
+      "create_date": "2018-08-03T04:02:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "sha256hash": "698e67bd7683a386bfa11b2b8ef3a023521e0c5c6cd13318f7d7648ac5a11c7d",
+      "create_date": "2018-08-03T04:07:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "sha256hash": "abfcf0d910055792860246b97e1139cf15067a247748505201a7ab580129ba3b",
+      "create_date": "2018-08-03T04:04:57",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "sha256hash": "aa10bfdd5f40f081d6614735584cd9235dc89883aeb769f074b1b3477d707aa1",
+      "create_date": "2018-08-03T04:01:54",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "sha256hash": "594f9733f99e4ce261c333b82984d4c9b42bacd50481ca8610edee06752f1d29",
+      "create_date": "2018-08-03T04:01:03",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "sha256hash": "3925487256c98190fff7ec2bd2ea9d763b81d78dcee41df83ee5c5a94d27359c",
+      "create_date": "2018-08-03T03:56:17",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "sha256hash": "0435e7e6c5b0bcad47c51415915ade5982ff34fbb1c327b4c11d80908c4a0c83",
+      "create_date": "2018-08-03T04:02:26",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE"
+    },
+    {
+      "hashvalue": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "sha256hash": "4d11447912c3af379214683e07f92d4f797842ef9e0e99a9621bd597ce82050b",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "sha256hash": "728ae58630b05b37c5592e05dd45e2bb0279ca7da3ad55012d4c46c27e16fab2",
+      "create_date": "2018-08-03T04:06:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "sha256hash": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "create_date": "2018-08-02T08:33:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "sha256hash": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "create_date": "2018-08-03T09:15:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "sha256hash": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "create_date": "2018-08-03T09:13:53",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "sha256hash": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "create_date": "2018-08-03T09:14:04",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "sha256hash": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "create_date": "2018-08-03T09:13:27",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "sha256hash": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "create_date": "2018-08-03T09:14:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "sha256hash": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "create_date": "2018-08-02T08:30:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "sha256hash": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "create_date": "2018-08-03T09:15:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "sha256hash": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "create_date": "2018-08-03T09:13:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "sha256hash": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "create_date": "2018-08-03T09:13:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "sha256hash": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "create_date": "2018-08-02T08:33:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "sha256hash": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "create_date": "2018-08-03T09:15:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "sha256hash": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "create_date": "2018-08-03T09:13:53",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "sha256hash": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "create_date": "2018-08-03T09:14:04",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "sha256hash": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "create_date": "2018-08-03T09:13:27",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "sha256hash": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "create_date": "2018-08-03T09:14:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "sha256hash": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "create_date": "2018-08-02T08:30:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "sha256hash": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "create_date": "2018-08-03T09:15:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "sha256hash": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "create_date": "2018-08-03T09:13:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "sha256hash": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "create_date": "2018-08-03T09:13:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "sha256hash": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "create_date": "2018-08-02T08:33:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "sha256hash": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "create_date": "2018-08-03T09:15:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "sha256hash": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "create_date": "2018-08-03T09:13:53",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "sha256hash": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "create_date": "2018-08-03T09:14:04",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "sha256hash": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "create_date": "2018-08-03T09:13:27",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "sha256hash": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "create_date": "2018-08-03T09:14:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "sha256hash": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "create_date": "2018-08-02T08:30:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "sha256hash": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "create_date": "2018-08-03T09:15:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "sha256hash": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "create_date": "2018-08-03T09:13:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "sha256hash": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "create_date": "2018-08-03T09:13:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "sha256hash": "bd1f32601f0920ec3c646e4c57ccb7d398a8a2ab23d4e867b7b97d6af3aebd5a",
+      "create_date": "2018-08-02T08:33:47",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "sha256hash": "acd4e76407fb014e607724d68e0d6a5faac927eb7c1152a548e62a6b2baaa90e",
+      "create_date": "2018-08-03T09:15:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.HttpNoUserAgent",
+        "Unit42.VirLock"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "sha256hash": "916baed36e68ced1f78bda8152ef5aecf3be91adc22cd6b1f315b269ad8ae4ac",
+      "create_date": "2018-08-03T09:13:53",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": []
+    },
+    {
+      "hashvalue": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "sha256hash": "b4c32950966c47bc3b83972d48cd405acca56dd31a7eec16d8a7cca4f4303662",
+      "create_date": "2018-08-03T09:14:04",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "sha256hash": "345bc45d4bc93ae90638faba2f6d7970945ba856da171a545385268336231f54",
+      "create_date": "2018-08-03T09:13:27",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "sha256hash": "216507456c35dc3cb47a0aa4d780098743fcd2e8a0294d8d7d6de0b6cb57d7c3",
+      "create_date": "2018-08-03T09:14:06",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "sha256hash": "0fade794405338c0f3da498750fd888e659604fbf1f48fa31cdf9c78053de719",
+      "create_date": "2018-08-02T08:30:42",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "sha256hash": "7b2897edf471108e74ec704d59c198f3f520319f1505f7b9e5e05c0e9a3c6b8b",
+      "create_date": "2018-08-03T09:15:13",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "sha256hash": "d3e3ff5e351c57ea289b792f49bd5e1944139a224b7b1e01fe3831bdb70cc099",
+      "create_date": "2018-08-03T09:13:58",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "sha256hash": "840fb3cf85cd02cddc14a89ef59b8e826668ae7782b87d7aef6e27724049eff5",
+      "create_date": "2018-08-03T09:13:49",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Unit42.DisableUAC",
+        "Unit42.VirLock",
+        "Unit42.HttpNoUserAgent"
+      ],
+      "priority_tags_public": [
+        "Unit42.VirLock"
+      ],
+      "priority_tags_name": [
+        "VirLock"
+      ],
+      "tag_groups": [
+        "Ransomware"
+      ]
+    },
+    {
+      "hashvalue": "224edc8394b4dc8499ee1a6aa4a3e6290336e7bd1934840be5b6c2ca1ec87a7b",
+      "sha256hash": "224edc8394b4dc8499ee1a6aa4a3e6290336e7bd1934840be5b6c2ca1ec87a7b",
+      "create_date": "2018-08-02T13:52:25",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "7979f9962d8bd36b474b86c87d797babd271dcb42a7f6440d77ff791bc3bb11c",
+      "sha256hash": "7979f9962d8bd36b474b86c87d797babd271dcb42a7f6440d77ff791bc3bb11c",
+      "create_date": "2018-08-02T13:47:57",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "34468ec3d14f75ca29d5a9e1da6073b59e2c73104015684c6fe7e3f4ab92ace1",
+      "sha256hash": "34468ec3d14f75ca29d5a9e1da6073b59e2c73104015684c6fe7e3f4ab92ace1",
+      "create_date": "2018-08-02T13:49:30",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "f9595e9eb56fba0ff7519a0b482803c9a0880c1a0934e2bf100141cedcc7be27",
+      "sha256hash": "f9595e9eb56fba0ff7519a0b482803c9a0880c1a0934e2bf100141cedcc7be27",
+      "create_date": "2018-08-03T10:38:31",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "791351b20be8d61ec39ed92a5d249b5e97c85d04f57a8a7e4e11c61b8bf9313a",
+      "sha256hash": "791351b20be8d61ec39ed92a5d249b5e97c85d04f57a8a7e4e11c61b8bf9313a",
+      "create_date": "2018-08-03T06:47:26",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "5f2a7a8baf1ce9c5cc06eee7629039d861de9ab69ee928f64cc7f57455a42b28",
+      "sha256hash": "5f2a7a8baf1ce9c5cc06eee7629039d861de9ab69ee928f64cc7f57455a42b28",
+      "create_date": "2018-08-03T06:58:20",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "f6ff1d719fab37931e4cf04df685b22c45275a7d8e1b29278c3490c9a10a7629",
+      "sha256hash": "f6ff1d719fab37931e4cf04df685b22c45275a7d8e1b29278c3490c9a10a7629",
+      "create_date": "2018-08-03T07:05:46",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "77a6fea0119c6f55a20912dd3724bfa6d364a29feb1c0c2881c8b93ba351bdc1",
+      "sha256hash": "77a6fea0119c6f55a20912dd3724bfa6d364a29feb1c0c2881c8b93ba351bdc1",
+      "create_date": "2018-08-02T19:41:40",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "PE",
+      "filetype_group": "PE",
+      "all_tags": [
+        "Commodity.Ramnit",
+        "Commodity.FlyStudio"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit",
+        "Commodity.FlyStudio"
+      ],
+      "priority_tags_name": [
+        "Ramnit",
+        "FlyStudio"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    },
+    {
+      "hashvalue": "24075ecb34eaa65283316e25ba17f15874deb4c8dbfa59645f452d31f48229ee",
+      "sha256hash": "24075ecb34eaa65283316e25ba17f15874deb4c8dbfa59645f452d31f48229ee",
+      "create_date": "2018-08-03T07:07:34",
+      "query_tag": "AVsigs_2695_jun",
+      "query_time": "2018-08-08 17:38:19.653514",
+      "verdict": "malware",
+      "filetype": "DLL",
+      "filetype_group": "DLL",
+      "all_tags": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_public": [
+        "Commodity.Ramnit"
+      ],
+      "priority_tags_name": [
+        "Ramnit"
+      ],
+      "tag_groups": [
+        "FileInfector",
+        "BankingTrojan"
+      ]
+    }
+  ]
+}

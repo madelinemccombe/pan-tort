@@ -1,0 +1,434 @@
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Firewall", "malware_monthly_count": 409203, "malware_daily_average": 13200, "all_verdict_monthly_count": 58398844, "all_verdict_daily_average": 1883833}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Proofpoint", "malware_monthly_count": 1280, "malware_daily_average": 41, "all_verdict_monthly_count": 101749, "all_verdict_daily_average": 3282}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Traps", "malware_monthly_count": 32484, "malware_daily_average": 1047, "all_verdict_monthly_count": 143384, "all_verdict_daily_average": 4625}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 27, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "Traps Android", "malware_monthly_count": 4, "malware_daily_average": 0, "all_verdict_monthly_count": 146, "all_verdict_daily_average": 4}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-01", "upload_source": "WF Appliance", "malware_monthly_count": 21275, "malware_daily_average": 686, "all_verdict_monthly_count": 28762, "all_verdict_daily_average": 927}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Firewall", "malware_monthly_count": 189556, "malware_daily_average": 6536, "all_verdict_monthly_count": 74797376, "all_verdict_daily_average": 2579219}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Proofpoint", "malware_monthly_count": 4319, "malware_daily_average": 148, "all_verdict_monthly_count": 334680, "all_verdict_daily_average": 11540}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Traps", "malware_monthly_count": 28199, "malware_daily_average": 972, "all_verdict_monthly_count": 197775, "all_verdict_daily_average": 6819}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 37, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "Traps Android", "malware_monthly_count": 7, "malware_daily_average": 0, "all_verdict_monthly_count": 227, "all_verdict_daily_average": 7}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-02", "upload_source": "WF Appliance", "malware_monthly_count": 7519, "malware_daily_average": 259, "all_verdict_monthly_count": 11110, "all_verdict_daily_average": 383}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Firewall", "malware_monthly_count": 202697, "malware_daily_average": 6538, "all_verdict_monthly_count": 90253717, "all_verdict_daily_average": 2911410}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Proofpoint", "malware_monthly_count": 207, "malware_daily_average": 6, "all_verdict_monthly_count": 442747, "all_verdict_daily_average": 14282}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Traps", "malware_monthly_count": 77997, "malware_daily_average": 2516, "all_verdict_monthly_count": 404039, "all_verdict_daily_average": 13033}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 50, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "Traps Android", "malware_monthly_count": 17, "malware_daily_average": 0, "all_verdict_monthly_count": 391, "all_verdict_daily_average": 12}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-03", "upload_source": "WF Appliance", "malware_monthly_count": 15444, "malware_daily_average": 498, "all_verdict_monthly_count": 22783, "all_verdict_daily_average": 734}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Firewall", "malware_monthly_count": 281938, "malware_daily_average": 9397, "all_verdict_monthly_count": 88376023, "all_verdict_daily_average": 2945867}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Proofpoint", "malware_monthly_count": 5486, "malware_daily_average": 182, "all_verdict_monthly_count": 639926, "all_verdict_daily_average": 21330}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Traps", "malware_monthly_count": 29494, "malware_daily_average": 983, "all_verdict_monthly_count": 303410, "all_verdict_daily_average": 10113}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 26, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "Traps Android", "malware_monthly_count": 7, "malware_daily_average": 0, "all_verdict_monthly_count": 216, "all_verdict_daily_average": 7}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-04", "upload_source": "WF Appliance", "malware_monthly_count": 12770, "malware_daily_average": 425, "all_verdict_monthly_count": 15531, "all_verdict_daily_average": 517}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Firewall", "malware_monthly_count": 410261, "malware_daily_average": 13234, "all_verdict_monthly_count": 92100985, "all_verdict_daily_average": 2970999}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Proofpoint", "malware_monthly_count": 5317, "malware_daily_average": 171, "all_verdict_monthly_count": 1029714, "all_verdict_daily_average": 33216}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Traps", "malware_monthly_count": 8394, "malware_daily_average": 270, "all_verdict_monthly_count": 298627, "all_verdict_daily_average": 9633}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 91, "all_verdict_daily_average": 2}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "Traps Android", "malware_monthly_count": 9, "malware_daily_average": 0, "all_verdict_monthly_count": 359, "all_verdict_daily_average": 11}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-05", "upload_source": "WF Appliance", "malware_monthly_count": 10984, "malware_daily_average": 354, "all_verdict_monthly_count": 18579, "all_verdict_daily_average": 599}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Firewall", "malware_monthly_count": 127312, "malware_daily_average": 4243, "all_verdict_monthly_count": 96675404, "all_verdict_daily_average": 3222513}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Proofpoint", "malware_monthly_count": 4644, "malware_daily_average": 154, "all_verdict_monthly_count": 2273828, "all_verdict_daily_average": 75794}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Traps", "malware_monthly_count": 4118, "malware_daily_average": 137, "all_verdict_monthly_count": 289812, "all_verdict_daily_average": 9660}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 47, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "Traps Android", "malware_monthly_count": 14, "malware_daily_average": 0, "all_verdict_monthly_count": 242, "all_verdict_daily_average": 8}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-06", "upload_source": "WF Appliance", "malware_monthly_count": 15251, "malware_daily_average": 508, "all_verdict_monthly_count": 19470, "all_verdict_daily_average": 649}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Firewall", "malware_monthly_count": 194483, "malware_daily_average": 6273, "all_verdict_monthly_count": 74623421, "all_verdict_daily_average": 2407207}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Proofpoint", "malware_monthly_count": 5662, "malware_daily_average": 182, "all_verdict_monthly_count": 2564736, "all_verdict_daily_average": 82733}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Traps", "malware_monthly_count": 4994, "malware_daily_average": 161, "all_verdict_monthly_count": 270137, "all_verdict_daily_average": 8714}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 68, "all_verdict_daily_average": 2}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "Traps Android", "malware_monthly_count": 13, "malware_daily_average": 0, "all_verdict_monthly_count": 520, "all_verdict_daily_average": 16}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-07", "upload_source": "WF Appliance", "malware_monthly_count": 23344, "malware_daily_average": 753, "all_verdict_monthly_count": 30813, "all_verdict_daily_average": 993}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Firewall", "malware_monthly_count": 232035, "malware_daily_average": 7485, "all_verdict_monthly_count": 95965262, "all_verdict_daily_average": 3095653}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Proofpoint", "malware_monthly_count": 5656, "malware_daily_average": 182, "all_verdict_monthly_count": 3726753, "all_verdict_daily_average": 120217}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Traps", "malware_monthly_count": 5218, "malware_daily_average": 168, "all_verdict_monthly_count": 256758, "all_verdict_daily_average": 8282}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 125, "all_verdict_daily_average": 4}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "Traps Android", "malware_monthly_count": 13, "malware_daily_average": 0, "all_verdict_monthly_count": 774, "all_verdict_daily_average": 24}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-08", "upload_source": "WF Appliance", "malware_monthly_count": 21103, "malware_daily_average": 680, "all_verdict_monthly_count": 29746, "all_verdict_daily_average": 959}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Firewall", "malware_monthly_count": 423185, "malware_daily_average": 14106, "all_verdict_monthly_count": 97396533, "all_verdict_daily_average": 3246551}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Proofpoint", "malware_monthly_count": 4214, "malware_daily_average": 140, "all_verdict_monthly_count": 4593584, "all_verdict_daily_average": 153119}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Traps", "malware_monthly_count": 23803, "malware_daily_average": 793, "all_verdict_monthly_count": 527653, "all_verdict_daily_average": 17588}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 109, "all_verdict_daily_average": 3}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "Traps Android", "malware_monthly_count": 28, "malware_daily_average": 0, "all_verdict_monthly_count": 1754, "all_verdict_daily_average": 58}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-09", "upload_source": "WF Appliance", "malware_monthly_count": 22851, "malware_daily_average": 761, "all_verdict_monthly_count": 25114, "all_verdict_daily_average": 837}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Firewall", "malware_monthly_count": 219399, "malware_daily_average": 7077, "all_verdict_monthly_count": 106989427, "all_verdict_daily_average": 3451271}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Proofpoint", "malware_monthly_count": 5883, "malware_daily_average": 189, "all_verdict_monthly_count": 5798303, "all_verdict_daily_average": 187042}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Traps", "malware_monthly_count": 14442, "malware_daily_average": 465, "all_verdict_monthly_count": 680918, "all_verdict_daily_average": 21965}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 55, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "Traps Android", "malware_monthly_count": 5, "malware_daily_average": 0, "all_verdict_monthly_count": 680, "all_verdict_daily_average": 21}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-10", "upload_source": "WF Appliance", "malware_monthly_count": 9977, "malware_daily_average": 321, "all_verdict_monthly_count": 12184, "all_verdict_daily_average": 393}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Firewall", "malware_monthly_count": 269066, "malware_daily_average": 8968, "all_verdict_monthly_count": 114362021, "all_verdict_daily_average": 3812067}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Proofpoint", "malware_monthly_count": 3283, "malware_daily_average": 109, "all_verdict_monthly_count": 6502183, "all_verdict_daily_average": 216739}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Traps", "malware_monthly_count": 16503, "malware_daily_average": 550, "all_verdict_monthly_count": 667551, "all_verdict_daily_average": 22251}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 89, "all_verdict_daily_average": 2}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "Traps Android", "malware_monthly_count": 7, "malware_daily_average": 0, "all_verdict_monthly_count": 1311, "all_verdict_daily_average": 43}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-11", "upload_source": "WF Appliance", "malware_monthly_count": 88227, "malware_daily_average": 2940, "all_verdict_monthly_count": 90281, "all_verdict_daily_average": 3009}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Firewall", "malware_monthly_count": 136293, "malware_daily_average": 4396, "all_verdict_monthly_count": 110171337, "all_verdict_daily_average": 3553914}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Proofpoint", "malware_monthly_count": 5340, "malware_daily_average": 172, "all_verdict_monthly_count": 7399179, "all_verdict_daily_average": 238683}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Traps", "malware_monthly_count": 43142, "malware_daily_average": 1391, "all_verdict_monthly_count": 402469, "all_verdict_daily_average": 12982}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 58, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "Traps Android", "malware_monthly_count": 11, "malware_daily_average": 0, "all_verdict_monthly_count": 1852, "all_verdict_daily_average": 59}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2016-12", "upload_source": "WF Appliance", "malware_monthly_count": 9517, "malware_daily_average": 307, "all_verdict_monthly_count": 11156, "all_verdict_daily_average": 359}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Firewall", "malware_monthly_count": 354146, "malware_daily_average": 11424, "all_verdict_monthly_count": 128574978, "all_verdict_daily_average": 4147579}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Proofpoint", "malware_monthly_count": 1553, "malware_daily_average": 50, "all_verdict_monthly_count": 8714031, "all_verdict_daily_average": 281097}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Traps", "malware_monthly_count": 10807, "malware_daily_average": 348, "all_verdict_monthly_count": 387250, "all_verdict_daily_average": 12491}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 48, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "Traps Android", "malware_monthly_count": 91, "malware_daily_average": 2, "all_verdict_monthly_count": 2024, "all_verdict_daily_average": 65}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-01", "upload_source": "WF Appliance", "malware_monthly_count": 4563, "malware_daily_average": 147, "all_verdict_monthly_count": 5951, "all_verdict_daily_average": 191}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Firewall", "malware_monthly_count": 278898, "malware_daily_average": 9960, "all_verdict_monthly_count": 140257694, "all_verdict_daily_average": 5009203}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Proofpoint", "malware_monthly_count": 2006, "malware_daily_average": 71, "all_verdict_monthly_count": 9285781, "all_verdict_daily_average": 331635}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Traps", "malware_monthly_count": 13304, "malware_daily_average": 475, "all_verdict_monthly_count": 364596, "all_verdict_daily_average": 13021}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 47, "all_verdict_daily_average": 1}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "Traps Android", "malware_monthly_count": 776, "malware_daily_average": 27, "all_verdict_monthly_count": 4783, "all_verdict_daily_average": 170}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-02", "upload_source": "WF Appliance", "malware_monthly_count": 9749, "malware_daily_average": 348, "all_verdict_monthly_count": 14069, "all_verdict_daily_average": 502}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Firewall", "malware_monthly_count": 328080, "malware_daily_average": 10583, "all_verdict_monthly_count": 166555196, "all_verdict_daily_average": 5372748}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Proofpoint", "malware_monthly_count": 2497, "malware_daily_average": 80, "all_verdict_monthly_count": 12151408, "all_verdict_daily_average": 391980}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Traps", "malware_monthly_count": 15599, "malware_daily_average": 503, "all_verdict_monthly_count": 339820, "all_verdict_daily_average": 10961}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 98, "all_verdict_daily_average": 3}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "Traps Android", "malware_monthly_count": 2137, "malware_daily_average": 68, "all_verdict_monthly_count": 7354, "all_verdict_daily_average": 237}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-03", "upload_source": "WF Appliance", "malware_monthly_count": 16277, "malware_daily_average": 525, "all_verdict_monthly_count": 20185, "all_verdict_daily_average": 651}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Firewall", "malware_monthly_count": 197773, "malware_daily_average": 6592, "all_verdict_monthly_count": 164191117, "all_verdict_daily_average": 5473037}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Proofpoint", "malware_monthly_count": 8729, "malware_daily_average": 290, "all_verdict_monthly_count": 11657474, "all_verdict_daily_average": 388582}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Traps", "malware_monthly_count": 10983, "malware_daily_average": 366, "all_verdict_monthly_count": 273567, "all_verdict_daily_average": 9118}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 70, "all_verdict_daily_average": 2}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "Traps Android", "malware_monthly_count": 2752, "malware_daily_average": 91, "all_verdict_monthly_count": 6177, "all_verdict_daily_average": 205}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-04", "upload_source": "WF Appliance", "malware_monthly_count": 31156, "malware_daily_average": 1038, "all_verdict_monthly_count": 34404, "all_verdict_daily_average": 1146}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Firewall", "malware_monthly_count": 291555, "malware_daily_average": 9405, "all_verdict_monthly_count": 183164522, "all_verdict_daily_average": 5908532}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Proofpoint", "malware_monthly_count": 10037, "malware_daily_average": 323, "all_verdict_monthly_count": 14720117, "all_verdict_daily_average": 474842}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Traps", "malware_monthly_count": 12961, "malware_daily_average": 418, "all_verdict_monthly_count": 334952, "all_verdict_daily_average": 10804}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 269, "all_verdict_daily_average": 8}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "Traps Android", "malware_monthly_count": 4649, "malware_daily_average": 149, "all_verdict_monthly_count": 8855, "all_verdict_daily_average": 285}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-05", "upload_source": "WF Appliance", "malware_monthly_count": 56099, "malware_daily_average": 1809, "all_verdict_monthly_count": 61093, "all_verdict_daily_average": 1970}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Firewall", "malware_monthly_count": 444233, "malware_daily_average": 14807, "all_verdict_monthly_count": 183039781, "all_verdict_daily_average": 6101326}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Proofpoint", "malware_monthly_count": 8103, "malware_daily_average": 270, "all_verdict_monthly_count": 14678480, "all_verdict_daily_average": 489282}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Traps", "malware_monthly_count": 11043, "malware_daily_average": 368, "all_verdict_monthly_count": 336165, "all_verdict_daily_average": 11205}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 184, "all_verdict_daily_average": 6}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "Traps Android", "malware_monthly_count": 2397, "malware_daily_average": 79, "all_verdict_monthly_count": 6152, "all_verdict_daily_average": 205}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-06", "upload_source": "WF Appliance", "malware_monthly_count": 88522, "malware_daily_average": 2950, "all_verdict_monthly_count": 90607, "all_verdict_daily_average": 3020}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Firewall", "malware_monthly_count": 171152, "malware_daily_average": 5521, "all_verdict_monthly_count": 183514967, "all_verdict_daily_average": 5919837}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Proofpoint", "malware_monthly_count": 10209, "malware_daily_average": 329, "all_verdict_monthly_count": 15083164, "all_verdict_daily_average": 486553}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Traps", "malware_monthly_count": 8104, "malware_daily_average": 261, "all_verdict_monthly_count": 381709, "all_verdict_daily_average": 12313}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 319, "all_verdict_daily_average": 10}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "Traps Android", "malware_monthly_count": 3374, "malware_daily_average": 108, "all_verdict_monthly_count": 7612, "all_verdict_daily_average": 245}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-07", "upload_source": "WF Appliance", "malware_monthly_count": 25239, "malware_daily_average": 814, "all_verdict_monthly_count": 26557, "all_verdict_daily_average": 856}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Firewall", "malware_monthly_count": 242255, "malware_daily_average": 7814, "all_verdict_monthly_count": 193761156, "all_verdict_daily_average": 6250359}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Proofpoint", "malware_monthly_count": 6937, "malware_daily_average": 223, "all_verdict_monthly_count": 17647830, "all_verdict_daily_average": 569284}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Traps", "malware_monthly_count": 19726, "malware_daily_average": 636, "all_verdict_monthly_count": 2239761, "all_verdict_daily_average": 72250}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 110, "all_verdict_daily_average": 3}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "Traps Android", "malware_monthly_count": 10, "malware_daily_average": 0, "all_verdict_monthly_count": 3727, "all_verdict_daily_average": 120}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-08", "upload_source": "WF Appliance", "malware_monthly_count": 19564, "malware_daily_average": 631, "all_verdict_monthly_count": 22312, "all_verdict_daily_average": 719}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Firewall", "malware_monthly_count": 351756, "malware_daily_average": 11725, "all_verdict_monthly_count": 194817752, "all_verdict_daily_average": 6493925}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Proofpoint", "malware_monthly_count": 12554, "malware_daily_average": 418, "all_verdict_monthly_count": 17157070, "all_verdict_daily_average": 571902}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Traps", "malware_monthly_count": 34610, "malware_daily_average": 1153, "all_verdict_monthly_count": 4756620, "all_verdict_daily_average": 158554}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 220, "all_verdict_daily_average": 7}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "Traps Android", "malware_monthly_count": 25, "malware_daily_average": 0, "all_verdict_monthly_count": 4476, "all_verdict_daily_average": 149}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-09", "upload_source": "WF Appliance", "malware_monthly_count": 6021, "malware_daily_average": 200, "all_verdict_monthly_count": 10394, "all_verdict_daily_average": 346}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Firewall", "malware_monthly_count": 314369, "malware_daily_average": 10140, "all_verdict_monthly_count": 212718889, "all_verdict_daily_average": 6861899}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Proofpoint", "malware_monthly_count": 8294, "malware_daily_average": 267, "all_verdict_monthly_count": 19953736, "all_verdict_daily_average": 643668}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Traps", "malware_monthly_count": 43871, "malware_daily_average": 1415, "all_verdict_monthly_count": 5125872, "all_verdict_daily_average": 165350}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 524, "all_verdict_daily_average": 16}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "Traps Android", "malware_monthly_count": 14, "malware_daily_average": 0, "all_verdict_monthly_count": 4753, "all_verdict_daily_average": 153}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-10", "upload_source": "WF Appliance", "malware_monthly_count": 701, "malware_daily_average": 22, "all_verdict_monthly_count": 860, "all_verdict_daily_average": 27}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Firewall", "malware_monthly_count": 714697, "malware_daily_average": 23823, "all_verdict_monthly_count": 223173564, "all_verdict_daily_average": 7439118}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Proofpoint", "malware_monthly_count": 5538, "malware_daily_average": 184, "all_verdict_monthly_count": 16368411, "all_verdict_daily_average": 545613}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Traps", "malware_monthly_count": 26850, "malware_daily_average": 895, "all_verdict_monthly_count": 3902155, "all_verdict_daily_average": 130071}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 147, "all_verdict_daily_average": 4}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "Traps Android", "malware_monthly_count": 9, "malware_daily_average": 0, "all_verdict_monthly_count": 4108, "all_verdict_daily_average": 136}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-11", "upload_source": "WF Appliance", "malware_monthly_count": 3883, "malware_daily_average": 129, "all_verdict_monthly_count": 6063, "all_verdict_daily_average": 202}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Firewall", "malware_monthly_count": 421865, "malware_daily_average": 13608, "all_verdict_monthly_count": 206664678, "all_verdict_daily_average": 6666602}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Proofpoint", "malware_monthly_count": 1761, "malware_daily_average": 56, "all_verdict_monthly_count": 18667076, "all_verdict_daily_average": 602163}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Traps", "malware_monthly_count": 30755, "malware_daily_average": 992, "all_verdict_monthly_count": 3930293, "all_verdict_daily_average": 126783}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 162, "all_verdict_daily_average": 5}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "Traps Android", "malware_monthly_count": 10, "malware_daily_average": 0, "all_verdict_monthly_count": 4208, "all_verdict_daily_average": 135}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2017-12", "upload_source": "WF Appliance", "malware_monthly_count": 101260, "malware_daily_average": 3266, "all_verdict_monthly_count": 102809, "all_verdict_daily_average": 3316}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Firewall", "malware_monthly_count": 418863, "malware_daily_average": 13511, "all_verdict_monthly_count": 252538842, "all_verdict_daily_average": 8146414}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Proofpoint", "malware_monthly_count": 2444, "malware_daily_average": 78, "all_verdict_monthly_count": 22835967, "all_verdict_daily_average": 736644}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Traps", "malware_monthly_count": 38247, "malware_daily_average": 1233, "all_verdict_monthly_count": 1528663, "all_verdict_daily_average": 49311}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 384, "all_verdict_daily_average": 12}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "Traps Android", "malware_monthly_count": 1, "malware_daily_average": 0, "all_verdict_monthly_count": 2251, "all_verdict_daily_average": 72}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-01", "upload_source": "WF Appliance", "malware_monthly_count": 16978, "malware_daily_average": 547, "all_verdict_monthly_count": 20978, "all_verdict_daily_average": 676}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Firewall", "malware_monthly_count": 377733, "malware_daily_average": 13490, "all_verdict_monthly_count": 238343620, "all_verdict_daily_average": 8512272}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Proofpoint", "malware_monthly_count": 1645, "malware_daily_average": 58, "all_verdict_monthly_count": 22335406, "all_verdict_daily_average": 797693}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Traps", "malware_monthly_count": 37282, "malware_daily_average": 1331, "all_verdict_monthly_count": 4711900, "all_verdict_daily_average": 168282}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 312, "all_verdict_daily_average": 11}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "Traps Android", "malware_monthly_count": 3, "malware_daily_average": 0, "all_verdict_monthly_count": 3079, "all_verdict_daily_average": 109}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-02", "upload_source": "WF Appliance", "malware_monthly_count": 1280, "malware_daily_average": 45, "all_verdict_monthly_count": 1397, "all_verdict_daily_average": 49}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Firewall", "malware_monthly_count": 467411, "malware_daily_average": 15077, "all_verdict_monthly_count": 284836957, "all_verdict_daily_average": 9188288}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Proofpoint", "malware_monthly_count": 2101, "malware_daily_average": 67, "all_verdict_monthly_count": 27629514, "all_verdict_daily_average": 891274}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Traps", "malware_monthly_count": 53472, "malware_daily_average": 1724, "all_verdict_monthly_count": 6008297, "all_verdict_daily_average": 193816}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 265, "all_verdict_daily_average": 8}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "Traps Android", "malware_monthly_count": 2, "malware_daily_average": 0, "all_verdict_monthly_count": 3413, "all_verdict_daily_average": 110}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-03", "upload_source": "WF Appliance", "malware_monthly_count": 16692, "malware_daily_average": 538, "all_verdict_monthly_count": 22412, "all_verdict_daily_average": 722}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Firewall", "malware_monthly_count": 688726, "malware_daily_average": 22957, "all_verdict_monthly_count": 282907490, "all_verdict_daily_average": 9430249}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Proofpoint", "malware_monthly_count": 1688, "malware_daily_average": 56, "all_verdict_monthly_count": 27693781, "all_verdict_daily_average": 923126}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Traps", "malware_monthly_count": 56091, "malware_daily_average": 1869, "all_verdict_monthly_count": 6379764, "all_verdict_daily_average": 212658}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Magnifier", "malware_monthly_count": 1, "malware_daily_average": 0, "all_verdict_monthly_count": 495, "all_verdict_daily_average": 16}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "Traps Android", "malware_monthly_count": 4, "malware_daily_average": 0, "all_verdict_monthly_count": 2779, "all_verdict_daily_average": 92}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-04", "upload_source": "WF Appliance", "malware_monthly_count": 20360, "malware_daily_average": 678, "all_verdict_monthly_count": 27981, "all_verdict_daily_average": 932}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Firewall", "malware_monthly_count": 678041, "malware_daily_average": 21872, "all_verdict_monthly_count": 307824989, "all_verdict_daily_average": 9929838}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Proofpoint", "malware_monthly_count": 2482, "malware_daily_average": 80, "all_verdict_monthly_count": 32031264, "all_verdict_daily_average": 1033266}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Traps", "malware_monthly_count": 95916, "malware_daily_average": 3094, "all_verdict_monthly_count": 6114213, "all_verdict_daily_average": 197232}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 846, "all_verdict_daily_average": 27}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "Traps Android", "malware_monthly_count": 1, "malware_daily_average": 0, "all_verdict_monthly_count": 2008, "all_verdict_daily_average": 64}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-05", "upload_source": "WF Appliance", "malware_monthly_count": 57710, "malware_daily_average": 1861, "all_verdict_monthly_count": 71406, "all_verdict_daily_average": 2303}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Firewall", "malware_monthly_count": 453100, "malware_daily_average": 15103, "all_verdict_monthly_count": 296969688, "all_verdict_daily_average": 9898989}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Proofpoint", "malware_monthly_count": 1707, "malware_daily_average": 56, "all_verdict_monthly_count": 31894807, "all_verdict_daily_average": 1063160}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Traps", "malware_monthly_count": 84124, "malware_daily_average": 2804, "all_verdict_monthly_count": 6501995, "all_verdict_daily_average": 216733}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Magnifier", "malware_monthly_count": 1, "malware_daily_average": 0, "all_verdict_monthly_count": 971, "all_verdict_daily_average": 32}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "Traps Android", "malware_monthly_count": 1, "malware_daily_average": 0, "all_verdict_monthly_count": 682, "all_verdict_daily_average": 22}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-06", "upload_source": "WF Appliance", "malware_monthly_count": 53879, "malware_daily_average": 1795, "all_verdict_monthly_count": 59651, "all_verdict_daily_average": 1988}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Firewall", "malware_monthly_count": 474115, "malware_daily_average": 15294, "all_verdict_monthly_count": 306593224, "all_verdict_daily_average": 9890104}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Proofpoint", "malware_monthly_count": 1417, "malware_daily_average": 45, "all_verdict_monthly_count": 34570474, "all_verdict_daily_average": 1115176}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Traps", "malware_monthly_count": 70784, "malware_daily_average": 2283, "all_verdict_monthly_count": 7692114, "all_verdict_daily_average": 248132}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Magnifier", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 1902, "all_verdict_daily_average": 61}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Manual API", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 0, "all_verdict_daily_average": 0}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "Traps Android", "malware_monthly_count": 0, "malware_daily_average": 0, "all_verdict_monthly_count": 394, "all_verdict_daily_average": 12}
+{"index": {"_index": "source_stats", "_type": "source_stats"}}
+{"date": "2018-07", "upload_source": "WF Appliance", "malware_monthly_count": 54577, "malware_daily_average": 1760, "all_verdict_monthly_count": 58189, "all_verdict_daily_average": 1877}
