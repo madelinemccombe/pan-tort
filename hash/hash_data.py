@@ -1,4 +1,3 @@
-####!/usr/bin/env python3
 """
 hash_data reads a list of md5 hash strings and performs 2 Autofocus api
 queries to get verdict/filetype and then signature coverage data
@@ -46,8 +45,6 @@ def elk_index(elk_index_name, index):
 def get_hash_list(filename):
 
     """ read the hash list from file and load into a list """
-
-    hash_list = []
 
     with open(filename, 'r') as hash_file:
         hash_list = hash_file.read().splitlines()

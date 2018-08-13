@@ -11,7 +11,7 @@ import requests
 
 from datetime import datetime
 from af_api import api_key
-from conf import hostname, hashfile, hashtype, elk_index_name, getsigdata, af_query, querytype
+from conf import hostname, inputfile, hashtype, elk_index_name, getsigdata, af_query, querytype, onlygetsigs
 from filetypedata import filetypetags
 
 # FIXME doesn't check for not-found sample hashes - key for the hashlist load
@@ -53,18 +53,18 @@ def elk_index():
     return index_tag_full
 
 
-def get_hash_list():
+def get_search_list():
 
     """
-    read in the list of hashes from a text file
-    :param filename: name of the hashfile
-    :return: return list of hash values
+    read in the list of elements from a text file
+    :param filename: name of the search list file
+    :return: return list of search values
     """
 
-    with open(hashfile, 'r') as hash_file:
-        hash_list = hash_file.read().splitlines()
+    with open(inputfile, 'r') as search_file:
+        search_list = search_file.read().splitlines()
 
-    return hash_list
+    return search_list
 
 
 def isactive(dict, searchFor):
@@ -75,7 +75,7 @@ def isactive(dict, searchFor):
     return 'Inactive'
 
 
-def multi_query(hashlist):
+def multi_query(searchlist):
 
     """
     initial query into autofocus for a specific hash value
@@ -83,23 +83,32 @@ def multi_query(hashlist):
     :return: autofocus response from initial query
     """
 
+    print('Initiating query to Autofocus')
+
+
     if querytype == 'hash':
         fieldvalue = f'sample.{hashtype}'
         query = {"operator": "all",
-                 "children": [{f"field":fieldvalue, "operator":"is in the list", "value":hashlist}]}
+                 "children": [{f"field":fieldvalue, "operator":"is in the list", "value":searchlist}]}
 
-    elif querytype == 'autofocus':
+    if querytype == 'threat':
+        query = {"operator": "all",
+                 "children": [
+                    {"field": "sample.create_date", "operator": "is after", "value": ["2018-06-01T00:00:00", "2018-08-08T23:59:59"]},
+                    {"field": "sample.threat_name", "operator": "is in the list", "value": searchlist}]}
+
+    if querytype == 'autofocus':
         query = af_query
 
 
-    print('Initiating query to Autofocus')
     search_values = {"apiKey": api_key,
                      "query": query,
                      "size": 4000,
                      "scope": "public",
                      "type": "scan",
                      "artifactSource": "af"
-                    }
+                     }
+
 
     headers = {"Content-Type": "application/json"}
     search_url = f'https://{hostname}/api/v1.0/samples/search'
@@ -119,7 +128,7 @@ def multi_query(hashlist):
     return search_dict
 
 
-def get_query_results(search_dict, startTime, query_tag):
+def scantype_query_results(search_dict, startTime, query_tag, search):
 
     """
     keep checking autofocus until a hit or search complete
@@ -138,8 +147,14 @@ def get_query_results(search_dict, startTime, query_tag):
 
     running_total = []
     running_length = []
-    all_sample_dict = {}
-    all_sample_dict['samples'] = []
+
+    # looping across 1000 element input lists requires a file read if > 1 loops
+    if search == 1:
+        all_sample_dict = {}
+        all_sample_dict['samples'] = []
+    else:
+        with open(f'hash_data_pretty_{query_tag}_nosigs.json', 'r') as hash_file:
+            all_sample_dict = json.load(hash_file)
 
     while search_progress != 'FIN':
 
@@ -167,9 +182,9 @@ def get_query_results(search_dict, startTime, query_tag):
             if autofocus_results['total'] != 0:
                 # parse data and output estack json elements
                 # return is running dict of all samples for pretty json output
-                all_sample_dict = parse_sample_data(autofocus_results, startTime, index, query_tag, all_sample_dict)
+                all_sample_dict = parse_sample_data(autofocus_results, startTime, index, query_tag, all_sample_dict, search)
                 with open(f'hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
-                    hash_file.write(json.dumps(all_sample_dict, indent=None, sort_keys=False) + "\n")
+                    hash_file.write(json.dumps(all_sample_dict, indent=2, sort_keys=False) + "\n")
                 index += 1
 
                 print(f'Results update for page {index}: {query_tag}\n')
@@ -202,7 +217,78 @@ def get_query_results(search_dict, startTime, query_tag):
     return autofocus_results
 
 
-def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_dict_pretty):
+def get_query_results(search_dict, startTime, query_tag, search):
+
+    """
+    keep checking autofocus until a hit or search complete
+    :param search_dict: initial response including the cookie value
+    :return: autofocus search results dictionary or null if no hits
+    """
+
+    autofocus_results = {}
+
+    cookie = search_dict['af_cookie']
+    print(f'Tracking cookie is {cookie}')
+    print('Getting sample data...\n')
+
+    search_progress = 'start'
+    index = 1
+
+    all_sample_dict = {}
+    all_sample_dict['samples'] = []
+
+    while search_progress != 'FIN':
+
+        #time.sleep(1)
+        try:
+            results_url = f'https://{hostname}/api/v1.0/samples/results/' + cookie
+            headers = {"Content-Type": "application/json"}
+            results_values = {"apiKey": api_key}
+            results = requests.post(results_url, headers=headers, data=json.dumps(results_values))
+            results.raise_for_status()
+        except requests.exceptions.HTTPError:
+            print(results)
+            print(results.text)
+            print('\nCorrect errors and rerun the application\n')
+            sys.exit()
+
+        autofocus_results = results.json()
+
+
+        if 'total' in autofocus_results:
+
+            if autofocus_results['total'] != 0:
+                # parse data and output estack json elements
+                # return is running dict of all samples for pretty json output
+
+                print(f'Results update for {query_tag}\n')
+                print(f"samples found so far: {autofocus_results['total']}")
+                print(f"Search percent complete: {autofocus_results['af_complete_percentage']}%")
+                minute_pts_rem = autofocus_results['bucket_info']['minute_points_remaining']
+                daily_pts_rem = autofocus_results['bucket_info']['daily_points_remaining']
+                print(f'AF quota update: {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
+                elapsedtime = datetime.now() - startTime
+                print(f'Elasped run time is {elapsedtime}')
+                print('=' * 80)
+
+            if autofocus_results['af_in_progress'] is False :
+                search_progress = 'FIN'
+        else:
+            print('Autofocus still queuing up the search...')
+
+    parse_sample_data(autofocus_results, startTime, index, query_tag, all_sample_dict, search)
+    index += 1
+
+    print('\n')
+    print('=' * 80)
+    print('\n')
+    print(f'sample processing complete for {query_tag}')
+    print(f"total hits: {autofocus_results['total']}")
+
+    return autofocus_results
+
+
+def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_dict_pretty, search):
 
     """
     primary function to do both the init query and keep checking until search complete
@@ -228,19 +314,20 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
         # AFoutput is json output converted to python dictionary
         hash_data_dict['hashvalue'] = keyhash
 
-        # initial AF query to get sample data include sha256 hash and WF verdict
-        # sha256 is required for sig queries; does not support md5 or sha1
-
-        verdict_num = autofocus_results['hits'][listpos]['_source']['malware']
-        verdict_text = malware_values[str(verdict_num)]
-        hash_data_dict['verdict'] = verdict_text
-        filetype = autofocus_results['hits'][listpos]['_source']['filetype']
-        hash_data_dict['filetype'] = filetype
-        hash_data_dict['filetype_group'] = filetypetags[filetype]
         hash_data_dict['sha256hash'] = autofocus_results['hits'][listpos]['_source']['sha256']
         hash_data_dict['create_date'] = autofocus_results['hits'][listpos]['_source']['create_date']
         hash_data_dict['query_tag'] = query_tag
         hash_data_dict['query_time'] = str(startTime)
+
+        # initial AF query to get sample data include sha256 hash and WF verdict
+        # sha256 is required for sig queries; does not support md5 or sha1
+        verdict_num = autofocus_results['hits'][listpos]['_source']['malware']
+        verdict_text = malware_values[str(verdict_num)]
+        hash_data_dict['verdict'] = verdict_text
+
+        filetype = autofocus_results['hits'][listpos]['_source']['filetype']
+        hash_data_dict['filetype'] = filetype
+        hash_data_dict['filetype_group'] = filetypetags[filetype]
 
         if 'tag' in autofocus_results['hits'][listpos]['_source']:
 
@@ -272,7 +359,7 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
         hash_data_dict_pretty['samples'].append(hash_data_dict)
 
         # Write dict contents to running file both estack and pretty json versions
-        if index == 1 and listpos == 0:
+        if index == 1 and listpos == 0 and search == 1:
             with open(f'hash_data_estack_{query_tag}_nosigs.json', 'w') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
@@ -389,35 +476,51 @@ def get_sig_data(query_tag, startTime):
 
 def main():
 
-    """hash_data main module"""
-    hash_list = []
+    """search_data main module"""
+    search_list_all = []
 
-
-    if querytype == 'hash':
-        # supported hashtypes are: md5, sha1, sha256
-        if hashtype != 'md5' and hashtype != 'sha1' and hashtype != 'sha256':
-            print('\nOnly hash types md5, sha1, or sha256 are supported')
-            print('correct in af_api.py and try again')
-            sys.exit(1)
-
-        # read hash list from file
-        hash_list = get_hash_list()
+    # for longer lists may have to break list in 1000 size pieces
+    # for autofocus type queries on do a single search
+    numsearches = 1
 
     query_tag = input('Enter brief tag name for this data: ')
-
     startTime = datetime.now()
+    listend = -1
 
-    #submit bulk query for sample data to AF
-    searchrequest = multi_query(hash_list)
+    if onlygetsigs != 'yes':
+        if querytype == 'hash':
+            # supported hashtypes are: md5, sha1, sha256
+            if hashtype != 'md5' and hashtype != 'sha1' and hashtype != 'sha256':
+                print('\nOnly hash types md5, sha1, or sha256 are supported')
+                print('correct in af_api.py and try again')
+                sys.exit(1)
 
-    #get query results and parse output
-    get_query_results(searchrequest, startTime, query_tag)
+        if querytype == 'hash' or querytype == 'threat' or querytype == 'domain':
+            # read items list from file
+            search_list_all = get_search_list()
+            listlength = len(search_list_all)
+            numsearches = int(listlength / 1000) + 1
+
+        for search in range(1, numsearches + 1):
+        #submit bulk query for sample data to AF
+
+            print(f'\nworking with search interval {search} of {numsearches}')
+            liststart = listend + 1
+            listend += 1000
+
+            search_list = search_list_all[liststart:listend]
+            print(f'query is sending {len(search_list)} items as search elements')
+
+            searchrequest = multi_query(search_list)
+
+            #get query results and parse output
+            scantype_query_results(searchrequest, startTime, query_tag, search)
 
     if getsigdata == 'yes':
-        get_sig_data(query_tag, startTime)
+            get_sig_data(query_tag, startTime)
 
     if querytype == 'autofocus':
-        print(af_query)
+            print(af_query)
 
 
 if __name__ == '__main__':
