@@ -186,6 +186,8 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
 
         autofocus_results = results.json()
 
+        running_total.append(autofocus_results['total'])
+        running_length.append(len(autofocus_results['hits']))
 
         if 'total' in autofocus_results:
 
@@ -201,6 +203,8 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
                 print(f"samples found so far: {autofocus_results['total']}")
                 print(f"Search percent complete: {autofocus_results['af_complete_percentage']}%")
                 print(f"samples processed in this batch: {len(autofocus_results['hits'])}")
+                totalsamples = sum(running_length)
+                print(f'total samples processed: {totalsamples}\n')
                 minute_pts_rem = autofocus_results['bucket_info']['minute_points_remaining']
                 daily_pts_rem = autofocus_results['bucket_info']['daily_points_remaining']
                 print(f'AF quota update: {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
