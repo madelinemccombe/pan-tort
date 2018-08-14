@@ -391,6 +391,7 @@ def missing_samples(query_tag, start_time):
             samples_notfound_dict['sample_found'] = False
             samples_notfound_dict['query_tag'] = query_tag
             samples_notfound_dict['query_time'] = str(start_time)
+            samples_notfound_dict['create_date'] = str(start_time)
 
             # Write dict contents to running file both estack and pretty json versions
             with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
