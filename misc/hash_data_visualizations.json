@@ -1,102 +1,169 @@
 [
   {
-    "_id": "9994da90-0b62-11e8-a38a-8becd44ee9a9",
+    "_id": "5c258700-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Active Sigs Missed - Metric",
-      "visState": "{\"title\":\"Active Sigs Missed - Metric\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with Active Signature\"}}]}",
+      "title": "pan_tort_no_sig_coverage",
+      "visState": "{\"title\":\"pan_tort_no_sig_coverage\",\"type\":\"metric\",\"params\":{\"addLegend\":false,\"addTooltip\":true,\"metric\":{\"colorSchema\":\"Green to Red\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"invertColors\":false,\"labels\":{\"show\":true},\"metricColorMode\":\"None\",\"percentageMode\":false,\"style\":{\"bgColor\":false,\"bgFill\":\"#000\",\"fontSize\":60,\"labelColor\":false,\"subText\":\"\"},\"useRanges\":false},\"type\":\"metric\"},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with No Signature Found\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
-      "savedSearchId": "c2b11030-0b60-11e8-a38a-8becd44ee9a9",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"key\":\"verdict.keyword\",\"negate\":false,\"params\":{\"query\":\"malware\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"malware\"},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}}},{\"$state\":{\"store\":\"appState\"},\"meta\":{\"alias\":null,\"disabled\":false,\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"key\":\"wf_av_sig_sig_state.keyword\",\"negate\":false,\"params\":{\"query\":\"none\",\"type\":\"phrase\"},\"type\":\"phrase\",\"value\":\"none\"},\"query\":{\"match\":{\"wf_av_sig_sig_state.keyword\":{\"query\":\"none\",\"type\":\"phrase\"}}}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
       }
     }
   },
   {
-    "_id": "efedcdc0-0b62-11e8-a38a-8becd44ee9a9",
+    "_id": "6940a140-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Hash File Type",
-      "visState": "{\"title\":\"Hash File Type\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"filetype.keyword\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Hash Filetype\"}}]}",
+      "title": "pan_tort_active_sigs_missed",
+      "visState": "{\"title\":\"pan_tort_active_sigs_missed\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with Active Signature\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"93a6c4d0-0cee-11e8-a38a-8becd44ee9a9\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"wf_av_sig_sig_state.keyword\",\"value\":\"active\",\"params\":{\"query\":\"active\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"wf_av_sig_sig_state.keyword\":{\"query\":\"active\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
   {
-    "_id": "f0357430-0b59-11e8-a38a-8becd44ee9a9",
+    "_id": "74aab020-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Hash Verdict",
-      "visState": "{\"title\":\"Hash Verdict\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":false,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Sample Verdict\"}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"verdict.keyword\",\"size\":25,\"order\":\"desc\",\"orderBy\":\"1\",\"customLabel\":\"Verdict\"}}]}",
+      "title": "pan_tort_inactive_sigs",
+      "visState": "{\"title\":\"pan_tort_inactive_sigs\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with Inactive Signatures\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"93a6c4d0-0cee-11e8-a38a-8becd44ee9a9\",\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}},{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"wf_av_sig_sig_state.keyword\",\"value\":\"inactive\",\"params\":{\"query\":\"inactive\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"wf_av_sig_sig_state.keyword\":{\"query\":\"inactive\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
   {
-    "_id": "71ccb8b0-0b63-11e8-a38a-8becd44ee9a9",
+    "_id": "4188ef90-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Inactive Sigs Missed - Metric",
-      "visState": "{\"title\":\"Inactive Sigs Missed - Metric\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with Inactive Signature\"}}]}",
+      "title": "pan_tort_malware_verdicts",
+      "visState": "{\"title\":\"pan_tort_malware_verdicts\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Verdict Samples\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
-      "savedSearchId": "2decc680-0b63-11e8-a38a-8becd44ee9a9",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
   {
-    "_id": "27aaea30-0d99-11e8-a38a-8becd44ee9a9",
+    "_id": "c714dcf0-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Malware Verdict Samples",
-      "visState": "{\"title\":\"Malware Verdict Samples\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Verdict Samples\"}}]}",
+      "title": "pan_tort_total_samples",
+      "visState": "{\"title\":\"pan_tort_total_samples\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Number of Samples\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"93a6c4d0-0cee-11e8-a38a-8becd44ee9a9\",\"filter\":[{\"meta\":{\"index\":\"93a6c4d0-0cee-11e8-a38a-8becd44ee9a9\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
   {
-    "_id": "9720dd20-0cfe-11e8-a38a-8becd44ee9a9",
+    "_id": "a1404320-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "No Signatures Found",
-      "visState": "{\"title\":\"No Signatures Found\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Malware Samples with No Signature Found\"}}]}",
+      "title": "pan_tort_wf_verdicts",
+      "visState": "{\"title\":\"pan_tort_wf_verdicts\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"verdict.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
-      "savedSearchId": "d8303fa0-0cfd-11e8-a38a-8becd44ee9a9",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"filter\":[],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
       }
     }
   },
   {
-    "_id": "6381c470-0b78-11e8-a38a-8becd44ee9a9",
+    "_id": "91ae0e60-9ff4-11e8-94b1-4383fc8f9985",
     "_type": "visualization",
     "_source": {
-      "title": "Total Hash MIsses",
-      "visState": "{\"title\":\"Total Hash MIsses\",\"type\":\"metric\",\"params\":{\"addTooltip\":true,\"addLegend\":false,\"type\":\"metric\",\"metric\":{\"percentageMode\":false,\"useRanges\":false,\"colorSchema\":\"Green to Red\",\"metricColorMode\":\"None\",\"colorsRange\":[{\"from\":0,\"to\":10000}],\"labels\":{\"show\":true},\"invertColors\":false,\"style\":{\"bgFill\":\"#000\",\"bgColor\":false,\"labelColor\":false,\"subText\":\"\",\"fontSize\":60}}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{\"customLabel\":\"Total Number of Samples\"}}]}",
+      "title": "pan_tort_file_types",
+      "visState": "{\"title\":\"pan_tort_file_types\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"filetype.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":50,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
       "uiStateJSON": "{}",
       "description": "",
       "version": 1,
       "kibanaSavedObjectMeta": {
-        "searchSourceJSON": "{\"index\":\"93a6c4d0-0cee-11e8-a38a-8becd44ee9a9\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "c1224890-9ffa-11e8-94b1-4383fc8f9985",
+    "_type": "visualization",
+    "_source": {
+      "title": "pan_tort_all_sig_states",
+      "visState": "{\"title\":\"pan_tort_all_sig_states\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"sig_state_all.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "86e3b330-9ffa-11e8-94b1-4383fc8f9985",
+    "_type": "visualization",
+    "_source": {
+      "title": "pan_tort_dns_sig_states",
+      "visState": "{\"title\":\"pan_tort_dns_sig_states\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"dns_sig_sig_state.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "9620c310-9ffa-11e8-94b1-4383fc8f9985",
+    "_type": "visualization",
+    "_source": {
+      "title": "pan_tort_wf_av_sig_states",
+      "visState": "{\"title\":\"pan_tort_wf_av_sig_states\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"wf_av_sig_sig_state.keyword\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":5,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"appState\"}}],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "fb2b00e0-9ffa-11e8-94b1-4383fc8f9985",
+    "_type": "visualization",
+    "_source": {
+      "title": "pan_tort_Top20_malware_tags",
+      "visState": "{\"title\":\"pan_tort_Top20_malware_tags\",\"type\":\"pie\",\"params\":{\"type\":\"pie\",\"addTooltip\":true,\"addLegend\":true,\"legendPosition\":\"right\",\"isDonut\":true,\"labels\":{\"show\":false,\"values\":true,\"last_level\":true,\"truncate\":100}},\"aggs\":[{\"id\":\"1\",\"enabled\":true,\"type\":\"count\",\"schema\":\"metric\",\"params\":{}},{\"id\":\"2\",\"enabled\":true,\"type\":\"terms\",\"schema\":\"segment\",\"params\":{\"field\":\"priority_tags_name.keyword\",\"otherBucket\":true,\"otherBucketLabel\":\"Other\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"size\":20,\"order\":\"desc\",\"orderBy\":\"1\"}}]}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[],\"query\":{\"query\":\"\",\"language\":\"lucene\"}}"
+      }
+    }
+  },
+  {
+    "_id": "fceaa7b0-9ff9-11e8-94b1-4383fc8f9985",
+    "_type": "visualization",
+    "_source": {
+      "title": "pan_tort_sample_firstseen_date",
+      "visState": "{\"aggs\":[{\"enabled\":true,\"id\":\"1\",\"params\":{},\"schema\":\"metric\",\"type\":\"count\"},{\"enabled\":true,\"id\":\"2\",\"params\":{\"customInterval\":\"2h\",\"customLabel\":\"Year Sample Added to Autofocus\",\"extended_bounds\":{},\"field\":\"create_date\",\"interval\":\"y\",\"min_doc_count\":1},\"schema\":\"segment\",\"type\":\"date_histogram\"},{\"enabled\":true,\"id\":\"3\",\"params\":{\"customLabel\":\"\",\"field\":\"wf_av_sig_sig_state.keyword\",\"missingBucket\":false,\"missingBucketLabel\":\"Missing\",\"order\":\"desc\",\"orderBy\":\"1\",\"otherBucket\":false,\"otherBucketLabel\":\"Other\",\"size\":5},\"schema\":\"group\",\"type\":\"terms\"}],\"params\":{\"addLegend\":true,\"addTimeMarker\":false,\"addTooltip\":true,\"categoryAxes\":[{\"id\":\"CategoryAxis-1\",\"labels\":{\"show\":true,\"truncate\":100},\"position\":\"bottom\",\"scale\":{\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{},\"type\":\"category\"}],\"grid\":{\"categoryLines\":false,\"style\":{\"color\":\"#eee\"}},\"legendPosition\":\"right\",\"seriesParams\":[{\"data\":{\"id\":\"1\",\"label\":\"Count\"},\"drawLinesBetweenPoints\":true,\"mode\":\"stacked\",\"show\":\"true\",\"showCircles\":true,\"type\":\"histogram\",\"valueAxis\":\"ValueAxis-1\"}],\"times\":[],\"type\":\"histogram\",\"valueAxes\":[{\"id\":\"ValueAxis-1\",\"labels\":{\"filter\":false,\"rotate\":0,\"show\":true,\"truncate\":100},\"name\":\"LeftAxis-1\",\"position\":\"left\",\"scale\":{\"mode\":\"normal\",\"type\":\"linear\"},\"show\":true,\"style\":{},\"title\":{\"text\":\"Count\"},\"type\":\"value\"}]},\"title\":\"pan_tort_sample_firstseen_date\",\"type\":\"histogram\"}",
+      "uiStateJSON": "{}",
+      "description": "",
+      "version": 1,
+      "kibanaSavedObjectMeta": {
+        "searchSourceJSON": "{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"filter\":[{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"query_tag.keyword\",\"value\":\"pan_tort_sample\",\"params\":{\"query\":\"pan_tort_sample\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"query_tag.keyword\":{\"query\":\"pan_tort_sample\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}},{\"meta\":{\"index\":\"1f93cf90-9801-11e8-94b1-4383fc8f9985\",\"negate\":false,\"disabled\":false,\"alias\":null,\"type\":\"phrase\",\"key\":\"verdict.keyword\",\"value\":\"malware\",\"params\":{\"query\":\"malware\",\"type\":\"phrase\"}},\"query\":{\"match\":{\"verdict.keyword\":{\"query\":\"malware\",\"type\":\"phrase\"}}},\"$state\":{\"store\":\"globalState\"}}],\"query\":{\"language\":\"lucene\",\"query\":\"\"}}"
       }
     }
   }

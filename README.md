@@ -47,6 +47,12 @@ elk_index_name = 'hash-data'
 
 [Create hash_list.txt](https://github.com/PaloAltoNetworks/pan-tort/wiki/hash_list)
 <br/>
+
+### 10. Run gettagdata.py to have an updated list of Autofocus malware tags
+```python gettagdata.py```
+
+NOTE: There will be a tagdata.json file in the hash directory when done.
+
 ### 10. Run hash_data.py to begin queries and retrieving verdict, filetype, and coverage information
 ```python hash_data_plus.py```
 <br/>

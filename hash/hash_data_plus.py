@@ -36,7 +36,7 @@ import sys
 import os
 import json
 import time
-from datetime import datetime
+from datetime import datetime, date
 import requests
 
 # local imports for static input data
@@ -375,6 +375,8 @@ def missing_samples(query_tag, start_time):
     samples_notfound_dict = {}
     hash_list = get_search_list()
 
+    missing_sample_date = start_time.strftime('%Y-%m-%dT%H:%M:%S')
+
     # read in the full set of samples after query is complete
     with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
         samples_dict = json.load(samplesfile)
@@ -391,7 +393,8 @@ def missing_samples(query_tag, start_time):
             samples_notfound_dict['sample_found'] = False
             samples_notfound_dict['query_tag'] = query_tag
             samples_notfound_dict['query_time'] = str(start_time)
-            samples_notfound_dict['create_date'] = str(start_time)
+            samples_notfound_dict['create_date'] = missing_sample_date
+            samples_notfound_dict['verdict'] = 'No Sample Found'
 
             # Write dict contents to running file both estack and pretty json versions
             with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
@@ -533,7 +536,6 @@ def main():
     start_time = datetime.now()
     listend = -1
     ok_to_get_sigs = True
-
 
     # supported conf.hashtypes are: md5, sha1, sha256
     if conf.hashtype != 'md5' and conf.hashtype != 'sha1' and conf.hashtype != 'sha256':
