@@ -17,13 +17,15 @@
 '''
 Palo Alto Networks hash_data_plus.py
 
-Reads in a list of samples hashes with output of malware verdict, file types, malware family,
-and signature coverage data.
+Reads in a list of samples hashes with output of malware verdict, file types,
+malware family, and signature coverage data.
 
-Outputs are formatted for both bulk load into Elasticsearch and readable 'pretty format' json
+Outputs are formatted for both bulk load into Elasticsearch and
+readable 'pretty format' json
+
 Outputs are stored in the out_estack and out_pretty directories
 
-Initial step to use is to have the af_api.py populated with the Autofocus API key value
+Before first use, create af_api.py with the Autofocus API key value
 Then populate the hash_list and run the script
 
 This software is provided without support, warranty, or guarantee.
@@ -34,9 +36,10 @@ import sys
 import os
 import json
 import time
-import requests
 from datetime import datetime
+import requests
 
+# local imports for static input data
 import conf
 from af_api import api_key
 from filetypedata import filetypetags
@@ -44,14 +47,15 @@ from filetypedata import filetypetags
 
 def init_hash_counters():
 
-    """
+    '''
     initialize hash counters
     :return: send back hash counters = zero
-    """
+    '''
 
     hash_counters = {}
-    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig', 'mal_active_sig',
-                         'mal_no_sig', 'grayware', 'benign', 'phishing', 'No sample found']
+    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig',
+                         'mal_active_sig', 'mal_no_sig', 'grayware', 'benign',
+                         'phishing', 'No sample found']
 
     for value in hash_count_values:
         hash_counters[value] = 0
@@ -61,11 +65,11 @@ def init_hash_counters():
 
 def elk_index():
 
-    """
+    '''
     set up elasticsearch bulk load index
     :param conf.elk_index_name: name of data index in elasticsearch
     :return: index tag to write as line in the output json file
-    """
+    '''
 
     index_tag_full = {}
     index_tag_inner = {}
@@ -77,6 +81,7 @@ def elk_index():
 
 
 def output_dir(dir_name):
+
     '''
     check for the output dirs and if exist=False then create them
     :param dir_name: directory name to be check and possibly created
@@ -86,16 +91,14 @@ def output_dir(dir_name):
     if os.path.isdir(dir_name) is False:
         os.mkdir(dir_name, mode=0o755)
 
-    return
-
 
 def get_search_list():
 
-    """
+    '''
     read in the list of elements from a text file
     :param filename: name of the search list file
     :return: return list of search values
-    """
+    '''
 
     with open(conf.inputfile, 'r') as search_file:
         search_list = search_file.read().splitlines()
@@ -103,29 +106,38 @@ def get_search_list():
     return search_list
 
 
-def is_active(dict, searchFor):
-    for k in dict:
-        for v in dict[k]:
-            if searchFor in v:
+def is_active(sigdict, searchfor):
+
+    '''
+    check to see if sig is active/inactive based on AF response
+    any true sets the return to Active
+    :param dict: dict loaded from json response per sig type
+    :param searchfor: value to search for in the sig reponse dict
+    :return:
+    '''
+    for sigkey in sigdict:
+        for sigentry in sigdict[sigkey]:
+            if searchfor in sigentry:
                 return 'Active'
     return 'Inactive'
 
 
 def multi_query(searchlist):
 
-    """
+    '''
     initial query into autofocus for a specific hash value
-    :param searchlist: set of hash values up to 1000 entries used in a single search
+    :param searchlist: set of hash values used in a single search (max 1000)
     :return: autofocus response from initial query
-    """
+    '''
 
     print('Initiating query to Autofocus')
 
     fieldvalue = f'sample.{conf.hashtype}'
     query = {"operator": "all",
-             "children": [{f"field":fieldvalue, "operator":"is in the list", "value":searchlist}]}
+             "children": [{f"field":fieldvalue, "operator":"is in the list",
+                           "value":searchlist}]}
 
-    # this used a scan type query to scale up beyond 4000 reponses from Autofocus
+    # uses a type=scan query to scale beyond 4000 samples hits from Autofocus
     search_values = {"apiKey": api_key,
                      "query": query,
                      "size": 4000,
@@ -138,7 +150,8 @@ def multi_query(searchlist):
     search_url = f'https://{conf.hostname}/api/v1.0/samples/search'
 
     try:
-        search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
+        search = requests.post(search_url, headers=headers,
+                               data=json.dumps(search_values))
         print('Search query posted to Autofocus')
         search.raise_for_status()
     except requests.exceptions.HTTPError:
@@ -152,19 +165,20 @@ def multi_query(searchlist):
     return search_dict
 
 
-def scantype_query_results(search_dict, startTime, query_tag, search):
+def scantype_query_results(search_dict, start_time, query_tag, search):
 
-    """
-    With type=scan each results post with the same cookie will return current set of hits
+    '''
+    With type=scan each results post with the same cookie will return
+    current set of hits
     This creates an extensible model for larger response sets > 4000
     Responses are returned in pages of 1000 entries
-    Response checks continue until search is complete and all pages of data returned
+    Checks continue until search is complete and all pages of data returned
     :param search_dict: initial response including the cookie value
-    :param startTime: when the script started - used to track run time
+    :param start_time: when the script started - used to track run time
     :param query_tag: identifier for this script run used as estack tag
     :param search: for multi-page search to denote which 1000 block being used
     :return: autofocus search results dictionary or null if no hits
-    """
+    '''
 
     autofocus_results = {}
 
@@ -190,10 +204,11 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
 
         time.sleep(5)
         try:
-            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
+            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/{cookie}'
             headers = {"Content-Type": "application/json"}
             results_values = {"apiKey": api_key}
-            results = requests.post(results_url, headers=headers, data=json.dumps(results_values))
+            results = requests.post(results_url, headers=headers,
+                                    data=json.dumps(results_values))
             results.raise_for_status()
         except requests.exceptions.HTTPError:
             print(results)
@@ -211,8 +226,10 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
             if autofocus_results['total'] != 0:
                 # parse data and output estack json elements
                 # return is running dict of all samples for pretty json output
-                all_sample_dict = parse_sample_data(autofocus_results, startTime, index, query_tag, all_sample_dict, search)
-                with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
+                all_sample_dict = parse_sample_data(autofocus_results,
+                                                    start_time, index, query_tag,
+                                                    all_sample_dict, search)
+                with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w')as hash_file:
                     hash_file.write(json.dumps(all_sample_dict, indent=2, sort_keys=False) + "\n")
                 index += 1
 
@@ -225,12 +242,11 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
                 minute_pts_rem = autofocus_results['bucket_info']['minute_points_remaining']
                 daily_pts_rem = autofocus_results['bucket_info']['daily_points_remaining']
                 print(f'AF quota update: {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
-                elapsedtime = datetime.now() - startTime
+                elapsedtime = datetime.now() - start_time
                 print(f'Elasped run time is {elapsedtime}')
                 print('=' * 80)
 
-
-            if autofocus_results['af_in_progress'] is False :
+            if autofocus_results['af_in_progress'] is False:
                 search_progress = 'FIN'
         else:
             print('Autofocus still queuing up the search...')
@@ -246,22 +262,23 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
     return autofocus_results
 
 
-def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_dict_pretty, search):
+def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data_dict_pretty, search):
 
-    """
-    parse the AF reponse and augment the data with file type, tag, malware information
-    then write to 2 files: pretty formatted json and estack for bulk load into elasticsearch
+    '''
+    parse the AF reponse and augment the data with file type, tag, malware
+    then write 2 files: pretty json and estack for bulk load into elasticsearch
     :param autofocus_results: array of data from AF multi-query response
-    :param startTime: time script started; used to track run time
-    :param index: note which cycle through the search block; if > 1 does file appends to existing file
+    :param start_time: time script started; used to track run time
+    :param index: note which cycle through the search block for file w or a
     :param query_tag: identifier for this script run used as estack tag
     :param search: for multi-page search to denote which 1000 block being used
-    :param hash_data_dict_pretty: master dict appended with each cycle and eventully output as pretty json file
+    :param hash_data_dict_pretty: master set of data to write out to json
     :return: update dictionary with sample data
-    """
+    '''
 
     # mapping of tag # to text name
-    malware_values = {'0': 'benign', '1': 'malware', '2': 'grayware', '3': 'phishing'}
+    malware_values = {'0': 'benign', '1': 'malware',
+                      '2': 'grayware', '3': 'phishing'}
 
     index_tag_full = elk_index()
 
@@ -280,10 +297,12 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
         # AFoutput is json output converted to python dictionary
         hash_data_dict['hashvalue'] = keyhash
 
-        hash_data_dict['sha256hash'] = autofocus_results['hits'][listpos]['_source']['sha256']
-        hash_data_dict['create_date'] = autofocus_results['hits'][listpos]['_source']['create_date']
+        hash_data_dict['sha256hash'] =\
+            autofocus_results['hits'][listpos]['_source']['sha256']
+        hash_data_dict['create_date'] =\
+            autofocus_results['hits'][listpos]['_source']['create_date']
         hash_data_dict['query_tag'] = query_tag
-        hash_data_dict['query_time'] = str(startTime)
+        hash_data_dict['query_time'] = str(start_time)
 
         # initial AF query to get sample data include sha256 hash and WF verdict
         # sha256 is required for sig queries; does not support md5 or sha1
@@ -298,7 +317,8 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
         # not all samples have a tag value; uses when a tag value is present
         if 'tag' in autofocus_results['hits'][listpos]['_source']:
 
-            hash_data_dict['all_tags'] = autofocus_results['hits'][listpos]['_source']['tag']
+            hash_data_dict['all_tags'] =\
+                autofocus_results['hits'][listpos]['_source']['tag']
 
             priority_tags_public = []
             priority_tags_name = []
@@ -309,7 +329,7 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
 
                     tag_class = tag_dict['_tags'][tag]['tag_class']
                     tag_name = tag_dict['_tags'][tag]['tag_name']
-                    if tag_class == 'malware_family' or tag_class == 'campaign' or tag_class == 'actor':
+                    if tag_class in ('malware_family', 'campaign', 'actor'):
                         priority_tags_public.append(tag)
                         priority_tags_name.append(tag_name)
 
@@ -340,18 +360,20 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
     return hash_data_dict_pretty
 
 
-def get_sig_data(query_tag, startTime):
-    """
-    after the initial sample data is captured when each sample that exists queries for sig coverage
-    the SHA256 hash is integral to the request URL so only a single hash queried at a time
-    instead of appending to the prior estack/outputs a new file with suffice sigs is created
-    :param query_tag: query descriptive tag used in elasticsearch as a filter
-    :param startTime: start time of the script to capture run time
-    :return:
-    """
+def get_sig_data(query_tag, start_time):
 
-    # stage 1 is the sample query and data capture (verdict, file type, malware tags)
-    # that output file is read in to a dict appended with sig data and output to a 2nd sigs file
+    '''
+    after the initial sample data is captured then check for sig coverage
+    only works with SHA256 so MD5/SHA1 input has SHA256 added from AF
+    only a single hash queried at a time since hash value in the url request
+    a new file appended with sigs added to the archive
+    :param query_tag: query descriptive tag used in elasticsearch as a filter
+    :param start_time: start time of the script to capture run time
+    :return:
+    '''
+
+    # stage 1 is the sample query and data capture stored as file nosigs
+    # that output is read in to a dict, updated, and output as sigs file
     with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
         samples_dict = json.load(samplesfile)
 
@@ -372,7 +394,7 @@ def get_sig_data(query_tag, startTime):
         print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
         print(f'hash: {sha256hash}')
 
-        # sections filters the reply for artifact data; script only returns coverage info
+        # script only returns coverage info: sections:coverage flag
         # the attribute coverage=true also required to return coverage data
         search_values = {"apiKey": api_key,
                          "coverage": 'true',
@@ -383,7 +405,8 @@ def get_sig_data(query_tag, startTime):
         search_url = f'https://{conf.hostname}/api/v1.0/sample/{sha256hash}/analysis'
 
         try:
-            search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
+            search = requests.post(search_url, headers=headers,
+                                   data=json.dumps(search_values))
             search.raise_for_status()
         except requests.exceptions.HTTPError:
             print(search)
@@ -391,20 +414,21 @@ def get_sig_data(query_tag, startTime):
             print('\nCorrect errors and rerun the application\n')
             sys.exit()
 
-        # this is a single request-response interaction not requiring a cookie and second url request
+        # this is a single request-response interaction
+        # no cookie and updated checks required
         results_analysis = json.loads(search.text)
 
         # sig types with coverage data to be captured
         sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
 
-        for type in sigtypes:
+        for stype in sigtypes:
             # add the full response to the doc
-            hash_data_dict[type] = results_analysis['coverage'][type]
+            hash_data_dict[stype] = results_analysis['coverage'][stype]
 
             # check sig state by type and add to doc
-            sig_state = f'{type}_sig_state'
+            sig_state = f'{stype}_sig_state'
             # convert to string for quick text search
-            sigstring = json.dumps(results_analysis['coverage'][type])
+            sigstring = json.dumps(results_analysis['coverage'][stype])
             if sigstring.find('true') != -1:
                 hash_data_dict[sig_state] = 'active'
             elif sigstring.find('true') == -1 and sigstring.find('false') != -1:
@@ -421,10 +445,12 @@ def get_sig_data(query_tag, startTime):
             hash_data_dict['sig_state_all'] = 'none'
 
         print('Sig coverage search complete')
-        minute_pts_rem = results_analysis['bucket_info']['minute_points_remaining']
-        daily_pts_rem = results_analysis['bucket_info']['daily_points_remaining']
+        minute_pts_rem =\
+            results_analysis['bucket_info']['minute_points_remaining']
+        daily_pts_rem =\
+            results_analysis['bucket_info']['daily_points_remaining']
         print(f'AF quota update:  {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
-        elapsedtime = datetime.now() - startTime
+        elapsedtime = datetime.now() - start_time
         print(f'Elasped run time is {elapsedtime}')
 
         hash_data_dict_pretty['samples'].append(hash_data_dict)
@@ -447,17 +473,16 @@ def get_sig_data(query_tag, startTime):
 
         index += 1
 
-    return
 
 def main():
 
-    """search_data main module"""
+    '''search_data main module'''
 
     # for longer lists may have to break list in 1000 size pieces
     # for autofocus type queries on do a single search
 
     query_tag = input('Enter brief tag name for this data: ')
-    startTime = datetime.now()
+    start_time = datetime.now()
     listend = -1
     ok_to_get_sigs = True
 
@@ -490,21 +515,22 @@ def main():
         searchrequest = multi_query(search_list)
 
         #get query results and parse output
-        scantype_query_results(searchrequest, startTime, query_tag, search)
+        scantype_query_results(searchrequest, start_time, query_tag, search)
 
-    # check that the output sigs file exists with sample hits before getting sig coverage data
-    # likely cause of no file or hits is a mismatch between hashtype searched and hashtype in hash_list.txt
+    # check that the output sigs file exists if AF hits 1= 0
+    # if no file, check that hashtype in conf.py matches hashlist.txt type
     try:
-        with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as outfile:
+        with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r'):
             pass
-    except IOError as e:
-        print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json' )
+    except IOError as nofile_error:
+        print(nofile_error)
+        print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json')
         print('This file is output from the initial sample search and read in to create a sig coverage output')
         print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
         ok_to_get_sigs = False
 
     if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
-            get_sig_data(query_tag, startTime)
+        get_sig_data(query_tag, start_time)
 
 
 if __name__ == '__main__':
