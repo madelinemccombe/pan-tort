@@ -161,6 +161,9 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
     search_progress = 'start'
     index = 1
 
+    running_total = []
+    running_length = []
+
     # looping across 1000 element input lists requires a file read if > 1 loops
     if search == 1:
         all_sample_dict = {}
