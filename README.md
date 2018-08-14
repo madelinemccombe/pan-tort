@@ -20,20 +20,40 @@
 ### 6. Change into hash directory
 ```cd hash```
 <br/>
-### 7. Create the af_api.py file with the Autofocus api key
-[Create panrc.py](https://github.com/PaloAltoNetworks/pan-tort/wiki/panrc)
+### 7. Create the af_api.py file with your Autofocus api key
 
-### 8. Edit the conf.py file with the hash type used in searches
+Sample af_api.py file:
+
+```
+api_key = '{{Autofocus API Key}}'
+```
+
 <br/>
 
+### 8. Edit the conf.py file with your Autofocus api key
+
+Sample conf.py file:
+
+```
+hostname = 'autofocus.paloaltonetworks.com'
+hashfile = 'hash_list.txt'
+hashtype = 'sha256'
+elk_index_name = 'hash-data'
+
+```
+
+<br/>
 ### 9. Create the hash_list.txt file with a list of hashes
+
 [Create hash_list.txt](https://github.com/PaloAltoNetworks/pan-tort/wiki/hash_list)
 <br/>
 ### 10. Run hash_data.py to begin queries and retrieving verdict, filetype, and coverage information
 ```python hash_data_plus.py```
 <br/>
+
 Supported hashtypes are md5, sha1, and sha256
 <br/>
+
 ### 11. Viewing output json files
 
 * hash_data_pretty.json:  raw data view of per-hash Autofocus responses
