@@ -141,7 +141,10 @@ def multi_query(searchlist):
 def scantype_query_results(search_dict, startTime, query_tag, search):
 
     """
-    keep checking autofocus until a hit or search complete
+    With type=scan each results post with the same cookie will return current set of hits
+    This creates an extensible model for larger response sets > 4000
+    Responses are returned in pages of 1000 entries
+    Response checks continue until search is complete and all pages of data returned
     :param search_dict: initial response including the cookie value
     :param startTime: when the script started - used to track run time
     :param query_tag: identifier for this script run used as estack tag
@@ -226,6 +229,7 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
 
     """
     parse the AF reponse and augment the data with file type, tag, malware information
+    then write to 2 files: pretty formatted json and estack for bulk load into elasticsearch
     :param autofocus_results: array of data from AF multi-query response
     :param startTime: time script started; used to track run time
     :param index: note which cycle through the search block; if > 1 does file appends to existing file
@@ -316,7 +320,17 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
 
 
 def get_sig_data(query_tag, startTime):
+    """
+    after the initial sample data is captured when each sample that exists queries for sig coverage
+    the SHA256 hash is integral to the request URL so only a single hash queried at a time
+    instead of appending to the prior estack/outputs a new file with suffice sigs is created
+    :param query_tag: query descriptive tag used in elasticsearch as a filter
+    :param startTime: start time of the script to capture run time
+    :return:
+    """
 
+    # stage 1 is the sample query and data capture (verdict, file type, malware tags)
+    # that output file is read in to a dict appended with sig data and output to a 2nd sigs file
     with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
         samples_dict = json.load(samplesfile)
 
@@ -337,6 +351,8 @@ def get_sig_data(query_tag, startTime):
         print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
         print(f'hash: {sha256hash}')
 
+        # sections filters the reply for artifact data; script only returns coverage info
+        # the attribute coverage=true also required to return coverage data
         search_values = {"apiKey": api_key,
                          "coverage": 'true',
                          "sections": ["coverage"],
@@ -354,8 +370,10 @@ def get_sig_data(query_tag, startTime):
             print('\nCorrect errors and rerun the application\n')
             sys.exit()
 
+        # this is a single request-response interaction not requiring a cookie and second url request
         results_analysis = json.loads(search.text)
 
+        # sig types with coverage data to be captured
         sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
 
         for type in sigtypes:
@@ -420,6 +438,7 @@ def main():
     query_tag = input('Enter brief tag name for this data: ')
     startTime = datetime.now()
     listend = -1
+    ok_to_get_sigs = True
 
 
     # supported conf.hashtypes are: md5, sha1, sha256
@@ -449,7 +468,18 @@ def main():
         #get query results and parse output
         scantype_query_results(searchrequest, startTime, query_tag, search)
 
-    if conf.getsigdata == 'yes':
+    # check that the output sigs file exists with sample hits before getting sig coverage data
+    # likely cause of no file or hits is a mismatch between hashtype searched and hashtype in hash_list.txt
+    try:
+        with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as outfile:
+            pass
+    except IOError as e:
+        print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json' )
+        print('This file is output from the initial sample search and read in to create a sig coverage output')
+        print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
+        ok_to_get_sigs = False
+
+    if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
             get_sig_data(query_tag, startTime)
 
 

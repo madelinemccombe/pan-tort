@@ -108,5 +108,5 @@ hashenv/
 hash/*.json
 hash/hash_list.txt
 hash/af_api.py
-out_estack/*
-out_pretty/*
+hash/out_estack/*.json
+hash/out_pretty/*.json
