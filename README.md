@@ -20,6 +20,7 @@
 ### 6. Change into hash directory
 ```cd hash```
 <br/>
+<<<<<<< HEAD
 ### 7. Create the af_api.py file with your Autofocus api key
 
 Sample af_api.py file:
@@ -51,13 +52,30 @@ query_tag = 'elf'
 ### 10. Run hash_data.py to begin queries and retrieving verdict, filetype, and coverage information
 
 ```python hash_data.py```
+=======
+### 7. Create the af_api.py file with the Autofocus api key
+[Create panrc.py](https://github.com/PaloAltoNetworks/pan-tort/wiki/panrc)
+
+### 8. Edit the conf.py file with the hash type used in searches
+<br/>
+
+### 9. Create the hash_list.txt file with a list of hashes
+[Create hash_list.txt](https://github.com/PaloAltoNetworks/pan-tort/wiki/hash_list)
+<br/>
+### 10. Run hash_data.py to begin queries and retrieving verdict, filetype, and coverage information
+```python hash_data_plus.py```
+>>>>>>> master
 <br/>
 
 Supported hashtypes are md5, sha1, and sha256
 <br/>
+<<<<<<< HEAD
 
 ### 11. Viewing output json files
 * hash_data_stats.json:  quick stats for verdicts and signature coverage (active or inactive)
+=======
+### 11. Viewing output json files
+>>>>>>> master
 
 * hash_data_pretty.json:  raw data view of per-hash Autofocus responses
 

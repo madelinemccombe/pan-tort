@@ -101,12 +101,13 @@ hashenv/
 # mypy
 .mypy_cache/
 
-# content management
+
+# content mgmt
 .idea/
 
-# pan-tort specific
-hash/*.json
+# stk specific
+hash/hash_data_estack.json
+hash/hash_data_pretty.json
+hash/hash_data_stats.json
 hash/hash_list.txt
-hash/af_api.py
-hash/out_estack/*.json
-hash/out_pretty/*.json
+hash/panrc.py
