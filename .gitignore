@@ -101,6 +101,9 @@ hashenv/
 # mypy
 .mypy_cache/
 
+# content mgmt
+.idea/
+
 # stk specific
 hash/hash_data_estack.json
 hash/hash_data_pretty.json
