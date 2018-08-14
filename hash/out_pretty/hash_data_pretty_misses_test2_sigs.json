@@ -2,10 +2,11 @@
     "samples": [
         {
             "hashvalue": "5bd44a35094fe6f7794d895122ddfa62",
+            "sample_found": true,
             "sha256hash": "762a4f2bf5ea4ff72fce674da1adf29f0b9357be18de4cd992d79198c56bb514",
             "create_date": "2017-09-01T16:46:24",
-            "query_tag": "test",
-            "query_time": "2018-08-14 10:05:44.189174",
+            "query_tag": "misses_test2",
+            "query_time": "2018-08-14 13:41:13.459913",
             "verdict": "malware",
             "filetype": "ELF",
             "filetype_group": "ELF",

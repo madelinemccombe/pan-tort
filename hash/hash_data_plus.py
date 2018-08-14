@@ -296,6 +296,7 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
         # AFoutput is json output converted to python dictionary
         hash_data_dict['hashvalue'] = keyhash
+        hash_data_dict['sample_found'] = True
 
         hash_data_dict['sha256hash'] =\
             autofocus_results['hits'][listpos]['_source']['sha256']
@@ -360,6 +361,48 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
     return hash_data_dict_pretty
 
 
+def missing_samples(query_tag, start_time):
+    '''
+    once the query is complete and samples found have to look for misses
+    this reads in the pretty json file to get the found list
+    then appends the estack and pretty nosigs files with hash misses
+    :return:
+    '''
+
+    index_tag_full = elk_index()
+
+    # initialize tracking dict for samples not found
+    samples_notfound_dict = {}
+    hash_list = get_search_list()
+
+    # read in the full set of samples after query is complete
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
+        samples_dict = json.load(samplesfile)
+
+    found_list = []
+    for sample in samples_dict['samples']:
+        found_list.append(sample['hashvalue'])
+
+    for sample in hash_list:
+        if sample in found_list:
+            pass
+        else:
+            samples_notfound_dict['hashvalue'] = sample
+            samples_notfound_dict['sample_found'] = False
+            samples_notfound_dict['query_tag'] = query_tag
+            samples_notfound_dict['query_time'] = str(start_time)
+
+            # Write dict contents to running file both estack and pretty json versions
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
+                hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+                hash_file.write(json.dumps(samples_notfound_dict, indent=None, sort_keys=False) + "\n")
+
+            samples_dict['samples'].append(samples_notfound_dict)
+
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
+        hash_file.write(json.dumps(samples_dict, indent=4, sort_keys=False) + "\n")
+
+
 def get_sig_data(query_tag, start_time):
 
     '''
@@ -374,7 +417,7 @@ def get_sig_data(query_tag, start_time):
 
     # stage 1 is the sample query and data capture stored as file nosigs
     # that output is read in to a dict, updated, and output as sigs file
-    with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
         samples_dict = json.load(samplesfile)
 
     index_tag_full = elk_index()
@@ -382,76 +425,79 @@ def get_sig_data(query_tag, start_time):
 
     listsize = len(samples_dict['samples'])
 
+    hash_data_dict_pretty = {}
+    hash_data_dict_pretty['samples'] = []
 
     for listpos in range(0, listsize):
 
-        hash_data_dict_pretty = {}
-        hash_data_dict_pretty['samples'] = []
         hash_data_dict = samples_dict['samples'][listpos]
-        sha256hash = hash_data_dict['sha256hash']
         hash_num = listpos + 1
 
-        print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
-        print(f'hash: {sha256hash}')
+        if samples_dict['samples'][listpos]['sample_found'] is True:
 
-        # script only returns coverage info: sections:coverage flag
-        # the attribute coverage=true also required to return coverage data
-        search_values = {"apiKey": api_key,
-                         "coverage": 'true',
-                         "sections": ["coverage"],
-                         }
+            sha256hash = hash_data_dict['sha256hash']
 
-        headers = {"Content-Type": "application/json"}
-        search_url = f'https://{conf.hostname}/api/v1.0/sample/{sha256hash}/analysis'
+            print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
+            print(f'hash: {sha256hash}')
 
-        try:
-            search = requests.post(search_url, headers=headers,
-                                   data=json.dumps(search_values))
-            search.raise_for_status()
-        except requests.exceptions.HTTPError:
-            print(search)
-            print(search.text)
-            print('\nCorrect errors and rerun the application\n')
-            sys.exit()
+            # script only returns coverage info: sections:coverage flag
+            # the attribute coverage=true also required to return coverage data
+            search_values = {"apiKey": api_key,
+                             "coverage": 'true',
+                             "sections": ["coverage"],
+                             }
 
-        # this is a single request-response interaction
-        # no cookie and updated checks required
-        results_analysis = json.loads(search.text)
+            headers = {"Content-Type": "application/json"}
+            search_url = f'https://{conf.hostname}/api/v1.0/sample/{sha256hash}/analysis'
 
-        # sig types with coverage data to be captured
-        sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
+            try:
+                search = requests.post(search_url, headers=headers,
+                                       data=json.dumps(search_values))
+                search.raise_for_status()
+            except requests.exceptions.HTTPError:
+                print(search)
+                print(search.text)
+                print('\nCorrect errors and rerun the application\n')
+                sys.exit()
 
-        for stype in sigtypes:
-            # add the full response to the doc
-            hash_data_dict[stype] = results_analysis['coverage'][stype]
+            # this is a single request-response interaction
+            # no cookie and updated checks required
+            results_analysis = json.loads(search.text)
 
-            # check sig state by type and add to doc
-            sig_state = f'{stype}_sig_state'
-            # convert to string for quick text search
-            sigstring = json.dumps(results_analysis['coverage'][stype])
-            if sigstring.find('true') != -1:
-                hash_data_dict[sig_state] = 'active'
-            elif sigstring.find('true') == -1 and sigstring.find('false') != -1:
-                hash_data_dict[sig_state] = 'inactive'
+            # sig types with coverage data to be captured
+            sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
+
+            for stype in sigtypes:
+                # add the full response to the doc
+                hash_data_dict[stype] = results_analysis['coverage'][stype]
+
+                # check sig state by type and add to doc
+                sig_state = f'{stype}_sig_state'
+                # convert to string for quick text search
+                sigstring = json.dumps(results_analysis['coverage'][stype])
+                if sigstring.find('true') != -1:
+                    hash_data_dict[sig_state] = 'active'
+                elif sigstring.find('true') == -1 and sigstring.find('false') != -1:
+                    hash_data_dict[sig_state] = 'inactive'
+                else:
+                    hash_data_dict[sig_state] = 'none'
+
+            # set doc value for any sig coverage as active, inactive, none
+            if search.text.find('true') != -1:
+                hash_data_dict['sig_state_all'] = 'active'
+            elif search.text.find('true') == -1 and search.text.find('false') != -1:
+                hash_data_dict['sig_state_all'] = 'inactive'
             else:
-                hash_data_dict[sig_state] = 'none'
+                hash_data_dict['sig_state_all'] = 'none'
 
-        # set doc value for any sig coverage as active, inactive, none
-        if search.text.find('true') != -1:
-            hash_data_dict['sig_state_all'] = 'active'
-        elif search.text.find('true') == -1 and search.text.find('false') != -1:
-            hash_data_dict['sig_state_all'] = 'inactive'
-        else:
-            hash_data_dict['sig_state_all'] = 'none'
-
-        print('Sig coverage search complete')
-        minute_pts_rem =\
-            results_analysis['bucket_info']['minute_points_remaining']
-        daily_pts_rem =\
-            results_analysis['bucket_info']['daily_points_remaining']
-        print(f'AF quota update:  {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
-        elapsedtime = datetime.now() - start_time
-        print(f'Elasped run time is {elapsedtime}')
+            print('Sig coverage search complete')
+            minute_pts_rem =\
+                results_analysis['bucket_info']['minute_points_remaining']
+            daily_pts_rem =\
+                results_analysis['bucket_info']['daily_points_remaining']
+            print(f'AF quota update:  {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
+            elapsedtime = datetime.now() - start_time
+            print(f'Elasped run time is {elapsedtime}')
 
         hash_data_dict_pretty['samples'].append(hash_data_dict)
 
@@ -468,10 +514,11 @@ def get_sig_data(query_tag, start_time):
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-            with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'a') as hash_file:
-                hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
-
         index += 1
+
+
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'w') as hash_file:
+                    hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
 
 
 def main():
@@ -528,6 +575,9 @@ def main():
         print('This file is output from the initial sample search and read in to create a sig coverage output')
         print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
         ok_to_get_sigs = False
+
+    # find AF sample misses and add to the estack json file as not found
+    missing_samples(query_tag, start_time)
 
     if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
         get_sig_data(query_tag, start_time)
