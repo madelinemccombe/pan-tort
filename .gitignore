@@ -105,9 +105,12 @@ hashenv/
 # content mgmt
 .idea/
 
-# stk specific
+# pan-tort specific
 hash/hash_data_estack.json
 hash/hash_data_pretty.json
 hash/hash_data_stats.json
 hash/hash_list.txt
-hash/panrc.py
+hash/af_api.py
+hash/out_estack/*.json
+hash/out_pretty/*.json
+hash/tagdata.json

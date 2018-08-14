@@ -45,7 +45,7 @@ Delete existing data in the index
     curl -XDELETE http://localhost:9200/hash-data
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_lab_test_02.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_mssp_gold_2018_sigs.json -H "Content-Type: application/x-ndjson"
 
 
 Elasticsearch delete by query example
