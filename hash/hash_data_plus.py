@@ -31,6 +31,7 @@ Use at your own risk.
 '''
 
 import sys
+import os
 import json
 import time
 import requests
@@ -73,6 +74,19 @@ def elk_index():
     index_tag_full['index'] = index_tag_inner
 
     return index_tag_full
+
+
+def output_dir(dir_name):
+    '''
+    check for the output dirs and if exist=False then create them
+    :param dir_name: directory name to be check and possibly created
+    '''
+
+    # check if the out_estack dir exists and if not then create it
+    if os.path.isdir(dir_name) is False:
+        os.mkdir(dir_name, mode=0o755)
+
+    return
 
 
 def get_search_list():
@@ -198,7 +212,7 @@ def scantype_query_results(search_dict, startTime, query_tag, search):
                 # parse data and output estack json elements
                 # return is running dict of all samples for pretty json output
                 all_sample_dict = parse_sample_data(autofocus_results, startTime, index, query_tag, all_sample_dict, search)
-                with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
+                with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
                     hash_file.write(json.dumps(all_sample_dict, indent=2, sort_keys=False) + "\n")
                 index += 1
 
@@ -315,11 +329,11 @@ def parse_sample_data(autofocus_results, startTime, index, query_tag, hash_data_
 
         # Write dict contents to running file both estack and pretty json versions
         if index == 1 and listpos == 0 and search == 1:
-            with open(f'out_estack/hash_data_estack_{query_tag}_nosigs.json', 'w') as hash_file:
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'w') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
         else:
-            with open(f'out_estack/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
@@ -417,18 +431,18 @@ def get_sig_data(query_tag, startTime):
 
         # Write dict contents to running file both estack and pretty json versions
         if index == 1 and listpos == 0:
-            with open(f'out_estack/hash_data_estack_{query_tag}_sigs.json', 'w') as hash_file:
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_sigs.json', 'w') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-            with open(f'out_pretty/hash_data_pretty_{query_tag}_sigs.json', 'w') as hash_file:
+            with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'w') as hash_file:
                 hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
         else:
-            with open(f'out_estack/hash_data_estack_{query_tag}_sigs.json', 'a') as hash_file:
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_sigs.json', 'a') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-            with open(f'out_pretty/hash_data_pretty_{query_tag}_sigs.json', 'a') as hash_file:
+            with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'a') as hash_file:
                 hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
 
         index += 1
@@ -454,6 +468,9 @@ def main():
         print('correct in af_api.py and try again')
         sys.exit(1)
 
+    # check for output dirs and created if needed
+    output_dir(conf.out_estack)
+    output_dir(conf.out_pretty)
 
     # read items list from file
     search_list_all = get_search_list()
@@ -478,7 +495,7 @@ def main():
     # check that the output sigs file exists with sample hits before getting sig coverage data
     # likely cause of no file or hits is a mismatch between hashtype searched and hashtype in hash_list.txt
     try:
-        with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as outfile:
+        with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as outfile:
             pass
     except IOError as e:
         print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json' )

@@ -9,3 +9,6 @@ elk_index_name = 'hash-data'
 # used for secondary lookups for get signature coverage data in AF
 # only set to no for testing or quick queries for tag/filetype data
 getsigdata = 'yes'
+# output directory names in the hash dir for estack and pretty json outputs
+out_estack = 'out_estack'
+out_pretty = 'out_pretty'
