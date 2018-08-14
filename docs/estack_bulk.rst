@@ -42,10 +42,10 @@ This can be used as a local workspace for load specific index and filename
 Delete existing data in the index
 
 ::
-    curl -XDELETE http://localhost:9200/sampleindex
+    curl -XDELETE http://localhost:9200/hash-data
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_pdf_postnov2017_nosigs.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_lab_test_02.json -H "Content-Type: application/x-ndjson"
 
 
 Elasticsearch delete by query example
@@ -57,7 +57,7 @@ POST hash-data/_delete_by_query
         "_source": "query_tag",
 "query": {
         "match" : {
-            "query_tag" : "cryptominer_apr18"
+            "query_tag" : "lab_test_02"
         }
     }
 }
