@@ -101,6 +101,9 @@ hashenv/
 # mypy
 .mypy_cache/
 
+# content management
+.idea/
+
 # pan-tort specific
 hash/*.json
 hash/hash_list.txt
