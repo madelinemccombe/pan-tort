@@ -101,6 +101,7 @@ hashenv/
 # mypy
 .mypy_cache/
 
+
 # content mgmt
 .idea/
 
