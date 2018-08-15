@@ -45,24 +45,6 @@ from af_api import api_key
 from filetypedata import filetypetags
 
 
-def init_hash_counters():
-
-    '''
-    initialize hash counters
-    :return: send back hash counters = zero
-    '''
-
-    hash_counters = {}
-    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig',
-                         'mal_active_sig', 'mal_no_sig', 'grayware', 'benign',
-                         'phishing', 'No sample found']
-
-    for value in hash_count_values:
-        hash_counters[value] = 0
-
-    return hash_counters
-
-
 def elk_index():
 
     '''
@@ -104,22 +86,6 @@ def get_search_list():
         search_list = search_file.read().splitlines()
 
     return search_list
-
-
-def is_active(sigdict, searchfor):
-
-    '''
-    check to see if sig is active/inactive based on AF response
-    any true sets the return to Active
-    :param dict: dict loaded from json response per sig type
-    :param searchfor: value to search for in the sig reponse dict
-    :return:
-    '''
-    for sigkey in sigdict:
-        for sigentry in sigdict[sigkey]:
-            if searchfor in sigentry:
-                return 'Active'
-    return 'Inactive'
 
 
 def multi_query(searchlist):
@@ -255,7 +221,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search):
     print('=' * 80)
     print('\n')
     print(f'sample processing complete for {query_tag}')
-    print(f"total hits: {autofocus_results['total']}")
+    print(f"total samples found in Autofocus: {autofocus_results['total']}")
     totalsamples = sum(running_length)
     print(f'total samples processed: {totalsamples}')
 
@@ -525,6 +491,75 @@ def get_sig_data(query_tag, start_time):
                     hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
 
 
+def quick_stats(query_tag):
+
+    '''
+    capture quick statistics for samples, verdicts, sig coverage
+    and display to terminal
+    :param query_tag: reference description for this script run
+    :return:
+    '''
+
+    hash_counters = {}
+    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig',
+                         'mal_active_sig', 'mal_no_sig', 'grayware', 'benign',
+                         'phishing', 'no sample found']
+
+    for value in hash_count_values:
+        hash_counters[value] = 0
+
+    # get the full json output file will all post-run sample data
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'r') as samplesfile:
+        samples_dict = json.load(samplesfile)
+
+
+    listsize = len(samples_dict['samples'])
+    hash_counters['total samples'] = listsize
+
+    # iterate through each sample dict in the json samples list
+    for listpos in range(0, listsize):
+
+        sample_data = samples_dict['samples'][listpos]
+
+        # counter updates for WF verdicts
+        if sample_data['verdict'] == 'malware':
+            hash_counters['malware'] += 1
+        if sample_data['verdict'] == 'grayware':
+            hash_counters['grayware'] += 1
+        if sample_data['verdict'] == 'benign':
+            hash_counters['benign'] += 1
+        if sample_data['verdict'] == 'phishing':
+            hash_counters['phishing'] += 1
+        if sample_data['verdict'] == 'No Sample Found':
+            hash_counters['no sample found'] += 1
+
+        # counter updates for sig coverage
+        if sample_data['verdict'] == 'malware':
+            if sample_data['wf_av_sig_sig_state'] == 'active':
+                hash_counters['mal_active_sig'] += 1
+            if sample_data['wf_av_sig_sig_state'] == 'inactive':
+                hash_counters['mal_inactive_sig'] += 1
+            if sample_data['wf_av_sig_sig_state'] == 'none':
+                hash_counters['mal_no_sig'] += 1
+
+    print('=' * 80)
+    print(f"Quick stats summary for {query_tag}\n")
+    print(f"Total samples queried: {hash_counters['total samples']}")
+    print(f"Samples not found in Autofocus: {hash_counters['no sample found']}")
+    print('-' * 80)
+    print('Verdicts')
+    print(f"malware:  {hash_counters['malware']}")
+    print(f"phishing:  {hash_counters['phishing']}")
+    print(f"grayware:  {hash_counters['grayware']}")
+    print(f"benign:  {hash_counters['benign']}")
+    print('-' * 80)
+    print('Signature coverage for malware verdicts')
+    print(f"active:  {hash_counters['mal_active_sig']}")
+    print(f"inactive:  {hash_counters['mal_inactive_sig']}")
+    print(f"no sig:  {hash_counters['mal_no_sig']}")
+    print('=' * 80)
+
+
 def main():
 
     '''search_data main module'''
@@ -584,6 +619,10 @@ def main():
 
     if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
         get_sig_data(query_tag, start_time)
+
+
+    # print out summary stats to terminal console
+    quick_stats(query_tag)
 
 
 if __name__ == '__main__':
