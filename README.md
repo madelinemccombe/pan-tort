@@ -1,74 +1,51 @@
-## Hash Search as part of the Testing Output Response Toolkit
+# Pan-Tort
+The primary purpose of the pan-tort project is to automate contextual
+information based on a list of hash samples created in a test lab.
 
+Installation, usage, and viewing outputs is documented here:
 
-## Install & start the hash search application
-### 1. Clone repo
-```git clone https://www.github.com/PaloAltoNetworks/pan-tort.git```
-<br/>
-### 2. Change into repo directory
-```cd pan-tort```
-<br/>
-### 3. Create python 3.6 virtualenv
-```python3.6 -m venv env```
-<br/>
-### 4. Activate virtualenv
-```source env/bin/activate```
-<br/>
-### 5. Download required libraries
-```pip install -r requirements.txt```
-<br/>
-### 6. Change into hash directory
-```cd hash```
-<br/>
-### 7. Create the af_api.py file with your Autofocus api key
+[Pan-Tort Documentation](https://pan-tort.readthedocs.io/)
 
-Sample af_api.py file:
+## Getting Started
+Prior to using pan-tort an Autofocus license aren API key are required.
+
+[Get Your Autofocus API Key](https://www.paloaltonetworks.com/documentation/autofocus/autofocus/autofocus_api/get-started-with-the-autofocus-api/get-your-api-key)
+
+The output of pan-tort can be loaded into ElasticSearch for viewing in Kibana.
+
+Information about installation and using these tools can be found in the docs.
+
+[Viewing Pan-Tort Outputs](https://pan-tort.readthedocs.io/)
+
+## Installation and Usage
+To download and use pan-tort simply clone this repo with the following command:
 
 ```
-api_key = '{{Autofocus API Key}}'
+git clone git@github.com:PaloAltoNetworks/pan-tort.git
 ```
 
-<br/>
+This requires python 3.6 or later.
 
-### 8. Edit the conf.py file with your Autofocus api key
+There are python package dependencies that can be run in a python virtual
+environment and loaded with ```pip install```
 
-Sample conf.py file:
+More usage details can be found in the pan-tort documentation.
 
-```
-hostname = 'autofocus.paloaltonetworks.com'
-hashfile = 'hash_list.txt'
-hashtype = 'sha256'
-elk_index_name = 'hash-data'
+[Pan-Tort Documentation](https://pan-tort.readthedocs.io/)
 
-```
+## Contributing
+Please read [CONTRIBUTING.md](https://github.com/PaloAltoNetworks/iron-skillet/CONTRIBUTING.md) for details on how you can help contribute to this project.
 
-<br/>
-### 9. Create the hash_list.txt file with a list of hashes
+## Support
+This is a Palo Alto Networks contributed project.
 
-[Create hash_list.txt](https://github.com/PaloAltoNetworks/pan-tort/wiki/hash_list)
-<br/>
+## Authors
 
-### 10. Run gettagdata.py to have an updated list of Autofocus malware tags
-```python gettagdata.py```
+* Scott Shoaf [(@scotchoaf)](https://github.com/scotchoaf)
+* Edward Arcuri - [(@sdndude)](https://github.com/sdndude)
 
-NOTE: There will be a tagdata.json file in the hash directory when done.
+See also the list of [contributors](https://github.com/PaloAltoNetworks/iron-skillet/contributors) who have participated in this project.
 
-### 10. Run hash_data.py to begin queries and retrieving verdict, filetype, and coverage information
-```python hash_data_plus.py```
-<br/>
+## License
 
-Supported hashtypes are md5, sha1, and sha256
-<br/>
-
-### 11. Viewing output json files
-
-* hash_data_pretty.json:  raw data view of per-hash Autofocus responses
-
-* hash_data_estack.json:  raw data output with index to bulk load into ElasticSearch/Kibana for visualization
-
-[ElasticStack Visualization](https://github.com/PaloAltoNetworks/pan-tort/wiki/elasticStack)
-
-NOTE: saved searches, visualizations, and dashboard are in the hash/misc directory for Kibana import
-<br/><br/>
-## Best Practices and Optional Configuration
-You should be all set.  For even more ideas on what you can do with the system and other things that you can download and install to get the most out of pan-tort, checkout the [Wiki](https://github.com/PaloAltoNetworks/pan-tort/wiki/overview)!!
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
