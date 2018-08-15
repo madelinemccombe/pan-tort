@@ -1,7 +1,7 @@
 Using pan-tort
 ==============
 
-The prior installation steps ensure pan-tort is ready to run and can community with Autofocus.
+The prior installation steps ensure pan-tort is ready to run and can communicate with Autofocus.
 
 Running a query
 ---------------
