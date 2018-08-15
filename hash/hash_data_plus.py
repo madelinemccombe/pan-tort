@@ -36,31 +36,13 @@ import sys
 import os
 import json
 import time
-from datetime import datetime
+from datetime import datetime, date
 import requests
 
 # local imports for static input data
 import conf
 from af_api import api_key
 from filetypedata import filetypetags
-
-
-def init_hash_counters():
-
-    '''
-    initialize hash counters
-    :return: send back hash counters = zero
-    '''
-
-    hash_counters = {}
-    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig',
-                         'mal_active_sig', 'mal_no_sig', 'grayware', 'benign',
-                         'phishing', 'No sample found']
-
-    for value in hash_count_values:
-        hash_counters[value] = 0
-
-    return hash_counters
 
 
 def elk_index():
@@ -104,22 +86,6 @@ def get_search_list():
         search_list = search_file.read().splitlines()
 
     return search_list
-
-
-def is_active(sigdict, searchfor):
-
-    '''
-    check to see if sig is active/inactive based on AF response
-    any true sets the return to Active
-    :param dict: dict loaded from json response per sig type
-    :param searchfor: value to search for in the sig reponse dict
-    :return:
-    '''
-    for sigkey in sigdict:
-        for sigentry in sigdict[sigkey]:
-            if searchfor in sigentry:
-                return 'Active'
-    return 'Inactive'
 
 
 def multi_query(searchlist):
@@ -255,7 +221,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search):
     print('=' * 80)
     print('\n')
     print(f'sample processing complete for {query_tag}')
-    print(f"total hits: {autofocus_results['total']}")
+    print(f"total samples found in Autofocus: {autofocus_results['total']}")
     totalsamples = sum(running_length)
     print(f'total samples processed: {totalsamples}')
 
@@ -296,6 +262,7 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
         # AFoutput is json output converted to python dictionary
         hash_data_dict['hashvalue'] = keyhash
+        hash_data_dict['sample_found'] = True
 
         hash_data_dict['sha256hash'] =\
             autofocus_results['hits'][listpos]['_source']['sha256']
@@ -360,6 +327,52 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
     return hash_data_dict_pretty
 
 
+def missing_samples(query_tag, start_time):
+    '''
+    once the query is complete and samples found have to look for misses
+    this reads in the pretty json file to get the found list
+    then appends the estack and pretty nosigs files with hash misses
+    :return:
+    '''
+
+    index_tag_full = elk_index()
+
+    # initialize tracking dict for samples not found
+    samples_notfound_dict = {}
+    hash_list = get_search_list()
+
+    missing_sample_date = start_time.strftime('%Y-%m-%dT%H:%M:%S')
+
+    # read in the full set of samples after query is complete
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
+        samples_dict = json.load(samplesfile)
+
+    found_list = []
+    for sample in samples_dict['samples']:
+        found_list.append(sample['hashvalue'])
+
+    for sample in hash_list:
+        if sample in found_list:
+            pass
+        else:
+            samples_notfound_dict['hashvalue'] = sample
+            samples_notfound_dict['sample_found'] = False
+            samples_notfound_dict['query_tag'] = query_tag
+            samples_notfound_dict['query_time'] = str(start_time)
+            samples_notfound_dict['create_date'] = missing_sample_date
+            samples_notfound_dict['verdict'] = 'No Sample Found'
+
+            # Write dict contents to running file both estack and pretty json versions
+            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
+                hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+                hash_file.write(json.dumps(samples_notfound_dict, indent=None, sort_keys=False) + "\n")
+
+            samples_dict['samples'].append(samples_notfound_dict)
+
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
+        hash_file.write(json.dumps(samples_dict, indent=4, sort_keys=False) + "\n")
+
+
 def get_sig_data(query_tag, start_time):
 
     '''
@@ -374,7 +387,7 @@ def get_sig_data(query_tag, start_time):
 
     # stage 1 is the sample query and data capture stored as file nosigs
     # that output is read in to a dict, updated, and output as sigs file
-    with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as samplesfile:
         samples_dict = json.load(samplesfile)
 
     index_tag_full = elk_index()
@@ -382,76 +395,79 @@ def get_sig_data(query_tag, start_time):
 
     listsize = len(samples_dict['samples'])
 
+    hash_data_dict_pretty = {}
+    hash_data_dict_pretty['samples'] = []
 
     for listpos in range(0, listsize):
 
-        hash_data_dict_pretty = {}
-        hash_data_dict_pretty['samples'] = []
         hash_data_dict = samples_dict['samples'][listpos]
-        sha256hash = hash_data_dict['sha256hash']
         hash_num = listpos + 1
 
-        print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
-        print(f'hash: {sha256hash}')
+        if samples_dict['samples'][listpos]['sample_found'] is True:
 
-        # script only returns coverage info: sections:coverage flag
-        # the attribute coverage=true also required to return coverage data
-        search_values = {"apiKey": api_key,
-                         "coverage": 'true',
-                         "sections": ["coverage"],
-                         }
+            sha256hash = hash_data_dict['sha256hash']
 
-        headers = {"Content-Type": "application/json"}
-        search_url = f'https://{conf.hostname}/api/v1.0/sample/{sha256hash}/analysis'
+            print(f"\ngetting sig coverage for {hash_num} of {listsize}: {query_tag}")
+            print(f'hash: {sha256hash}')
 
-        try:
-            search = requests.post(search_url, headers=headers,
-                                   data=json.dumps(search_values))
-            search.raise_for_status()
-        except requests.exceptions.HTTPError:
-            print(search)
-            print(search.text)
-            print('\nCorrect errors and rerun the application\n')
-            sys.exit()
+            # script only returns coverage info: sections:coverage flag
+            # the attribute coverage=true also required to return coverage data
+            search_values = {"apiKey": api_key,
+                             "coverage": 'true',
+                             "sections": ["coverage"],
+                             }
 
-        # this is a single request-response interaction
-        # no cookie and updated checks required
-        results_analysis = json.loads(search.text)
+            headers = {"Content-Type": "application/json"}
+            search_url = f'https://{conf.hostname}/api/v1.0/sample/{sha256hash}/analysis'
 
-        # sig types with coverage data to be captured
-        sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
+            try:
+                search = requests.post(search_url, headers=headers,
+                                       data=json.dumps(search_values))
+                search.raise_for_status()
+            except requests.exceptions.HTTPError:
+                print(search)
+                print(search.text)
+                print('\nCorrect errors and rerun the application\n')
+                sys.exit()
 
-        for stype in sigtypes:
-            # add the full response to the doc
-            hash_data_dict[stype] = results_analysis['coverage'][stype]
+            # this is a single request-response interaction
+            # no cookie and updated checks required
+            results_analysis = json.loads(search.text)
 
-            # check sig state by type and add to doc
-            sig_state = f'{stype}_sig_state'
-            # convert to string for quick text search
-            sigstring = json.dumps(results_analysis['coverage'][stype])
-            if sigstring.find('true') != -1:
-                hash_data_dict[sig_state] = 'active'
-            elif sigstring.find('true') == -1 and sigstring.find('false') != -1:
-                hash_data_dict[sig_state] = 'inactive'
+            # sig types with coverage data to be captured
+            sigtypes = ['dns_sig', 'wf_av_sig', 'fileurl_sig']
+
+            for stype in sigtypes:
+                # add the full response to the doc
+                hash_data_dict[stype] = results_analysis['coverage'][stype]
+
+                # check sig state by type and add to doc
+                sig_state = f'{stype}_sig_state'
+                # convert to string for quick text search
+                sigstring = json.dumps(results_analysis['coverage'][stype])
+                if sigstring.find('true') != -1:
+                    hash_data_dict[sig_state] = 'active'
+                elif sigstring.find('true') == -1 and sigstring.find('false') != -1:
+                    hash_data_dict[sig_state] = 'inactive'
+                else:
+                    hash_data_dict[sig_state] = 'none'
+
+            # set doc value for any sig coverage as active, inactive, none
+            if search.text.find('true') != -1:
+                hash_data_dict['sig_state_all'] = 'active'
+            elif search.text.find('true') == -1 and search.text.find('false') != -1:
+                hash_data_dict['sig_state_all'] = 'inactive'
             else:
-                hash_data_dict[sig_state] = 'none'
+                hash_data_dict['sig_state_all'] = 'none'
 
-        # set doc value for any sig coverage as active, inactive, none
-        if search.text.find('true') != -1:
-            hash_data_dict['sig_state_all'] = 'active'
-        elif search.text.find('true') == -1 and search.text.find('false') != -1:
-            hash_data_dict['sig_state_all'] = 'inactive'
-        else:
-            hash_data_dict['sig_state_all'] = 'none'
-
-        print('Sig coverage search complete')
-        minute_pts_rem =\
-            results_analysis['bucket_info']['minute_points_remaining']
-        daily_pts_rem =\
-            results_analysis['bucket_info']['daily_points_remaining']
-        print(f'AF quota update:  {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
-        elapsedtime = datetime.now() - start_time
-        print(f'Elasped run time is {elapsedtime}')
+            print('Sig coverage search complete')
+            minute_pts_rem =\
+                results_analysis['bucket_info']['minute_points_remaining']
+            daily_pts_rem =\
+                results_analysis['bucket_info']['daily_points_remaining']
+            print(f'AF quota update:  {minute_pts_rem} minute points and {daily_pts_rem} daily points remaining')
+            elapsedtime = datetime.now() - start_time
+            print(f'Elasped run time is {elapsedtime}')
 
         hash_data_dict_pretty['samples'].append(hash_data_dict)
 
@@ -468,10 +484,80 @@ def get_sig_data(query_tag, start_time):
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
 
-            with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'a') as hash_file:
-                hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
-
         index += 1
+
+
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'w') as hash_file:
+                    hash_file.write(json.dumps(hash_data_dict_pretty, indent=4, sort_keys=False) + "\n")
+
+
+def quick_stats(query_tag):
+
+    '''
+    capture quick statistics for samples, verdicts, sig coverage
+    and display to terminal
+    :param query_tag: reference description for this script run
+    :return:
+    '''
+
+    hash_counters = {}
+    hash_count_values = ['total samples', 'malware', 'mal_inactive_sig',
+                         'mal_active_sig', 'mal_no_sig', 'grayware', 'benign',
+                         'phishing', 'no sample found']
+
+    for value in hash_count_values:
+        hash_counters[value] = 0
+
+    # get the full json output file will all post-run sample data
+    with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_sigs.json', 'r') as samplesfile:
+        samples_dict = json.load(samplesfile)
+
+
+    listsize = len(samples_dict['samples'])
+    hash_counters['total samples'] = listsize
+
+    # iterate through each sample dict in the json samples list
+    for listpos in range(0, listsize):
+
+        sample_data = samples_dict['samples'][listpos]
+
+        # counter updates for WF verdicts
+        if sample_data['verdict'] == 'malware':
+            hash_counters['malware'] += 1
+        if sample_data['verdict'] == 'grayware':
+            hash_counters['grayware'] += 1
+        if sample_data['verdict'] == 'benign':
+            hash_counters['benign'] += 1
+        if sample_data['verdict'] == 'phishing':
+            hash_counters['phishing'] += 1
+        if sample_data['verdict'] == 'No Sample Found':
+            hash_counters['no sample found'] += 1
+
+        # counter updates for sig coverage
+        if sample_data['verdict'] == 'malware':
+            if sample_data['wf_av_sig_sig_state'] == 'active':
+                hash_counters['mal_active_sig'] += 1
+            if sample_data['wf_av_sig_sig_state'] == 'inactive':
+                hash_counters['mal_inactive_sig'] += 1
+            if sample_data['wf_av_sig_sig_state'] == 'none':
+                hash_counters['mal_no_sig'] += 1
+
+    print('=' * 80)
+    print(f"Quick stats summary for {query_tag}\n")
+    print(f"Total samples queried: {hash_counters['total samples']}")
+    print(f"Samples not found in Autofocus: {hash_counters['no sample found']}")
+    print('-' * 80)
+    print('Verdicts')
+    print(f"malware:  {hash_counters['malware']}")
+    print(f"phishing:  {hash_counters['phishing']}")
+    print(f"grayware:  {hash_counters['grayware']}")
+    print(f"benign:  {hash_counters['benign']}")
+    print('-' * 80)
+    print('Signature coverage for malware verdicts')
+    print(f"active:  {hash_counters['mal_active_sig']}")
+    print(f"inactive:  {hash_counters['mal_inactive_sig']}")
+    print(f"no sig:  {hash_counters['mal_no_sig']}")
+    print('=' * 80)
 
 
 def main():
@@ -485,7 +571,6 @@ def main():
     start_time = datetime.now()
     listend = -1
     ok_to_get_sigs = True
-
 
     # supported conf.hashtypes are: md5, sha1, sha256
     if conf.hashtype != 'md5' and conf.hashtype != 'sha1' and conf.hashtype != 'sha256':
@@ -529,8 +614,15 @@ def main():
         print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
         ok_to_get_sigs = False
 
+    # find AF sample misses and add to the estack json file as not found
+    missing_samples(query_tag, start_time)
+
     if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
         get_sig_data(query_tag, start_time)
+
+
+    # print out summary stats to terminal console
+    quick_stats(query_tag)
 
 
 if __name__ == '__main__':
