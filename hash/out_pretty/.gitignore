@@ -1,0 +1,5 @@
+# Ignore everything in this directory
+/*
+# Except this file
+!.gitignore
+!hash_data_pretty_pan_tort_sample*

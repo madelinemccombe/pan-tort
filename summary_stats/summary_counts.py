@@ -1,25 +1,32 @@
-####!/usr/bin/env python3
+
 """
 hash_data reads a list of md5 hash strings and performs 2 Autofocus api
 queries to get verdict/filetype and then signature coverage data
 This provides contextual information in test environments beyond just a hash miss
 """
 import sys
+import os
 import time
 import json
 import requests
 import calendar
 import csv
 
+import conf
 from datetime import datetime
 from af_api import api_key
-from conf import hostname
 
 
-# FIXME doesn't check for not-found sample hashes - key for the hashlist load
-# FIXME need to add in the summary stats view - at minimum the end state output file
-# FIXME wait and retry when server connect errors happen vs ending program
+def output_dir(dir_name):
 
+    '''
+    check for the output dirs and if exist=False then create them
+    :param dir_name: directory name to be check and possibly created
+    '''
+
+    # check if the out_estack dir exists and if not then create it
+    if os.path.isdir(dir_name) is False:
+        os.mkdir(dir_name, mode=0o755)
 
 
 def monthly_stats(sourcetype, startdate, enddate):
@@ -47,7 +54,7 @@ def monthly_stats(sourcetype, startdate, enddate):
                     }
 
     headers = {"Content-Type": "application/json"}
-    search_url = f'https://{hostname}/api/v1.0/samples/search'
+    search_url = f'https://{conf.hostname}/api/v1.0/samples/search'
 
     try:
         search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
@@ -91,7 +98,7 @@ def get_query_results(search_dict, startTime):
 
         time.sleep(5)
         try:
-            results_url = f'https://{hostname}/api/v1.0/samples/results/' + cookie
+            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
             results_values = {"apiKey": api_key}
             results = requests.post(results_url, headers=headers, data=json.dumps(results_values))
@@ -137,14 +144,17 @@ def get_query_results(search_dict, startTime):
 
 def main():
 
-    startyear = 2014
+    startyear = conf.start_year
     currentyear = int(datetime.now().year)
 
     startTime = datetime.now()
 
+    #check for dir and create if needed
+    output_dir(conf.out_json)
+
     headers = ['month', 'total_malware', 'total_daily_avg', 'noAPI_malware', 'noAPI_daily_avg']
 
-    with open(f'monthly_malware_stats.csv', 'w') as statfile:
+    with open(f'{conf.out_csv}/monthly_malware_stats.csv', 'w') as statfile:
         writer = csv.writer(statfile)
         writer.writerow(headers)
 
@@ -171,13 +181,13 @@ def main():
 
             csvlist = [sdate]
 
-            for type in stypes:
+            for stype in stypes:
 
                 print('=' * 80)
-                print(f'starting search for {sdate} and type = {type}')
+                print(f'starting search for {sdate} and type = {stype}')
 
                 #submit bulk query for sample data to AF
-                searchrequest = monthly_stats(type, startdate, enddate)
+                searchrequest = monthly_stats(stype, startdate, enddate)
 
                 #get query results and parse output
                 samplecount = get_query_results(searchrequest, startTime)
@@ -187,7 +197,7 @@ def main():
                 csvlist.append(samplecount)
                 csvlist.append(dailyavg)
 
-            with open(f'monthly_malware_stats.csv', 'a') as statfile:
+            with open(f'{conf.out_csv}/monthly_malware_stats.csv', 'a') as statfile:
                 writer = csv.writer(statfile)
                 writer.writerow(csvlist)
 

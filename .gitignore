@@ -101,7 +101,15 @@ hashenv/
 # mypy
 .mypy_cache/
 
+ content mgmt
+.idea/
+
 # pan-tort specific
-hash/*.json
 hash/hash_list.txt
 hash/af_api.py
+hash/tagdata.json
+hash/AV_updates/
+hash/saved_queries/
+docs/build/
+docs/source/
+

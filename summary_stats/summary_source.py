@@ -5,17 +5,16 @@ queries to get verdict/filetype and then signature coverage data
 This provides contextual information in test environments beyond just a hash miss
 """
 import sys
+import os
 import time
 import json
 import requests
 import calendar
 
+import conf
 from datetime import datetime
 from af_api import api_key
-from conf import hostname
 
-
-# FIXME wait and retry when server connect errors happen vs ending program
 
 
 def elk_index(elk_index_name):
@@ -34,6 +33,17 @@ def elk_index(elk_index_name):
 
     return index_tag_full
 
+
+def output_dir(dir_name):
+
+    '''
+    check for the output dirs and if exist=False then create them
+    :param dir_name: directory name to be check and possibly created
+    '''
+
+    # check if the out_estack dir exists and if not then create it
+    if os.path.isdir(dir_name) is False:
+        os.mkdir(dir_name, mode=0o755)
 
 
 def monthly_stats(sourcetype, startdate, enddate, verdict):
@@ -65,7 +75,7 @@ def monthly_stats(sourcetype, startdate, enddate, verdict):
                     }
 
     headers = {"Content-Type": "application/json"}
-    search_url = f'https://{hostname}/api/v1.0/samples/search'
+    search_url = f'https://{conf.hostname}/api/v1.0/samples/search'
 
     try:
         search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
@@ -109,7 +119,7 @@ def get_query_results(search_dict, startTime):
 
         time.sleep(5)
         try:
-            results_url = f'https://{hostname}/api/v1.0/samples/results/' + cookie
+            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
             results_values = {"apiKey": api_key}
             results = requests.post(results_url, headers=headers, data=json.dumps(results_values))
@@ -155,7 +165,10 @@ def get_query_results(search_dict, startTime):
 
 def main():
 
-    startyear = 2016
+    #check for dir and create if needed
+    output_dir(conf.out_json)
+
+    startyear = conf.start_year
     currentyear = int(datetime.now().year)
 
     startTime = datetime.now()
@@ -221,11 +234,11 @@ def main():
                 monthly_count_dict['all_verdict_daily_average'] = all_dailyavg
 
                 if index == 1:
-                    with open(f'upload_source_summary.json', 'w') as stat_file:
+                    with open(f'{conf.out_json}/upload_source_summary.json', 'w') as stat_file:
                         stat_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                         stat_file.write(json.dumps(monthly_count_dict, indent=None, sort_keys=False) + "\n")
                 else:
-                    with open(f'upload_source_summary.json', 'a') as stat_file:
+                    with open(f'{conf.out_json}/upload_source_summary.json', 'a') as stat_file:
                         stat_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                         stat_file.write(json.dumps(monthly_count_dict, indent=None, sort_keys=False) + "\n")
 

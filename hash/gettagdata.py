@@ -16,12 +16,17 @@ def tag_query(total):
 
     """
     tag query into autofocus to get a complete tag list
+    :param total: max number of tag items expected; should be >> current size
     """
 
     # set the number of iterations based on total tags and limit of 200 tags per response
     AFpages = int(round(total/200))
     tag_dict = {}
     tag_dict['_tags'] = {}
+
+    print('=' * 80)
+    print('Updating local tag data from Autofocus tag and tag group lists...\n')
+
 
     for page in range(0, AFpages+1, 1):
 
@@ -56,6 +61,8 @@ def tag_query(total):
 
     with open('tagdata.json', 'w') as file:
         file.write(json.dumps(tag_dict, indent=2, sort_keys=False) + "\n")
+
+    print('\ntag data refresh complete and stored in tagdata.json')
 
 
     return

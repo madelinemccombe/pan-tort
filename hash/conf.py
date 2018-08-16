@@ -1,11 +1,18 @@
-# used in the url to connect to autofocus
 hostname = 'autofocus.paloaltonetworks.com'
-# file that contains the list of hash values
+# querytype is autofocus for exported queries or hash when reading from hash list
+querytype = 'hash'
+# used for hash inputs; leave as default even if not using
 inputfile = 'hash_list.txt'
-# hashtype options are md5, sha256, or sha1
 hashtype = 'md5'
-# used to map to the index in elasticsearch
 elk_index_name = 'hash-data'
-# used for secondary lookups for get signature coverage data in AF
-# only set to no for testing or quick queries for tag/filetype data
+out_estack = 'out_estack'
+out_pretty = 'out_pretty'
+# extend the data parsing to include a second search for sig coverage
 getsigdata = 'yes'
+# for testing to use existing pretty json output file and skip sample search
+onlygetsigs = 'no'
+gettagdata = 'no'
+# edit the query for each search
+# you can copy-paste by creating a query in Autofocus and exporting using the GUI 'Export Search'
+af_query = {"operator":"all","children":[{"field":"sample.create_date","operator":"is in the range","value":["2018-04-14T00:00:00","2018-04-14T23:59:59"]},{"field":"sample.malware","operator":"is","value":1},{"field":"sample.tag_group","operator":"is in the list","value":["CryptoMiner"]},{"field":"session.upload_src","operator":"is not","value":"Manual API"}]}
+# placeholder so af_query no EOF - paste cheat

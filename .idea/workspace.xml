@@ -2,11 +2,19 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="71f90d9d-4943-41dc-9fb9-c8b447bbedbf" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/docs/estack_bulk.rst" beforeDir="false" afterPath="$PROJECT_DIR$/docs/estack_bulk.rst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/hash/conf.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/conf.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash/hash_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/hash_data.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/hash/hash_plus.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/hash_plus.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/gettagdata.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/gettagdata.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_data.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_data_plus.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/hash_plus.py" beforeDir="false" afterPath="$PROJECT_DIR$/hash/threat_data.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_test_nosigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/hash/out_estack/hash_data_estack_test_nosigs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_test_nosigs.json" beforeDir="false" afterPath="$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_test_nosigs.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary_stats/summary_counts.py" beforeDir="false" afterPath="$PROJECT_DIR$/summary_stats/summary_counts.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/summary_stats/summary_source.py" beforeDir="false" afterPath="$PROJECT_DIR$/summary_stats/summary_source.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -17,76 +25,37 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="conf.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/hash/conf.py">
+      <file leaf-file-name="threat_data.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/threat_data.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="hash_list.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/hash_list.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="286">
-              <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="scratch.json" pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_CONFIG_DIR$/scratches/scratch.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="960">
-              <caret line="64" column="22" selection-start-line="64" selection-start-column="22" selection-end-line="64" selection-end-column="22" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="estack_bulk.rst" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="234">
-              <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="summary_counts.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary_stats/summary_counts.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1496">
-              <caret line="38" selection-start-line="38" selection-end-line="38" />
+            <state relative-caret-position="6190">
+              <caret line="414" column="30" lean-forward="true" selection-start-line="414" selection-start-column="30" selection-end-line="414" selection-end-column="30" />
               <folding>
-                <element signature="e#253#263#0" expanded="true" />
+                <element signature="e#228#238#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="summary_source.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/summary_stats/summary_source.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="579">
-              <caret line="158" column="31" selection-start-line="158" selection-start-column="31" selection-end-line="158" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="af_api.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/af_api.py">
+      <file leaf-file-name="hash_data_pretty_mssp_gold_aug16_nosigs.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_mssp_gold_aug16_nosigs.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file leaf-file-name="hash_data_plus.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/hash/hash_data_plus.py">
+      <file leaf-file-name="conf.py" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hash/conf.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
-              <caret line="423" column="22" selection-start-line="423" selection-start-column="22" selection-end-line="423" selection-end-column="22" />
-              <folding>
-                <element signature="e#253#263#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="180">
+              <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="estack_bulk.rst" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="608">
+              <caret line="48" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="48" />
             </state>
           </provider>
         </entry>
@@ -95,9 +64,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>&quot;malware_f</find>
-      <find>SystemSerialNumber_Mac</find>
-      <find>tag_group_name</find>
       <find>Unit42.NanoCoreRAT</find>
       <find>Unit42.Satori</find>
       <find />
@@ -113,7 +79,6 @@
       <find>1000</find>
       <find>&quot;hashvalue</find>
       <find>af_out</find>
-      <find />
       <find>[</find>
       <find>Unit42.Gafgyt</find>
       <find>sha256</find>
@@ -124,6 +89,11 @@
       <find>hashvalue</find>
       <find>AVsigs_2694_jun</find>
       <find>Unit</find>
+      <find>onlygetsigs</find>
+      <find>startTime</find>
+      <find>hostname</find>
+      <find>inputfile</find>
+      <find>get_search_list</find>
     </findStrings>
     <replaceStrings>
       <replace />
@@ -132,6 +102,9 @@
       <replace>inputfile</replace>
       <replace>AVsigs_2696_jun</replace>
       <replace>&quot;Unit</replace>
+      <replace>conf.onlygetsigs</replace>
+      <replace>start_time</replace>
+      <replace>conf.hostname</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -141,15 +114,12 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/hash/panrc.py" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/hash/af_api.py" />
-        <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/hash/readtagdata.py" />
         <option value="$PROJECT_DIR$/hash/hash_data_estack.json" />
         <option value="$PROJECT_DIR$/hash/filetypedata.py" />
         <option value="$PROJECT_DIR$/hash/hash_data_pretty_sigs_nosigs.json" />
         <option value="$PROJECT_DIR$/hash/hash_data_pretty_blackvine_nosigs.json" />
-        <option value="$PROJECT_DIR$/hash/gettagdata.py" />
         <option value="$PROJECT_DIR$/hash/hash_list.txt" />
         <option value="$PROJECT_DIR$/hash/monthly_malware_stats_2016.csv" />
         <option value="$PROJECT_DIR$/hash/monthly_malware_stats_2015_2018.csv" />
@@ -162,7 +132,6 @@
         <option value="$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt" />
         <option value="$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2696_jun_nosigs.json" />
         <option value="$PROJECT_DIR$/hash/parse_threatnames.py" />
-        <option value="$PROJECT_DIR$/hash/hash_plus.py" />
         <option value="$APPLICATION_CONFIG_DIR$/scratches/scratch.json" />
         <option value="$PROJECT_DIR$/hash/larger_query.json" />
         <option value="$PROJECT_DIR$/hash/upload_source_summary.json" />
@@ -170,10 +139,20 @@
         <option value="$PROJECT_DIR$/hash/upload_source_summary_2017to2018.json" />
         <option value="$PROJECT_DIR$/hash/summary_source.py" />
         <option value="$PROJECT_DIR$/hash/summary_counts.py" />
-        <option value="$PROJECT_DIR$/docs/estack_bulk.rst" />
         <option value="$PROJECT_DIR$/hash/hash_data.py" />
-        <option value="$PROJECT_DIR$/hash/conf.py" />
         <option value="$PROJECT_DIR$/hash/hash_data_plus.py" />
+        <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/hash/hash_plus.py" />
+        <option value="$PROJECT_DIR$/hash/gettagdata.py" />
+        <option value="$PROJECT_DIR$/hash/out_estack/.gitignore" />
+        <option value="$PROJECT_DIR$/hash/out_pretty/.gitignore" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/summary_stats/conf.py" />
+        <option value="$PROJECT_DIR$/summary_stats/summary_source.py" />
+        <option value="$PROJECT_DIR$/summary_stats/summary_counts.py" />
+        <option value="$PROJECT_DIR$/hash/conf.py" />
+        <option value="$PROJECT_DIR$/hash/threat_data.py" />
+        <option value="$PROJECT_DIR$/docs/estack_bulk.rst" />
       </list>
     </option>
   </component>
@@ -187,16 +166,18 @@
     <packageJsonPaths />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-390" />
-    <option name="y" value="-1057" />
-    <option name="width" value="1920" />
-    <option name="height" value="1057" />
+    <option name="x" value="-214" />
+    <option name="y" value="-1005" />
+    <option name="width" value="1389" />
+    <option name="height" value="877" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -217,6 +198,12 @@
             <path>
               <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
               <item name="pan-tort" type="462c0819:PsiDirectoryNode" />
+              <item name="hash" type="462c0819:PsiDirectoryNode" />
+              <item name="out_estack" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="pan-tort" type="b2602c69:ProjectViewProjectNode" />
+              <item name="pan-tort" type="462c0819:PsiDirectoryNode" />
               <item name="summary_stats" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -232,7 +219,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -240,11 +226,12 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/hash" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/summary_stats" />
+      <recent name="$PROJECT_DIR$/hash" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/hash/out_pretty" />
       <recent name="$PROJECT_DIR$/hash" />
     </key>
   </component>
@@ -282,44 +269,61 @@
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31666666" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.26770833" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16027689" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32820514" />
       <window_info anchor="right" id="SciView" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-    </layout>
-    <layout-to-restore>
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Thumbnails" order="8" weight="0.32916668" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.30899706" />
-      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info anchor="right" id="SciView" order="3" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
-      <window_info anchor="right" id="Database" order="4" />
-      <window_info anchor="bottom" id="Terminal" order="11" visible="true" weight="0.3897436" />
-      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info id="Favorites" order="2" side_tool="true" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.31666666" />
+      <window_info anchor="bottom" id="Python Console" order="7" />
+    </layout>
+    <layout-to-restore>
+      <window_info anchor="bottom" id="Thumbnails" order="13" weight="0.32916668" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="right" id="SciView" order="3" />
-      <window_info anchor="bottom" id="Find" order="1" weight="0.32948717" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.22523962" />
+      <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Python Console" order="10" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.32916668" />
+      <window_info anchor="right" id="Database" order="3" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="11" visible="true" weight="0.31666666" />
+      <window_info anchor="bottom" id="Event Log" order="12" side_tool="true" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="right" id="SciView" order="4" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info id="Favorites" order="2" side_tool="true" />
     </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -329,101 +333,15 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_sigs.json" />
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="348">
-          <caret line="103" column="10" selection-start-line="103" selection-start-column="10" selection-end-line="103" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/env/lib/python3.6/site-packages/requests/sessions.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="162">
-          <caret line="617" selection-start-line="617" selection-end-line="617" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_cryptominer_mar18_nosigs.json" />
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_public.csv">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/monthly_malware_stats_2014_2018.csv">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="34" selection-start-line="12" selection-start-column="34" selection-end-line="12" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames.text" />
-    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2694.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="11788">
-          <caret line="534" selection-start-line="534" selection-end-line="534" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/AV_updates/AntiVirusExternal-2695.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-618" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt_quotes">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="207">
-          <caret line="499" column="31" lean-forward="true" selection-end-line="499" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="23" selection-start-line="11" selection-start-column="23" selection-end-line="11" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatnames-test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatname-test_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="21" selection-start-line="21" selection-end-line="21" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="12" selection-start-line="1" selection-start-column="12" selection-end-line="1" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2695_noAPI_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt_quotes" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_test.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatnames-test_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_threatname-test_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2695_noAPI_nosigs.json" />
     <entry file="file://$PROJECT_DIR$/hash/tagdata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -431,53 +349,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="499">
-          <caret line="48932" column="22" selection-start-line="48932" selection-start-column="22" selection-end-line="48932" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="36" column="16" selection-start-line="36" selection-start-column="7" selection-end-line="36" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2695_noAPI_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_sigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="194">
-          <caret line="40" column="22" selection-start-line="40" selection-start-column="13" selection-end-line="40" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2696_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41914">
-          <caret line="2803" column="231" selection-start-line="2803" selection-start-column="231" selection-end-line="2803" selection-end-column="231" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2697_jun_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2694.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8000" column="23" selection-start-line="8000" selection-end-line="8000" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2696.txt" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2695_noAPI_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_pretty_AVsigs_2694_jun_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2696_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2694_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_AVsigs_2697_jun_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/threatnames_AntiVirusExternal-2694.txt" />
     <entry file="file://$PROJECT_DIR$/hash/parse_threatnames.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-548">
@@ -492,112 +372,163 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_blackvine2018_sigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/smaller_query.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="189">
-          <caret line="437" column="17" selection-end-line="447" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/larger_query_shuffle.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/larger_query.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="247">
-          <caret line="442" column="19" lean-forward="true" selection-start-line="442" selection-start-column="19" selection-end-line="442" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_testing_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_soap_fromjan2017_nosigs.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-8" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_2017to2018.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6495">
-          <caret line="433" column="3" selection-start-line="433" selection-start-column="3" selection-end-line="433" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="825">
-          <caret line="55" column="13" selection-start-line="55" selection-start-column="13" selection-end-line="55" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_manualapi.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="44" column="51" selection-start-line="44" selection-start-column="51" selection-end-line="44" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summary_stats/summary_counts.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1496">
-          <caret line="38" selection-start-line="38" selection-end-line="38" />
-          <folding>
-            <element signature="e#253#263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/summary_stats/summary_source.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="579">
-          <caret line="158" column="31" selection-start-line="158" selection-start-column="31" selection-end-line="158" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_blackvine2018_sigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/smaller_query.json" />
+    <entry file="file://$PROJECT_DIR$/hash/larger_query_shuffle.json" />
+    <entry file="file://$PROJECT_DIR$/hash/larger_query.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_testing_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/hash_data_estack_soap_fromjan2017_nosigs.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_2017to2018.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary.json" />
+    <entry file="file://$PROJECT_DIR$/hash/upload_source_summary_manualapi.json" />
     <entry file="file://$PROJECT_DIR$/hash/af_api.py">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_plus.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="52" column="25" lean-forward="true" selection-start-line="38" selection-end-line="52" selection-end-column="25" />
-          <folding>
-            <element signature="e#253#263#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/hash_data.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/hash/hash_list.txt">
+    <entry file="file://$PROJECT_DIR$/docs/source/dashboard.rst">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="286">
-          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+        <state relative-caret-position="118">
+          <caret line="67" column="18" selection-start-line="67" selection-start-column="18" selection-end-line="67" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;MarkdownPreviewEditor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="135">
+            <caret line="9" selection-start-line="9" selection-end-line="9" />
+          </first_editor>
+          <second_editor>
+            <markdownNavigatorState />
+          </second_editor>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/hash/hash_data_plus.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="423" column="22" selection-start-line="423" selection-start-column="22" selection-end-line="423" selection-end-column="22" />
+        <state relative-caret-position="1009">
+          <caret line="107" column="29" selection-start-line="107" selection-start-column="29" selection-end-line="107" selection-end-column="29" />
           <folding>
             <element signature="e#253#263#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/using_pantort.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1200">
+          <caret line="80" selection-start-line="80" selection-end-line="80" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/release_history.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" selection-start-line="27" selection-end-line="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/build/html/using_pantort.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/source/index.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="16" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/out_pretty/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="17" selection-start-line="4" selection-start-column="17" selection-end-line="4" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/out_estack/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="16" lean-forward="true" selection-start-line="4" selection-start-column="16" selection-end-line="4" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/gettagdata.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="960">
+          <caret line="64" column="66" selection-start-line="64" selection-start-column="66" selection-end-line="64" selection-end-column="66" />
+          <folding>
+            <element signature="e#253#263#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summary_stats/conf.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summary_stats/summary_source.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="45" column="38" lean-forward="true" selection-start-line="36" selection-end-line="45" selection-end-column="38" />
+          <folding>
+            <element signature="e#228#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/summary_stats/summary_counts.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2850">
+          <caret line="190" lean-forward="true" selection-start-line="190" selection-end-line="190" />
+          <folding>
+            <element signature="e#228#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="96" selection-start-line="96" selection-end-line="96" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/hash_list.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="333">
+          <caret line="91" column="32" selection-start-line="91" selection-start-column="32" selection-end-line="91" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/hash/conf.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="18" selection-start-line="9" selection-start-column="18" selection-end-line="9" selection-end-column="18" />
+        <state relative-caret-position="180">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/out_pretty/hash_data_pretty_mssp_gold_aug16_nosigs.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hash/threat_data.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="6190">
+          <caret line="414" column="30" lean-forward="true" selection-start-line="414" selection-start-column="30" selection-end-line="414" selection-end-column="30" />
+          <folding>
+            <element signature="e#228#238#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/docs/estack_bulk.rst">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="608">
+          <caret line="48" lean-forward="true" selection-start-line="47" selection-start-column="4" selection-end-line="48" />
         </state>
       </provider>
     </entry>
