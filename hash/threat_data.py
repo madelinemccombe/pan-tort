@@ -271,68 +271,83 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
     # interate through AF results to create dict key/values for each sample hash
     for listpos in range(0, listsize):
         keyhash = autofocus_results['hits'][listpos]['_source'][conf.hashtype]
-        hash_data_dict = {}
 
-        # AFoutput is json output converted to python dictionary
-        hash_data_dict['hashvalue'] = keyhash
-        hash_data_dict['sample_found'] = True
+        # Autofocus sending back bad data - ignore if not in source hash_list
+        source_list = get_search_list()
+        if keyhash in source_list:
 
-        hash_data_dict['sha256hash'] = autofocus_results['hits'][listpos]['_source']['sha256']
-        hash_data_dict['create_date'] = autofocus_results['hits'][listpos]['_source']['create_date']
-        hash_data_dict['query_tag'] = query_tag
-        hash_data_dict['query_time'] = str(start_time)
+            hash_data_dict = {}
 
-        # initial AF query to get sample data include sha256 hash and WF verdict
-        # sha256 is required for sig queries; does not support md5 or sha1
-        verdict_num = autofocus_results['hits'][listpos]['_source']['malware']
-        verdict_text = malware_values[str(verdict_num)]
-        hash_data_dict['verdict'] = verdict_text
 
-        filetype = autofocus_results['hits'][listpos]['_source']['filetype']
-        hash_data_dict['filetype'] = filetype
-        hash_data_dict['filetype_group'] = filetypetags[filetype]
+            # AFoutput is json output converted to python dictionary
+            hash_data_dict['hashvalue'] = keyhash
+            hash_data_dict['sample_found'] = True
 
-        if 'tag' in autofocus_results['hits'][listpos]['_source']:
+            hash_data_dict['sha256hash'] = autofocus_results['hits'][listpos]['_source']['sha256']
+            hash_data_dict['create_date'] = autofocus_results['hits'][listpos]['_source']['create_date']
+            hash_data_dict['query_tag'] = query_tag
+            hash_data_dict['query_time'] = str(start_time)
 
-            hash_data_dict['all_tags'] = autofocus_results['hits'][listpos]['_source']['tag']
+            # initial AF query to get sample data include sha256 hash and WF verdict
+            # sha256 is required for sig queries; does not support md5 or sha1
+            verdict_num = autofocus_results['hits'][listpos]['_source']['malware']
+            verdict_text = malware_values[str(verdict_num)]
+            hash_data_dict['verdict'] = verdict_text
 
-            priority_tags_public = []
-            priority_tags_name = []
+            if 'filetype' in autofocus_results['hits'][listpos]['_source']:
+                filetype = autofocus_results['hits'][listpos]['_source']['filetype']
+                hash_data_dict['filetype'] = filetype
+                if filetype in filetypetags:
+                    hash_data_dict['filetype_group'] = filetypetags[filetype]
+                else:
+                    hash_data_dict['filetype_group'] = 'NewTypeEh'
+            else:
+                hash_data_dict['filetype'] = 'Unknown'
+                hash_data_dict['filetype_group'] = 'Unknown'
 
-            for tag in hash_data_dict['all_tags']:
+            if 'tag' in autofocus_results['hits'][listpos]['_source']:
 
-                if 'tag_class' in tag_dict['_tags'][tag]:
+                hash_data_dict['all_tags'] = autofocus_results['hits'][listpos]['_source']['tag']
 
-                    tag_class = tag_dict['_tags'][tag]['tag_class']
-                    tag_name = tag_dict['_tags'][tag]['tag_name']
-                    if tag_class in ('malware_family', 'campaign', 'actor'):
-                        priority_tags_public.append(tag)
-                        priority_tags_name.append(tag_name)
+                priority_tags_public = []
+                priority_tags_name = []
 
-                    hash_data_dict['priority_tags_public'] = priority_tags_public
-                    hash_data_dict['priority_tags_name'] = priority_tags_name
+                for tag in hash_data_dict['all_tags']:
 
-                if 'tag_groups' in tag_dict['_tags'][tag]:
-                    taggroups = []
-                    for group in tag_dict['_tags'][tag]['tag_groups']:
-                        taggroups.append(group['tag_group_name'])
+                    if 'tag_class' in tag_dict['_tags'][tag]:
 
-                    hash_data_dict['tag_groups'] = taggroups
+                        tag_class = tag_dict['_tags'][tag]['tag_class']
+                        tag_name = tag_dict['_tags'][tag]['tag_name']
+                        if tag_class in ('malware_family', 'campaign', 'actor'):
+                            priority_tags_public.append(tag)
+                            priority_tags_name.append(tag_name)
 
-        # this creates a json format with first record as samples then appended json list entries
-        # proper json format to read the file in during run to append with new data
-        hash_data_dict_pretty['samples'].append(hash_data_dict)
+                        hash_data_dict['priority_tags_public'] = priority_tags_public
+                        hash_data_dict['priority_tags_name'] = priority_tags_name
 
-        # Write dict contents to running file both estack and pretty json versions
-        if index == 1 and listpos == 0 and search == 1:
-            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'w') as hash_file:
-                hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
-                hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+                    if 'tag_groups' in tag_dict['_tags'][tag]:
+                        taggroups = []
+                        for group in tag_dict['_tags'][tag]['tag_groups']:
+                            taggroups.append(group['tag_group_name'])
+
+                        hash_data_dict['tag_groups'] = taggroups
+
+            # this creates a json format with first record as samples then appended json list entries
+            # proper json format to read the file in during run to append with new data
+            hash_data_dict_pretty['samples'].append(hash_data_dict)
+
+            # Write dict contents to running file both estack and pretty json versions
+            if index == 1 and listpos == 0 and search == 1:
+                with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'w') as hash_file:
+                    hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+                    hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+            else:
+                with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
+                    hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
+                    hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+
         else:
-            with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
-                hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
-                hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
-
+            print('Ignoring unexpected hash found: ' + keyhash)
 
     return hash_data_dict_pretty
 

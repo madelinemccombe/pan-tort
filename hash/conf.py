@@ -14,5 +14,5 @@ onlygetsigs = 'no'
 gettagdata = 'no'
 # edit the query for each search
 # you can copy-paste by creating a query in Autofocus and exporting using the GUI 'Export Search'
-af_query = {"operator":"all","children":[{"field":"sample.create_date","operator":"is in the range","value":["2018-04-14T00:00:00","2018-04-14T23:59:59"]},{"field":"sample.malware","operator":"is","value":1},{"field":"sample.tag_group","operator":"is in the list","value":["CryptoMiner"]},{"field":"session.upload_src","operator":"is not","value":"Manual API"}]}
+af_query = {"operator":"all","children":[{"field":"sample.malware","operator":"is","value":1},{"field":"session.app","operator":"is","value":"ftp"},{"field":"sample.create_date","operator":"is after","value":["2018-01-01T00:00:00","2018-11-05T23:59:59"]},{"field":"session.upload_src","operator":"is not","value":"Manual API"}]}
 # placeholder so af_query no EOF - paste cheat
