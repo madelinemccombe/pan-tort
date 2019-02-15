@@ -68,4 +68,5 @@ def tag_query(total):
     return
 
 if __name__ == '__main__':
-    tag_query(3000)
+    # set to >> max number of tags to ensure we pull them all
+    tag_query(4000)

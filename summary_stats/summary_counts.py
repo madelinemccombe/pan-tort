@@ -29,7 +29,7 @@ def output_dir(dir_name):
         os.mkdir(dir_name, mode=0o755)
 
 
-def monthly_stats(sourcetype, startdate, enddate):
+def daily_stats(sourcetype, startdate, enddate):
 
 
     if sourcetype == 'no_API':

@@ -112,4 +112,6 @@ hash/AV_updates/
 hash/saved_queries/
 docs/build/
 docs/source/
+summary_stats/af_api.py
+summary_stats/out_json/
 

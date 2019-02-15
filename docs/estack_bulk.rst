@@ -28,7 +28,7 @@ Generic format to add new data to the index as a bulk load
 Format filename used with pan-tort
 
 ::
-   curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack.json -H "Content-Type: application/x-ndjson"
+   curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_ftp_toFeb2019_nosigs.json -H "Content-Type: application/x-ndjson"
 
 
 My data indexes and file
@@ -42,10 +42,10 @@ This can be used as a local workspace for load specific index and filename
 Delete existing data in the index
 
 ::
-    curl -XDELETE http://localhost:9200/sampleindex
+    curl -XDELETE http://localhost:9200/tag_group_stats
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_mssp_gold_jan18_sigs.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_soap_toFeb2019_global_nosigs.json -H "Content-Type: application/x-ndjson"
 
 
 Elasticsearch delete by query example

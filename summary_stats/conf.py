@@ -5,5 +5,5 @@ out_json = 'out_json'
 out_csv = 'out_csv'
 
 # start year for time queries
-start_year = '2016'
+start_year = 2018
 
