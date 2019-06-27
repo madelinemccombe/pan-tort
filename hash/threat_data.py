@@ -41,6 +41,10 @@ import time
 from datetime import datetime
 import requests
 
+# adding shared dir for imports
+here = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.normpath(os.path.join(here, '../shared')))
+
 # script to create or update the tagdata.json list from Autofocus
 from gettagdata import tag_query
 
@@ -116,6 +120,8 @@ def multi_query(searchlist):
 
     if conf.querytype == 'autofocus':
         query = conf.af_query
+
+    print(query)
 
 
     search_values = {"apiKey": api_key,
@@ -320,7 +326,7 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
                     tag_class = tag_dict['_tags'][tag]['tag_class']
                     tag_name = tag_dict['_tags'][tag]['tag_name']
-                    if tag_class in ('malware_family', 'campaign', 'actor'):
+                    if tag_class in ('malware_family', 'campaign', 'actor', 'exploit'):
                         priority_tags_public.append(tag)
                         priority_tags_name.append(tag_name)
 
@@ -605,9 +611,9 @@ def main():
 
     # refresh tag data list
     # the value sent to Autofocus should >> than current tag lists to set page count
-    # as of 2018-08-16 list size is ~2300 items
+    # as of 2019-05-16 list size is ~2900 items
     if conf.gettagdata == 'yes':
-        tag_query(3000)
+        tag_query(5000)
 
     # check for output dirs and created if needed
     output_dir(conf.out_estack)

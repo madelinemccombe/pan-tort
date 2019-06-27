@@ -9,7 +9,7 @@ Each curl is to delete and then add new data to the index.
 Sample data bulk load
 ---------------------
 
-Loads can be addititive since Elasticsearch will create unique documents ids when loaded
+Loads can be additive since Elasticsearch will create unique documents ids when loaded
 
 .. highlight:: bash
 
@@ -45,7 +45,7 @@ Delete existing data in the index
     curl -XDELETE http://localhost:9200/tag_group_stats
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_soap_toFeb2019_global_nosigs.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_androidAPK_apr19_nosigs.json -H "Content-Type: application/x-ndjson"
 
 
 Elasticsearch delete by query example

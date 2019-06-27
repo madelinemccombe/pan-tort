@@ -202,21 +202,28 @@ def main():
     index_tag_full = elk_index('tag_group_stats')
 
     tag_groups = [
-        'AdWare',
-        'Android',
+        'Backdoor',
         'BankingTrojan',
+        'CryptoMiner',
+        'DDoS',
+        'Downloader',
+        'Dropper',
         'ExploitKit',
         'FileInfector',
         'HackingTool',
-        'Linux',
-        'OSX',
+        'InternetofThingsMalware',
+        'LinuxMalware',
+        'MobileMalware',
+        'OSXMalware',
         'PointofSale',
+        'PotentiallyUnwantedProgram',
         'Ransomware',
+        'RemoteAccessTrojan',
+        'Rootkit',
+        'SCADA',
+        'Wiper',
         'Worm',
-        'DDoS',
-        'CryptoMiner',
     ]
-
     for year in range(startyear, currentyear+1):
         for month in range(1, 13):
 

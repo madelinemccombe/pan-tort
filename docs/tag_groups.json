@@ -1,0 +1,2 @@
+{"operator":"all","children":[{"field":"sample.malware","operator":"is","value":1},{"field":"sample.tag_group","operator":"is in the list","value":
+["Backdoor","BankingTrojan","CryptoMiner","DDoS","Downloader","Dropper","ExploitKit","FileInfector","HackingTool","InternetofThingsMalware","LinuxMalware","MobileMalware","OSXMalware","PointofSale","PotentiallyUnwantedProgram","Ransomware","RemoteAccessTrojan","Rootkit","SCADA","Wiper","Worm"]},{"field":"sample.create_date","operator":"is after","value":["2019-03-01T00:00:00","2019-05-13T23:59:59"]}]}
