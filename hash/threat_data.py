@@ -27,13 +27,11 @@ readable 'pretty format' json
 
 Outputs are stored in the out_estack and out_pretty directories
 
-Before first use, create af_api.py with the Autofocus API key value
-Then populate the hash_list and run the script
-
 This software is provided without support, warranty, or guarantee.
 Use at your own risk.
 '''
 
+import argparse
 import sys
 import os
 import json
@@ -50,7 +48,6 @@ from gettagdata import tag_query
 
 # local imports for static data input
 import conf
-from af_api import api_key
 from filetypedata import filetypetags
 
 
@@ -96,7 +93,7 @@ def get_search_list():
     return search_list
 
 
-def multi_query(searchlist):
+def multi_query(searchlist, api_key):
 
     '''
     initial query into autofocus for a specific hash value
@@ -151,7 +148,7 @@ def multi_query(searchlist):
     return search_dict
 
 
-def scantype_query_results(search_dict, start_time, query_tag, search):
+def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
 
     '''
     With type=scan each results post with the same cookie will return
@@ -597,6 +594,19 @@ def quick_stats(query_tag):
 
 def main():
 
+    # python skillets currently use CLI arguments to get input from the operator / user. Each argparse argument long
+    # name must match a variable in the .meta-cnc file directly
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-k", "--api_key", help="Autofocus API key", type=str)
+    args = parser.parse_args()
+
+    if len(sys.argv) < 2:
+        parser.print_help()
+        parser.exit()
+        exit(1)
+
+    api_key = args.api_key
+
     '''search_data main module'''
     search_list_all = []
 
@@ -613,7 +623,7 @@ def main():
     # the value sent to Autofocus should >> than current tag lists to set page count
     # as of 2019-05-16 list size is ~2900 items
     if conf.gettagdata == 'yes':
-        tag_query(5000)
+        tag_query(5000, api_key)
 
     # check for output dirs and created if needed
     output_dir(conf.out_estack)
@@ -625,7 +635,7 @@ def main():
             # supported conf.hashtypes are: md5, sha1, sha256
             if conf.hashtype != 'md5' and conf.hashtype != 'sha1' and conf.hashtype != 'sha256':
                 print('\nOnly hash types md5, sha1, or sha256 are supported')
-                print('correct in af_api.py and try again')
+                print('correct in conf.py and try again')
                 sys.exit(1)
 
         if conf.querytype in ['hash', 'threat', 'domain']:
@@ -644,10 +654,10 @@ def main():
             search_list = search_list_all[liststart:listend]
             print(f'query is sending {len(search_list)} items as search elements')
 
-            searchrequest = multi_query(search_list)
+            searchrequest = multi_query(search_list, api_key)
 
             #get query results and parse output
-            scantype_query_results(searchrequest, start_time, query_tag, search)
+            scantype_query_results(searchrequest, start_time, query_tag, search, api_key)
 
         # check that the output sigs file exists if AF hits 1= 0
         # if no file, check that hashtype in conf.py matches hashlist.txt type
