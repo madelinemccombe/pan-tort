@@ -1,3 +1,6 @@
+# vscode
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -101,7 +104,10 @@ hashenv/
 # mypy
 .mypy_cache/
 
- content mgmt
+# mac
+.DS_Store
+
+# pycharm
 .idea/
 
 # pan-tort specific
@@ -110,8 +116,13 @@ hash/af_api.py
 hash/tagdata.json
 hash/AV_updates/
 hash/saved_queries/
+hash/out_estack
+hash/out_pretty
 docs/build/
 docs/source/
 summary_stats/af_api.py
 summary_stats/out_json/
-
+shared/af_api.py
+shared/tagdata.json
+exploits/out_estack
+exploits/out_pretty
