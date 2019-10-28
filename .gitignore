@@ -111,13 +111,13 @@ hashenv/
 .idea/
 
 # pan-tort specific
-hash/hash_list.txt
-hash/af_api.py
-hash/tagdata.json
-hash/AV_updates/
-hash/saved_queries/
-hash/out_estack
-hash/out_pretty
+af_query/hash_list.txt
+af_query/af_api.py
+af_query/tagdata.json
+af_query/AV_updates/
+af_query/saved_queries/
+af_query/out_estack
+af_query/out_pretty
 docs/build/
 docs/source/
 summary_stats/af_api.py

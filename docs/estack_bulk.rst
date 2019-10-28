@@ -47,6 +47,11 @@ Delete existing data in the index
 ::
     curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_androidAPK_apr19_nosigs.json -H "Content-Type: application/x-ndjson"
 
+append with -u user:password if ElasticSearch security pack is installed
+
+::
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_androidAPK_apr19_nosigs.json -H "Content-Type: application/x-ndjson" -u user:password
+
 
 Elasticsearch delete by query example
 -------------------------------------

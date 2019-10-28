@@ -8,16 +8,50 @@ import sys
 import json
 import requests
 
-from af_api import api_key
 from conf import hostname
 
+def get_tag_count(api_key):
 
-def tag_query(total):
+    print('=' * 80)
+    print('get total number of tags in Autofocus')
+    print('tag data query is limited to 200 tags; each page query gets a block of 200 tags\n')
+
+    # dummy query to make the search work - not limited to Ransomware
+    query = {"field":"tag_group","operator":"is","value":"Ransomware"}
+
+    search_values = {"apiKey": api_key,
+                        "query": query,
+                        "pageSize": 200,
+                        "pageNum": 1,
+                        "scope": "visible",
+                    }
+
+    headers = {"Content-Type": "application/json"}
+    search_url = f'https://{hostname}/api/v1.0/tags'
+
+    try:
+        search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
+        search.raise_for_status()
+    except requests.exceptions.HTTPError:
+        print(search)
+        print(search.text)
+        print('\nCorrect errors and rerun the application\n')
+        sys.exit()
+
+    search_dict = json.loads(search.text)
+    total = search_dict['total_count']
+    print(f'found {total} tags')
+
+    return(search_dict['total_count'])
+
+def tag_query(api_key):
 
     """
     tag query into autofocus to get a complete tag list
     :param total: max number of tag items expected; should be >> current size
     """
+    # get total number of tags
+    total = get_tag_count(api_key)
 
     # set the number of iterations based on total tags and limit of 200 tags per response
     AFpages = int(round(total/200))
@@ -45,7 +79,7 @@ def tag_query(total):
 
         try:
             search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
-            print(f'Getting tag data at page {page}')
+            print(f'Getting tag data at page {page} of {AFpages}')
             search.raise_for_status()
         except requests.exceptions.HTTPError:
             print(search)
@@ -70,4 +104,4 @@ def tag_query(total):
 
 if __name__ == '__main__':
     # set to >> max number of tags to ensure we pull them all
-    tag_query(5000)
+    tag_query(api_key)
