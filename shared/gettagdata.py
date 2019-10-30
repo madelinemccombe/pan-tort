@@ -94,7 +94,7 @@ def tag_query(api_key):
             tag_dict['_tags'][tagname] = tag
 
 
-    with open('tagdata.json', 'w') as file:
+    with open('data/tagdata.json', 'w') as file:
         file.write(json.dumps(tag_dict, indent=2, sort_keys=False) + "\n")
 
     print('\ntag data refresh complete and stored in tagdata.json')
@@ -103,5 +103,5 @@ def tag_query(api_key):
     return
 
 if __name__ == '__main__':
-    # set to >> max number of tags to ensure we pull them all
+    # page based tag queries with num pages based on total number of tags
     tag_query(api_key)

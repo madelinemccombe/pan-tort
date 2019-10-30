@@ -36,6 +36,7 @@ import sys
 import os
 import json
 import time
+import csv
 from datetime import datetime
 import requests
 
@@ -78,6 +79,62 @@ def output_dir(dir_name):
     if os.path.isdir(dir_name) is False:
         os.mkdir(dir_name, mode=0o755)
 
+def clean_exploit_data():
+
+    '''
+    read csv vulnerability object file and create dict with CVE key
+    :return: return cve dict
+    '''
+
+    # create cve_dict based on parse of vulnerability csv file
+    cve_dict = {}
+
+    # read in vulnerability csv file and parse
+    # some CVE fields are also comma separated
+    with open(f'data/{conf.inputfile_exploits}', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            # skip blank CVE records
+            if row['CVE']:
+                # break out multi-cve field so single cve value in dict
+                if ',' in row['CVE']:
+                    cve_many = row['CVE'].split(',')
+                    for cve in cve_many:
+                        cve_dict[cve] = {}
+                        cve_dict[cve]['Threat Name'] = row['Threat Name']
+                        cve_dict[cve]['Category'] = row['Category']
+                        cve_dict[cve]['Severity'] = row['Severity']
+
+                else:
+                    cve_dict[row['CVE']] = {}
+                    cve_dict[row['CVE']]['Threat Name'] = row['Threat Name']
+                    cve_dict[row['CVE']]['Category'] = row['Category']
+                    cve_dict[row['CVE']]['Severity'] = row['Severity']
+
+    return cve_dict
+
+
+def create_cve_list():
+
+    '''
+    read in autofocus cve tag data and get list of cve values
+    :return: return list of cve values
+    '''
+
+    # create cve tags list based on parse of autofocus tag data
+    cve_tag_list = []
+
+    # for a current list, should run gettagdata.py periodically
+    with open('data/tagdata.json', 'r') as tag_file:
+        tag_dict = json.load(tag_file)
+
+        for tag in tag_dict['_tags']:
+            if 'CVE' in tag:
+                if '_' not in tag:
+                    cve_tag_list.append(tag_dict['_tags'][tag]['public_tag_name'])
+
+    return cve_tag_list
 
 def get_search_list():
 
@@ -148,7 +205,7 @@ def multi_query(searchlist, api_key):
     return search_dict
 
 
-def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
+def scantype_query_results(search_dict, start_time, query_tag, search, api_key, exploits):
 
     '''
     With type=scan each results post with the same cookie will return
@@ -185,7 +242,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
 
     while search_progress != 'FIN':
 
-        time.sleep(5)
+        #time.sleep(1)
         try:
             results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
@@ -209,7 +266,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
             if autofocus_results['total'] != 0:
                 # parse data and output estack json elements
                 # return is running dict of all samples for pretty json output
-                all_sample_dict = parse_sample_data(autofocus_results, start_time, index, query_tag, all_sample_dict, search)
+                all_sample_dict = parse_sample_data(autofocus_results, start_time, index, query_tag, all_sample_dict, search, exploits)
                 with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
                     hash_file.write(json.dumps(all_sample_dict, indent=2, sort_keys=False) + "\n")
                 index += 1
@@ -232,6 +289,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
                 search_progress = 'FIN'
         else:
             print('Autofocus still queuing up the search...')
+            time.sleep(5)
 
     print('\n')
     print('=' * 80)
@@ -244,8 +302,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search, api_key):
     return autofocus_results
 
 
-
-def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data_dict_pretty, search):
+def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data_dict_pretty, search, exploits):
 
     '''
     parse the AF reponse and augment the data with file type, tag, malware
@@ -266,7 +323,7 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
     # used to have a full view of AF tag data for data augmentation
     # for a current list, should run gettagdata.py periodically
-    with open('tagdata.json', 'r') as tag_file:
+    with open('data/tagdata.json', 'r') as tag_file:
         tag_dict = json.load(tag_file)
 
     listsize = len(autofocus_results['hits'])
@@ -316,6 +373,13 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
             priority_tags_public = []
             priority_tags_name = []
+            tag_classes = []
+            hash_data_dict['tag_array'] = {}
+            hash_data_dict['exploit_data'] = []
+            malware_tags = []
+            campaign_tags = []
+            actor_tags = []
+            exploit_tags = []
 
             for tag in hash_data_dict['all_tags']:
 
@@ -327,15 +391,58 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
                         priority_tags_public.append(tag)
                         priority_tags_name.append(tag_name)
 
+                        if tag_class not in tag_classes:
+                            tag_classes.append(tag_class)
+
+                        # experimental to see if I can get all tag data added here for search and visuals
+                        #hash_data_dict['tag_array'][tag] = tag_dict['_tags'][tag]
+
+                        # create class specific list of tags for query and display
+                        if tag_class == 'malware_family':
+                            malware_tags.append(tag_name)
+                        elif tag_class == 'campaign':
+                            campaign_tags.append(tag_name)
+                        elif tag_class == 'actor':
+                            actor_tags.append(tag_name)
+                        elif tag_class == 'exploit':
+                            exploit_tags.append(tag_name)
+
                     hash_data_dict['priority_tags_public'] = priority_tags_public
                     hash_data_dict['priority_tags_name'] = priority_tags_name
+                    hash_data_dict['tag_classes'] = tag_classes
+                    hash_data_dict['malware_tags'] = malware_tags
+                    hash_data_dict['campaign_tags'] = campaign_tags
+                    hash_data_dict['actor_tags'] = actor_tags
+                    hash_data_dict['exploit_tags'] = exploit_tags
 
                 if 'tag_groups' in tag_dict['_tags'][tag]:
                     taggroups = []
                     for group in tag_dict['_tags'][tag]['tag_groups']:
-                        taggroups.append(group['tag_group_name'])
+                        if group not in taggroups:
+                            taggroups.append(group['tag_group_name'])
 
                     hash_data_dict['tag_groups'] = taggroups
+
+                # get CVE specific tag info and query against the fw exploit sig data
+                # note: there are many exploits tags that don't have CVE values and no way to readily correlate
+                if conf.get_exploits is True:
+                    if 'CVE' in tag:
+
+                        cve_value = tag.split('.')[1]
+                        exploit_dict = {}
+                        exploit_dict['cve_value'] = cve_value
+
+                        if cve_value in exploits:
+                            exploit_dict['threat name'] = exploits[cve_value]['Threat Name']
+                            exploit_dict['category'] = exploits[cve_value]['Category']
+                            exploit_dict['severity'] = exploits[cve_value]['Severity']
+
+                        else:
+                            exploit_dict['threat name'] = 'Unknown'
+                            exploit_dict['category'] = 'Unknown'
+                            exploit_dict['severity'] = 'Unknown'
+
+                        hash_data_dict['exploit_data'].append(exploit_dict)
 
         # this creates a json format with first record as samples then appended json list entries
         # proper json format to read the file in during run to append with new data
@@ -619,6 +726,12 @@ def main():
     listend = -1
     ok_to_get_sigs = True
 
+    if conf.get_exploits is True:
+        exploit_dict = clean_exploit_data()
+        query_list = create_cve_list()
+    else:
+        exploit_dict = {}
+
     # refresh tag data list
     # the value sent to Autofocus should >> than current tag lists to set page count
     # as of 2019-05-16 list size is ~2900 items
@@ -657,7 +770,7 @@ def main():
             searchrequest = multi_query(search_list, api_key)
 
             #get query results and parse output
-            scantype_query_results(searchrequest, start_time, query_tag, search, api_key)
+            scantype_query_results(searchrequest, start_time, query_tag, search, api_key, exploit_dict)
 
         # check that the output sigs file exists if AF hits 1= 0
         # if no file, check that hashtype in conf.py matches hashlist.txt type
