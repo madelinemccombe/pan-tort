@@ -126,3 +126,4 @@ shared/af_api.py
 shared/tagdata.json
 exploits/out_estack
 exploits/out_pretty
+data/

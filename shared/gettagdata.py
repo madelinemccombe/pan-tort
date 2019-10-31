@@ -6,9 +6,10 @@ This provides contextual information in test environments beyond just a hash mis
 """
 import sys
 import json
+import argparse
 import requests
 
-from conf import hostname
+import conf
 
 def get_tag_count(api_key):
 
@@ -27,7 +28,7 @@ def get_tag_count(api_key):
                     }
 
     headers = {"Content-Type": "application/json"}
-    search_url = f'https://{hostname}/api/v1.0/tags'
+    search_url = f'https://{conf.hostname}/api/v1.0/tags'
 
     try:
         search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
@@ -44,6 +45,7 @@ def get_tag_count(api_key):
 
     return(search_dict['total_count'])
 
+
 def tag_query(api_key):
 
     """
@@ -57,6 +59,8 @@ def tag_query(api_key):
     AFpages = int(round(total/200))
     tag_dict = {}
     tag_dict['_tags'] = {}
+    tag_groups = []
+    tags_no_group = []
 
     print('=' * 80)
     print('Updating local tag data from Autofocus tag and tag group lists...\n')
@@ -75,7 +79,7 @@ def tag_query(api_key):
                         }
 
         headers = {"Content-Type": "application/json"}
-        search_url = f'https://{hostname}/api/v1.0/tags'
+        search_url = f'https://{conf.hostname}/api/v1.0/tags'
 
         try:
             search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
@@ -93,15 +97,47 @@ def tag_query(api_key):
             tagname = tag['public_tag_name']
             tag_dict['_tags'][tagname] = tag
 
+            # generate a list of tag group names
+            if 'tag_groups' in tag:
+                for group in tag['tag_groups']:
+                    if group['tag_group_name'] not in tag_groups:
+                        tag_groups.append(group['tag_group_name'])
+
+            # or if no group generate a list of tags without groups
+            else:
+                tags_no_group.append(tagname)
 
     with open('data/tagdata.json', 'w') as file:
         file.write(json.dumps(tag_dict, indent=2, sort_keys=False) + "\n")
 
     print('\ntag data refresh complete and stored in tagdata.json')
 
+    with open('data/groupList.txt', 'w') as file:
+        for group in tag_groups:
+            file.write(f'{group}\n')
+    
+    print('tag group list created in groupList.txt')
+
+    with open('data/noGroupTags.txt', 'w') as file:
+        for tag in tags_no_group:
+            file.write(f'{tag}\n')
+
+    print('ungrouped tags listed in noGroupTags.txt')
 
     return
 
 if __name__ == '__main__':
     # page based tag queries with num pages based on total number of tags
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-k", "--api_key", help="Autofocus API key", type=str)
+    args = parser.parse_args()
+
+    if len(sys.argv) < 2:
+        parser.print_help()
+        parser.exit()
+        exit(1)
+
+    api_key = args.api_key
+
     tag_query(api_key)
