@@ -17,7 +17,7 @@ getsigdata = 'no'
 onlygetsigs = 'no'
 # run a query to get the latest tag data; required periodically to ensure all tag info can be referenced
 # writes to the data dir
-gettagdata = 'no'
+gettagdata = 'yes'
 # adds exploit details to the data for exploit specific queries
 # get_exploits is either set to True or False
 get_exploits = False
@@ -32,5 +32,5 @@ af_query = {"operator":"all","children":[{"field":"sample.malware","operator":"i
 out_json = 'tag_group_stats_json'
 out_csv = 'tag_group_stats_csv'
 # start month and year for time queries
-start_month = 6
-start_year = 2019
+start_month = 1
+start_year = 2018
