@@ -801,7 +801,7 @@ def main():
     # print out the elasticSearch bulk load based on the tag and thus filename
     print('\nuse the curl command to load estack data to elasticSearch')
     print('either ignore -u if no security features used or append with elasticSearch username and password\n')
-    print(f'curl -s -XPOST \'http://localhost:9200/_bulk\' --data-binary @out_estack/hash_data_estack_{query_tag}_nosigs.json -H \"Content-Type: application/x-ndjson\" -u user:password\n\n')
+    print(f'curl -s -XPOST \'http://{conf.elastic_url_port}/_bulk\' --data-binary @out_estack/hash_data_estack_{query_tag}_nosigs.json -H \"Content-Type: application/x-ndjson\" -u user:password\n\n')
 
 if __name__ == '__main__':
     main()
