@@ -127,3 +127,4 @@ shared/tagdata.json
 exploits/out_estack
 exploits/out_pretty
 data/
+af_query/geocoding-error.csv
