@@ -15,38 +15,44 @@
 # Author: Scott Shoaf <sshoaf@paloaltonetworks.com>
 
 '''
-Palo Alto Networks hash_data_plus.py
+Palo Alto Networks threat_data.py
 
-Reads in a list of samples hashes with output of malware verdict, file types,
-malware family, and signature coverage data.
+Reads in a list of samples hashes, threatnames, or af_query as json
+
+Output of malware verdict, file types,
+malware family, and optionally signature coverage data.
 
 Outputs are formatted for both bulk load into Elasticsearch and
 readable 'pretty format' json
 
 Outputs are stored in the out_estack and out_pretty directories
 
-Before first use, create af_api.py with the Autofocus API key value
-Then populate the hash_list and run the script
-
 This software is provided without support, warranty, or guarantee.
 Use at your own risk.
 '''
 
+import argparse
 import sys
 import os
 import json
 import time
-from datetime import datetime, date
+import csv
+from datetime import datetime
 import requests
 
-# local imports for static input data
+# adding shared dir for imports
+here = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, os.path.normpath(os.path.join(here, '../shared')))
+
+# script to create or update the tagdata.json list from Autofocus
+from gettagdata import tag_query
+
+# local imports for static data input
 import conf
-from af_api import api_key
 from filetypedata import filetypetags
 
 
 def elk_index():
-
     '''
     set up elasticsearch bulk load index
     :param conf.elk_index_name: name of data index in elasticsearch
@@ -73,6 +79,62 @@ def output_dir(dir_name):
     if os.path.isdir(dir_name) is False:
         os.mkdir(dir_name, mode=0o755)
 
+def clean_exploit_data():
+
+    '''
+    read csv vulnerability object file and create dict with CVE key
+    :return: return cve dict
+    '''
+
+    # create cve_dict based on parse of vulnerability csv file
+    cve_dict = {}
+
+    # read in vulnerability csv file and parse
+    # some CVE fields are also comma separated
+    with open(f'data/{conf.inputfile_exploits}', newline='') as csvfile:
+        reader = csv.DictReader(csvfile)
+
+        for row in reader:
+            # skip blank CVE records
+            if row['CVE']:
+                # break out multi-cve field so single cve value in dict
+                if ',' in row['CVE']:
+                    cve_many = row['CVE'].split(',')
+                    for cve in cve_many:
+                        cve_dict[cve] = {}
+                        cve_dict[cve]['Threat Name'] = row['Threat Name']
+                        cve_dict[cve]['Category'] = row['Category']
+                        cve_dict[cve]['Severity'] = row['Severity']
+
+                else:
+                    cve_dict[row['CVE']] = {}
+                    cve_dict[row['CVE']]['Threat Name'] = row['Threat Name']
+                    cve_dict[row['CVE']]['Category'] = row['Category']
+                    cve_dict[row['CVE']]['Severity'] = row['Severity']
+
+    return cve_dict
+
+
+def create_cve_list():
+
+    '''
+    read in autofocus cve tag data and get list of cve values
+    :return: return list of cve values
+    '''
+
+    # create cve tags list based on parse of autofocus tag data
+    cve_tag_list = []
+
+    # for a current list, should run gettagdata.py periodically
+    with open('data/tagdata.json', 'r') as tag_file:
+        tag_dict = json.load(tag_file)
+
+        for tag in tag_dict['_tags']:
+            if 'CVE' in tag:
+                if '_' not in tag:
+                    cve_tag_list.append(tag_dict['_tags'][tag]['public_tag_name'])
+
+    return cve_tag_list
 
 def get_search_list():
 
@@ -88,36 +150,48 @@ def get_search_list():
     return search_list
 
 
-def multi_query(searchlist):
+def multi_query(searchlist, api_key):
 
     '''
     initial query into autofocus for a specific hash value
-    :param searchlist: set of hash values used in a single search (max 1000)
+    :param hashvalue: hash for the search
     :return: autofocus response from initial query
     '''
 
     print('Initiating query to Autofocus')
 
-    fieldvalue = f'sample.{conf.hashtype}'
-    query = {"operator": "all",
-             "children": [{f"field":fieldvalue, "operator":"is in the list",
-                           "value":searchlist}]}
 
-    # uses a type=scan query to scale beyond 4000 samples hits from Autofocus
+    if conf.querytype == 'hash':
+        fieldvalue = f'sample.{conf.hashtype}'
+        query = {"operator": "all",
+                 "children": [{f"field":fieldvalue, "operator":"is in the list", "value":searchlist}]}
+
+    if conf.querytype == 'threat':
+        query = {"operator": "all",
+                 "children": [
+                    {"field": "sample.create_date", "operator": "is after", "value": ["2018-06-01T00:00:00", "2018-08-08T23:59:59"]},
+                    {"field": "sample.threat_name", "operator": "is in the list", "value": searchlist}]}
+
+    if conf.querytype == 'autofocus':
+        query = conf.af_query
+
+    print(query)
+
+
     search_values = {"apiKey": api_key,
                      "query": query,
                      "size": 4000,
-                     "scope": "public",
+                     "scope": "global",
                      "type": "scan",
                      "artifactSource": "af"
                      }
+
 
     headers = {"Content-Type": "application/json"}
     search_url = f'https://{conf.hostname}/api/v1.0/samples/search'
 
     try:
-        search = requests.post(search_url, headers=headers,
-                               data=json.dumps(search_values))
+        search = requests.post(search_url, headers=headers, data=json.dumps(search_values))
         print('Search query posted to Autofocus')
         search.raise_for_status()
     except requests.exceptions.HTTPError:
@@ -131,7 +205,7 @@ def multi_query(searchlist):
     return search_dict
 
 
-def scantype_query_results(search_dict, start_time, query_tag, search):
+def scantype_query_results(search_dict, start_time, query_tag, search, api_key, exploits):
 
     '''
     With type=scan each results post with the same cookie will return
@@ -163,18 +237,17 @@ def scantype_query_results(search_dict, start_time, query_tag, search):
         all_sample_dict = {}
         all_sample_dict['samples'] = []
     else:
-        with open(f'out_pretty/hash_data_pretty_{query_tag}_nosigs.json', 'r') as hash_file:
+        with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r') as hash_file:
             all_sample_dict = json.load(hash_file)
 
     while search_progress != 'FIN':
 
         time.sleep(5)
         try:
-            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/{cookie}'
+            results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
             results_values = {"apiKey": api_key}
-            results = requests.post(results_url, headers=headers,
-                                    data=json.dumps(results_values))
+            results = requests.post(results_url, headers=headers, data=json.dumps(results_values))
             results.raise_for_status()
         except requests.exceptions.HTTPError:
             print(results)
@@ -184,18 +257,17 @@ def scantype_query_results(search_dict, start_time, query_tag, search):
 
         autofocus_results = results.json()
 
-        running_total.append(autofocus_results['total'])
-        running_length.append(len(autofocus_results['hits']))
 
         if 'total' in autofocus_results:
+
+            running_total.append(autofocus_results['total'])
+            running_length.append(len(autofocus_results['hits']))
 
             if autofocus_results['total'] != 0:
                 # parse data and output estack json elements
                 # return is running dict of all samples for pretty json output
-                all_sample_dict = parse_sample_data(autofocus_results,
-                                                    start_time, index, query_tag,
-                                                    all_sample_dict, search)
-                with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w')as hash_file:
+                all_sample_dict = parse_sample_data(autofocus_results, start_time, index, query_tag, all_sample_dict, search, exploits)
+                with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'w') as hash_file:
                     hash_file.write(json.dumps(all_sample_dict, indent=2, sort_keys=False) + "\n")
                 index += 1
 
@@ -212,23 +284,25 @@ def scantype_query_results(search_dict, start_time, query_tag, search):
                 print(f'Elasped run time is {elapsedtime}')
                 print('=' * 80)
 
-            if autofocus_results['af_in_progress'] is False:
+
+            if autofocus_results['af_in_progress'] is False :
                 search_progress = 'FIN'
         else:
             print('Autofocus still queuing up the search...')
+            time.sleep(5)
 
     print('\n')
     print('=' * 80)
     print('\n')
     print(f'sample processing complete for {query_tag}')
-    print(f"total samples found in Autofocus: {autofocus_results['total']}")
+    print(f"total hits: {autofocus_results['total']}")
     totalsamples = sum(running_length)
     print(f'total samples processed: {totalsamples}')
 
     return autofocus_results
 
 
-def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data_dict_pretty, search):
+def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data_dict_pretty, search, exploits):
 
     '''
     parse the AF reponse and augment the data with file type, tag, malware
@@ -243,14 +317,13 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
     '''
 
     # mapping of tag # to text name
-    malware_values = {'0': 'benign', '1': 'malware',
-                      '2': 'grayware', '3': 'phishing'}
+    malware_values = {'0': 'benign', '1': 'malware', '2': 'grayware', '3': 'phishing'}
 
     index_tag_full = elk_index()
 
     # used to have a full view of AF tag data for data augmentation
     # for a current list, should run gettagdata.py periodically
-    with open('tagdata.json', 'r') as tag_file:
+    with open('data/tagdata.json', 'r') as tag_file:
         tag_dict = json.load(tag_file)
 
     listsize = len(autofocus_results['hits'])
@@ -258,16 +331,22 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
     # interate through AF results to create dict key/values for each sample hash
     for listpos in range(0, listsize):
         keyhash = autofocus_results['hits'][listpos]['_source'][conf.hashtype]
+
+        # Autofocus sending back bad data - ignore if not in source hash_list
+        source_list = get_search_list()
+
+        # only for hash searches
+        #if keyhash in source_list:
+
         hash_data_dict = {}
+
 
         # AFoutput is json output converted to python dictionary
         hash_data_dict['hashvalue'] = keyhash
         hash_data_dict['sample_found'] = True
 
-        hash_data_dict['sha256hash'] =\
-            autofocus_results['hits'][listpos]['_source']['sha256']
-        hash_data_dict['create_date'] =\
-            autofocus_results['hits'][listpos]['_source']['create_date']
+        hash_data_dict['sha256hash'] = autofocus_results['hits'][listpos]['_source']['sha256']
+        hash_data_dict['create_date'] = autofocus_results['hits'][listpos]['_source']['create_date']
         hash_data_dict['query_tag'] = query_tag
         hash_data_dict['query_time'] = str(start_time)
 
@@ -277,18 +356,30 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
         verdict_text = malware_values[str(verdict_num)]
         hash_data_dict['verdict'] = verdict_text
 
-        filetype = autofocus_results['hits'][listpos]['_source']['filetype']
-        hash_data_dict['filetype'] = filetype
-        hash_data_dict['filetype_group'] = filetypetags[filetype]
+        if 'filetype' in autofocus_results['hits'][listpos]['_source']:
+            filetype = autofocus_results['hits'][listpos]['_source']['filetype']
+            hash_data_dict['filetype'] = filetype
+            if filetype in filetypetags:
+                hash_data_dict['filetype_group'] = filetypetags[filetype]
+            else:
+                hash_data_dict['filetype_group'] = 'NewTypeEh'
+        else:
+            hash_data_dict['filetype'] = 'Unknown'
+            hash_data_dict['filetype_group'] = 'Unknown'
 
-        # not all samples have a tag value; uses when a tag value is present
         if 'tag' in autofocus_results['hits'][listpos]['_source']:
 
-            hash_data_dict['all_tags'] =\
-                autofocus_results['hits'][listpos]['_source']['tag']
+            hash_data_dict['all_tags'] = autofocus_results['hits'][listpos]['_source']['tag']
 
             priority_tags_public = []
             priority_tags_name = []
+            tag_classes = []
+            hash_data_dict['tag_array'] = {}
+            hash_data_dict['exploit_data'] = []
+            malware_tags = []
+            campaign_tags = []
+            actor_tags = []
+            exploit_tags = []
 
             for tag in hash_data_dict['all_tags']:
 
@@ -296,19 +387,62 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
 
                     tag_class = tag_dict['_tags'][tag]['tag_class']
                     tag_name = tag_dict['_tags'][tag]['tag_name']
-                    if tag_class in ('malware_family', 'campaign', 'actor'):
+                    if tag_class in ('malware_family', 'campaign', 'actor', 'exploit'):
                         priority_tags_public.append(tag)
                         priority_tags_name.append(tag_name)
 
+                        if tag_class not in tag_classes:
+                            tag_classes.append(tag_class)
+
+                        # experimental to see if I can get all tag data added here for search and visuals
+                        #hash_data_dict['tag_array'][tag] = tag_dict['_tags'][tag]
+
+                        # create class specific list of tags for query and display
+                        if tag_class == 'malware_family':
+                            malware_tags.append(tag_name)
+                        elif tag_class == 'campaign':
+                            campaign_tags.append(tag_name)
+                        elif tag_class == 'actor':
+                            actor_tags.append(tag_name)
+                        elif tag_class == 'exploit':
+                            exploit_tags.append(tag_name)
+
                     hash_data_dict['priority_tags_public'] = priority_tags_public
                     hash_data_dict['priority_tags_name'] = priority_tags_name
+                    hash_data_dict['tag_classes'] = tag_classes
+                    hash_data_dict['malware_tags'] = malware_tags
+                    hash_data_dict['campaign_tags'] = campaign_tags
+                    hash_data_dict['actor_tags'] = actor_tags
+                    hash_data_dict['exploit_tags'] = exploit_tags
 
                 if 'tag_groups' in tag_dict['_tags'][tag]:
                     taggroups = []
                     for group in tag_dict['_tags'][tag]['tag_groups']:
-                        taggroups.append(group['tag_group_name'])
+                        if group not in taggroups:
+                            taggroups.append(group['tag_group_name'])
 
                     hash_data_dict['tag_groups'] = taggroups
+
+                # get CVE specific tag info and query against the fw exploit sig data
+                # note: there are many exploits tags that don't have CVE values and no way to readily correlate
+                if conf.get_exploits is True:
+                    if 'CVE' in tag:
+
+                        cve_value = tag.split('.')[1]
+                        exploit_dict = {}
+                        exploit_dict['cve_value'] = cve_value
+
+                        if cve_value in exploits:
+                            exploit_dict['threat name'] = exploits[cve_value]['Threat Name']
+                            exploit_dict['category'] = exploits[cve_value]['Category']
+                            exploit_dict['severity'] = exploits[cve_value]['Severity']
+
+                        else:
+                            exploit_dict['threat name'] = 'Unknown'
+                            exploit_dict['category'] = 'Unknown'
+                            exploit_dict['severity'] = 'Unknown'
+
+                        hash_data_dict['exploit_data'].append(exploit_dict)
 
         # this creates a json format with first record as samples then appended json list entries
         # proper json format to read the file in during run to append with new data
@@ -323,6 +457,10 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
             with open(f'{conf.out_estack}/hash_data_estack_{query_tag}_nosigs.json', 'a') as hash_file:
                 hash_file.write(json.dumps(index_tag_full, indent=None, sort_keys=False) + "\n")
                 hash_file.write(json.dumps(hash_data_dict, indent=None, sort_keys=False) + "\n")
+
+        # only for hash searches
+        #else:
+        #    print('Ignoring unexpected hash found: ' + keyhash)
 
     return hash_data_dict_pretty
 
@@ -398,6 +536,7 @@ def get_sig_data(query_tag, start_time):
     hash_data_dict_pretty = {}
     hash_data_dict_pretty['samples'] = []
 
+    # for sig search only lookup coverage for samples found in samples search
     for listpos in range(0, listsize):
 
         hash_data_dict = samples_dict['samples'][listpos]
@@ -562,68 +701,107 @@ def quick_stats(query_tag):
 
 def main():
 
+    # python skillets currently use CLI arguments to get input from the operator / user. Each argparse argument long
+    # name must match a variable in the .meta-cnc file directly
+    parser = argparse.ArgumentParser()
+    parser.add_argument("-k", "--api_key", help="Autofocus API key", type=str)
+    args = parser.parse_args()
+
+    if len(sys.argv) < 2:
+        parser.print_help()
+        parser.exit()
+        exit(1)
+
+    api_key = args.api_key
+
     '''search_data main module'''
+    search_list_all = []
 
     # for longer lists may have to break list in 1000 size pieces
     # for autofocus type queries on do a single search
+    numsearches = 1
 
     query_tag = input('Enter brief tag name for this data: ')
     start_time = datetime.now()
     listend = -1
     ok_to_get_sigs = True
 
-    # supported conf.hashtypes are: md5, sha1, sha256
-    if conf.hashtype != 'md5' and conf.hashtype != 'sha1' and conf.hashtype != 'sha256':
-        print('\nOnly hash types md5, sha1, or sha256 are supported')
-        print('correct in af_api.py and try again')
-        sys.exit(1)
+    if conf.get_exploits is True:
+        exploit_dict = clean_exploit_data()
+        query_list = create_cve_list()
+    else:
+        exploit_dict = {}
+
+    # refresh tag data list
+    # the value sent to Autofocus should >> than current tag lists to set page count
+    # as of 2019-05-16 list size is ~2900 items
+    if conf.gettagdata == 'yes':
+        tag_query(api_key)
 
     # check for output dirs and created if needed
     output_dir(conf.out_estack)
     output_dir(conf.out_pretty)
 
-    # read items list from file
-    search_list_all = get_search_list()
-    listlength = len(search_list_all)
-    numsearches = int(listlength / 1000) + 1
+    if conf.onlygetsigs != 'yes':
 
-    for search in range(1, numsearches + 1):
-    #submit bulk query for sample data to AF
+        if conf.querytype == 'hash':
+            # supported conf.hashtypes are: md5, sha1, sha256
+            if conf.hashtype != 'md5' and conf.hashtype != 'sha1' and conf.hashtype != 'sha256':
+                print('\nOnly hash types md5, sha1, or sha256 are supported')
+                print('correct in conf.py and try again')
+                sys.exit(1)
 
-        print(f'\nworking with search interval {search} of {numsearches}')
-        liststart = listend + 1
-        listend += 1000
+        if conf.querytype in ['hash', 'threat', 'domain']:
+            # read items list from file
+            search_list_all = get_search_list()
+            listlength = len(search_list_all)
+            numsearches = int(listlength / 1000) + 1
 
-        search_list = search_list_all[liststart:listend]
-        print(f'query is sending {len(search_list)} items as search elements')
+        for search in range(1, numsearches + 1):
+        #submit bulk query for sample data to AF
 
-        searchrequest = multi_query(search_list)
+            print(f'\nworking with search interval {search} of {numsearches}')
+            liststart = listend + 1
+            listend += 1000
 
-        #get query results and parse output
-        scantype_query_results(searchrequest, start_time, query_tag, search)
+            search_list = search_list_all[liststart:listend]
+            print(f'query is sending {len(search_list)} items as search elements')
 
-    # check that the output sigs file exists if AF hits 1= 0
-    # if no file, check that hashtype in conf.py matches hashlist.txt type
-    try:
-        with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r'):
-            pass
-    except IOError as nofile_error:
-        print(nofile_error)
-        print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json')
-        print('This file is output from the initial sample search and read in to create a sig coverage output')
-        print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
-        ok_to_get_sigs = False
+            searchrequest = multi_query(search_list, api_key)
 
-    # find AF sample misses and add to the estack json file as not found
-    missing_samples(query_tag, start_time)
+            #get query results and parse output
+            scantype_query_results(searchrequest, start_time, query_tag, search, api_key, exploit_dict)
+
+        # check that the output sigs file exists if AF hits 1= 0
+        # if no file, check that hashtype in conf.py matches hashlist.txt type
+        try:
+            with open(f'{conf.out_pretty}/hash_data_pretty_{query_tag}_nosigs.json', 'r'):
+                pass
+        except IOError as nofile_error:
+            print(nofile_error)
+            print(f'Unable to open out_pretty/hash_data_pretty_{query_tag}_nosigs.json')
+            print('This file is output from the initial sample search and read in to create a sig coverage output')
+            print('If hits are expected check that the hashtype in conf.py matches the hashes in hash_list.txt')
+            ok_to_get_sigs = False
+
+        # find AF sample misses and add to the estack json file as not found
+        if conf.querytype == 'hash':
+            missing_samples(query_tag, start_time)
 
     if conf.getsigdata == 'yes' and ok_to_get_sigs is True:
-        get_sig_data(query_tag, start_time)
+            get_sig_data(query_tag, start_time)
 
+    if conf.querytype == 'autofocus':
+            print(conf.af_query)
 
     # print out summary stats to terminal console
-    quick_stats(query_tag)
+    if conf.querytype == 'hash' and conf.getsigdata == 'yes':
+        quick_stats(query_tag)
 
+    # print out the elasticSearch bulk load based on the tag and thus filename
+    print('\nuse the curl command to load estack data to elasticSearch')
+    print('either ignore -u if no security features used or append with elasticSearch username and password\n')
+    print(f'curl -s -XPOST \'http://{conf.elastic_url_port}/_bulk\' --data-binary @out_estack/hash_data_estack_{query_tag}_nosigs.json -H \"Content-Type: application/x-ndjson\" -u user:password\n\n')
 
 if __name__ == '__main__':
     main()

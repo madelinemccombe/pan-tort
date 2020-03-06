@@ -1,3 +1,6 @@
+# vscode
+.vscode/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
@@ -102,14 +105,25 @@ hashenv/
 # mypy
 .mypy_cache/
 
+# mac
+.DS_Store
 
-# content mgmt
+# pycharm
 .idea/
 
 # pan-tort specific
-hash/hash_data_estack.json
-hash/hash_data_pretty.json
-hash/hash_data_stats.json
-hash/hash_list.txt
-hash/af_api.py
-hash/tagdata.json
+af_query/hash_list.txt
+af_query/af_api.py
+af_query/tagdata.json
+af_query/AV_updates/
+af_query/saved_queries/
+af_query/out_estack
+af_query/out_pretty
+summary_stats/af_api.py
+summary_stats/out_json/
+shared/af_api.py
+shared/tagdata.json
+exploits/out_estack
+exploits/out_pretty
+data/
+af_query/geocoding-error.csv

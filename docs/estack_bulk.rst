@@ -9,7 +9,7 @@ Each curl is to delete and then add new data to the index.
 Sample data bulk load
 ---------------------
 
-Loads can be addititive since Elasticsearch will create unique documents ids when loaded
+Loads can be additive since Elasticsearch will create unique documents ids when loaded
 
 .. highlight:: bash
 
@@ -28,7 +28,7 @@ Generic format to add new data to the index as a bulk load
 Format filename used with pan-tort
 
 ::
-   curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack.json -H "Content-Type: application/x-ndjson"
+   curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @hash_data_estack_ftp_toFeb2019_nosigs.json -H "Content-Type: application/x-ndjson"
 
 
 My data indexes and file
@@ -42,10 +42,18 @@ This can be used as a local workspace for load specific index and filename
 Delete existing data in the index
 
 ::
-    curl -XDELETE http://localhost:9200/hash-data
+
+    curl -XDELETE http://localhost:9200/tag_group_stats
 
 ::
-    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_pan_tort_sample_sigs.json -H "Content-Type: application/x-ndjson"
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_androidAPK_apr19_nosigs.json -H "Content-Type: application/x-ndjson"
+
+
+append with -u user:password if ElasticSearch security pack is installed
+
+::
+    curl -s -XPOST 'http://localhost:9200/_bulk' --data-binary @out_estack/hash_data_estack_androidAPK_apr19_nosigs.json -H "Content-Type: application/x-ndjson" -u user:password
+
 
 
 Elasticsearch delete by query example
