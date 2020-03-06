@@ -242,7 +242,7 @@ def scantype_query_results(search_dict, start_time, query_tag, search, api_key, 
 
     while search_progress != 'FIN':
 
-        #time.sleep(1)
+        time.sleep(5)
         try:
             results_url = f'https://{conf.hostname}/api/v1.0/samples/results/' + cookie
             headers = {"Content-Type": "application/json"}
