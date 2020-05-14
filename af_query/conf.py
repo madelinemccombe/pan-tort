@@ -27,14 +27,18 @@ get_exploits = False
 inputfile_exploits = 'exploits.csv'
 # edit the query for each search
 # you can copy-paste by creating a query in Autofocus and exporting using the GUI 'Export Search'
-af_query = {"operator":"all","children":[{"operator":"all","children":[{"field":"sample.tag_class","operator":"is in the list","value":["actor","campaign","malware_family","exploit"]},{"field":"sample.create_date","operator":"is in the range","value":["2019-09-16T00:00:00","2019-09-30T23:59:59"]}]},{"operator":"any","children":[{"field":"sample.filetype","operator":"is","value":"ELF"},{"operator":"all","children":[{"field":"sample.tasks.behavior_type","operator":"is","value":"elf_sa_arch"}]},{"field":"sample.filetype","operator":"is","value":"Shell Script"}]},{"operator":"any","children":[{"field":"sample.malware","operator":"is","value":1}]}]}
-
+af_query = {"operator":"all","children":[{"field":"sample.malware","operator":"is","value":1},{"field":"sample.tag_group","operator":"is","value":"InternetofThingsMalware"},{"field":"sample.create_date","operator":"is after","value":["2019-01-01T00:00:00","2020-04-18T23:59:59"]}]}
 # ^^^^^ placeholder comment for blank line below af query input - paste cheat
 # output dir for the json and csv data
 out_json = 'tag_group_stats_json'
 out_csv = 'tag_group_stats_csv'
-# start month and year for time queries
-start_month = 10
-start_year = 2019
+# start and end date values for time queries
+start_month = 1
+start_day = 28
+start_year = 2020
+end_month = 1
+end_day = 31
+end_year = 2020
+date_interval = 1
 # session search stall count; how many checks total same as process
 stall_stop = 10

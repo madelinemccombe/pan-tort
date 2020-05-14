@@ -333,7 +333,7 @@ def parse_sample_data(autofocus_results, start_time, index, query_tag, hash_data
         keyhash = autofocus_results['hits'][listpos]['_source'][conf.hashtype]
 
         # Autofocus sending back bad data - ignore if not in source hash_list
-        source_list = get_search_list()
+        #source_list = get_search_list()
 
         # only for hash searches
         #if keyhash in source_list:
